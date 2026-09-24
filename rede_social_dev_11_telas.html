@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rede Social para Desenvolvedores — 11 Telas</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a2f;
+      --panel-2: #18233f;
+      --text: #f7f9ff;
+      --muted: #aab6d3;
+      --line: #263454;
+      --accent: #6ea8fe;
+      --accent-2: #8b5cf6;
+      --success: #42d392;
+      --warning: #f4c95d;
+      --shadow: 0 18px 50px rgba(0,0,0,.28);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(110,168,254,.13), transparent 32%),
+        radial-gradient(circle at top right, rgba(139,92,246,.14), transparent 28%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(11,16,32,.8);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .topbar-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 10px 26px rgba(110,168,254,.26);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav a:hover { color: var(--text); }
+
+    .hero {
+      padding: 92px 0 56px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid rgba(110,168,254,.25);
+      border-radius: 999px;
+      color: #dbe7ff;
+      background: rgba(110,168,254,.08);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0 auto;
+      max-width: 900px;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -.05em;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #8cc4ff, #b79cff, #74f0c4);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: 24px auto 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--text);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      border: 0;
+    }
+
+    .section { padding: 34px 0 60px; }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 22px;
+    }
+
+    .section h2 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 42px);
+      letter-spacing: -.03em;
+    }
+
+    .section-sub {
+      margin-top: 8px;
+      color: var(--muted);
+      max-width: 780px;
+    }
+
+    .concept-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .concept-card,
+    .screen-card,
+    .flow-card,
+    .team-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .concept-card {
+      padding: 22px;
+      min-height: 170px;
+    }
+
+    .concept-card .icon { font-size: 28px; margin-bottom: 12px; }
+    .concept-card h3 { margin: 0 0 8px; font-size: 18px; }
+    .concept-card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .highlight {
+      margin-top: 18px;
+      padding: 18px 20px;
+      border-left: 4px solid var(--success);
+      background: rgba(66,211,146,.08);
+      border-radius: 12px;
+      color: #dffbec;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 760px;
+    }
+
+    th, td {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      font-size: 13px;
+      color: #c8d4ee;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255,255,255,.02);
+    }
+
+    tr:last-child td { border-bottom: 0; }
+    td:first-child { font-weight: 800; color: var(--accent); }
+
+    .screens {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .screen-card {
+      padding: 26px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .screen-card::after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: rgba(110,168,254,.06);
+      right: -40px;
+      top: -55px;
+    }
+
+    .screen-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      background: rgba(110,168,254,.12);
+      border: 1px solid rgba(110,168,254,.25);
+      color: #dbe9ff;
+      margin-bottom: 18px;
+    }
+
+    .screen-card h3 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      letter-spacing: -.02em;
+    }
+
+    .screen-card p { color: var(--muted); margin: 0 0 14px; }
+
+    .feature-list {
+      display: grid;
+      gap: 10px;
+      padding: 0;
+      margin: 14px 0 0;
+      list-style: none;
+    }
+
+    .feature-list li {
+      display: flex;
+      gap: 10px;
+      color: #dce5f8;
+      font-size: 14px;
+    }
+
+    .feature-list li::before {
+      content: "✓";
+      color: var(--success);
+      font-weight: 900;
+    }
+
+    .mock {
+      margin-top: 18px;
+      border-radius: 16px;
+      background: #0d1529;
+      border: 1px solid #22314f;
+      padding: 16px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 13px;
+      color: #ccd6ee;
+      white-space: pre-line;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .team-card { padding: 20px; }
+    .team-card strong { display: block; font-size: 16px; margin-bottom: 6px; }
+    .team-card span { color: var(--muted); font-size: 14px; }
+
+    .nav-demo {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .app-nav {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .app-nav span {
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.035);
+      color: #d8e2f6;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .flow-card {
+      padding: 26px;
+      text-align: center;
+    }
+
+    .flow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-weight: 900;
+      font-size: clamp(18px, 3vw, 28px);
+      letter-spacing: -.02em;
+    }
+
+    .flow span {
+      color: var(--accent);
+    }
+
+    footer {
+      padding: 32px 0 54px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 960px) {
+      .concept-grid { grid-template-columns: repeat(2, 1fr); }
+      .screens { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .nav { display: none; }
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding-top: 64px; }
+      .concept-grid, .team-grid { grid-template-columns: 1fr; }
+      .section-head { align-items: flex-start; flex-direction: column; }
+      .container { width: min(100% - 22px, 1180px); }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#topo">
+        <span class="brand-mark">&lt;/&gt;</span>
+        <span>DevNetwork</span>
+      </a>
+      <nav class="nav">
+        <a href="#conceito">Conceito</a>
+        <a href="#telas">11 telas</a>
+        <a href="#equipe">Divisão da equipe</a>
+        <a href="#navegacao">Navegação</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="topo">
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">🚀 Rede social focada em desenvolvedores</div>
+        <h1>Conhecimento, <span class="gradient-text">networking, projetos e contratação</span> no mesmo ecossistema.</h1>
+        <p>
+          Uma plataforma que mistura ideias de Facebook, Instagram, WhatsApp, GitHub e LinkedIn,
+          mas com identidade própria para desenvolvedores, comunidades técnicas, colaboração em projetos
+          e parcerias de negócios.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#telas">Ver as 11 telas</a>
+          <a class="btn" href="#equipe">Ver divisão do time</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="conceito">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Conceito do produto</h2>
+            <div class="section-sub">A plataforma nasce da união de quatro pilares complementares.</div>
+          </div>
+        </div>
+
+        <div class="concept-grid">
+          <article class="concept-card">
+            <div class="icon">📱</div>
+            <h3>Instagram / Facebook</h3>
+            <p>Feed, posts, comunidades, interação e descoberta de conteúdo.</p>
+          </article>
+          <article class="concept-card">
+            <div class="icon">💼</div>
+            <h3>LinkedIn</h3>
+            <p>Carreira, networking, empresas, oportunidades e reputação profissional.</p>
+          </article>
+          <article class="concept-card">
+            <div class="icon">💻</div>
+            <h3>GitHub</h3>
+            <p>Projetos, código, contribuições e portfólio verificável.</p>
+          </article>
+          <article class="concept-card">
+            <div class="icon">💬</div>
+            <h3>WhatsApp / Discord</h3>
+            <p>Comunicação rápida, grupos de projeto e relacionamento entre membros.</p>
+          </article>
+        </div>
+
+        <div class="highlight">
+          <strong>Diferencial central:</strong> o perfil do desenvolvedor mostra não apenas quem ele é,
+          mas também o que sabe, o que construiu, com quem colaborou e o que está buscando agora.
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Mapa das 11 telas</h2>
+            <div class="section-sub">Uma tela principal por domínio, permitindo distribuir o front-end entre 11 desenvolvedores.</div>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>#</th><th>Tela</th><th>Inspiração</th><th>Objetivo</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Home / Feed</td><td>Instagram + LinkedIn</td><td>Conteúdo e descoberta</td></tr>
+              <tr><td>2</td><td>Perfil do Desenvolvedor</td><td>LinkedIn + GitHub</td><td>Identidade profissional</td></tr>
+              <tr><td>3</td><td>Explorar</td><td>Instagram + GitHub</td><td>Descobrir pessoas, tecnologias e projetos</td></tr>
+              <tr><td>4</td><td>Projetos</td><td>GitHub</td><td>Mostrar projetos e colaboração</td></tr>
+              <tr><td>5</td><td>Projeto / Workspace</td><td>GitHub + Trello</td><td>Trabalhar colaborativamente</td></tr>
+              <tr><td>6</td><td>Comunidades</td><td>Facebook + Discord</td><td>Criar comunidades técnicas</td></tr>
+              <tr><td>7</td><td>Vagas & Oportunidades</td><td>LinkedIn</td><td>Contratação</td></tr>
+              <tr><td>8</td><td>Networking</td><td>LinkedIn</td><td>Criar conexões relevantes</td></tr>
+              <tr><td>9</td><td>Mensagens</td><td>WhatsApp + LinkedIn</td><td>Comunicação</td></tr>
+              <tr><td>10</td><td>Notificações</td><td>GitHub + Instagram</td><td>Centralizar atividades</td></tr>
+              <tr><td>11</td><td>Empresas</td><td>LinkedIn + GitHub</td><td>Conectar empresas e desenvolvedores</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="telas">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>As 11 telas em detalhes</h2>
+            <div class="section-sub">Cada módulo abaixo representa um domínio funcional da aplicação.</div>
+          </div>
+        </div>
+
+        <div class="screens">
+          <article class="screen-card">
+            <div class="screen-number">01</div>
+            <h3>Home / Feed</h3>
+            <p>O coração da plataforma. Um feed com posts técnicos estruturados e foco em descoberta.</p>
+            <ul class="feature-list">
+              <li>Texto, imagem e vídeo</li><li>Trechos de código com syntax highlighting</li><li>Links de repositório</li><li>Enquetes e arquivos</li><li>Curtir, comentar, salvar, compartilhar e colaborar</li>
+            </ul>
+            <div class="mock">Gustavo publicou:
+“Como implementei autenticação JWT com Flask”
+
+🚀 Procurando colaboradores</div>
+          </article>
+
+          <article class="screen-card">
+            <div class="screen-number">02</div>
+            <h3>Perfil do Desenvolvedor</h3>
+            <p>Mais do que um currículo: identidade técnica, portfólio real e histórico de colaboração.</p>
+            <ul class="feature-list">
+              <li>Sobre, Projetos, Posts, Experiência e Contribuições</li><li>Tech Stack visual</li><li>Projetos públicos e colaborativos</li><li>Tecnologias utilizadas</li><li>Integração futura com GitHub</li>
+            </ul>
+            <div class="mock">Gustavo
+Software Engineer | Python | Flask | Automação
+São Paulo, Brasil
+
+[Conectar] [Seguir] [Mensagem]
+
+Python · JavaScript · React · Flask · PostgreSQL · Docker</div>
+          </article>
+
+          <article class="screen-card">
+            <div class="screen-number">03</div>
+            <h3>Explorar / Discover</h3>
+            <p>Busca universal para descobrir tudo que existe na rede.</p>
+            <ul class="feature-list">
+              <li>Pessoas</li><li>Projetos</li><li>Posts</li><li>Comunidades</li><li>Empresas e vagas</li><li>Trending Developers e Trending Technologies</li>
+            </ul>
+            <div class="mock">Pesquisar desenvolvedores, projetos, tecnologias, empresas...
+
+React ↑   Rust ↑   Python ↑   Next.js ↑</div>
+          </article>
+
+          <article class="screen-card">
+            <div class="screen-number">04</div>
+            <h3>Projetos</h3>
+            <p>Feed e marketplace de projetos abertos a colaboração.</p>
+            <ul class="feature-list">
+              <li>Descrição do projeto</li><li>Stack utilizada</li><li>Equipe atual</li><li>Perfis procurados</li><li>Botão “Quero colaborar”</li>
+            </ul>
+            <div class="mock">OpenFinance AI
+Plataforma open-source para análise financeira utilizando IA.
+
+Stack: Python · FastAPI · React · PostgreSQL
+Equipe: 4 desenvolvedores
+Procurando: Front-end Developer · UI/UX Designer</div>
+          </article>
+
+          <article class="screen-card">
+            <div class="screen-number">05</div>
+            <h3>Workspace do Projeto</h3>
+            <p>Ambiente de trabalho colaborativo inspirado em GitHub + Trello.</p>
+            <ul class="feature-list">
+              <li>Visão geral</li><li>Equipe</li><li>Código</li><li>Tarefas</li><li>Discussões</li><li>Kanban com Backlog, Desenvolvimento, Review e Concluído</li>
+            </ul>
+            <div class="mock">Backlog → Em desenvolvimento → Review → Concluído
+
+Criar tela Login — Gustavo
+API autenticação — João
+Dashboard — Maria</div>
+          </article>
+
+          <article class="screen-card">
+            <div class="screen-number">06</div>
+            <h3>Comunidades</h3>
+            <p>Espaços temáticos inspirados em grupos do Facebook, Reddit e Discord.</p>
+            <ul class="feature-list">
+              <li>Feed</li><li>Discussões</li><li>Projetos</li><li>Eventos</li><li>Membros</li><li>Desafios técnicos semanais</li>
+            </ul>
+            <div class="mock">Python Brasil — 128 mil membros
+React Developers — 94 mil membros
+IA & Machine Learning — 67 mil membros
+
+🔥 Desafio da semana: Construa uma API REST usando FastAPI.</div>
+          </article>
+
+          <article class="screen-card">
+            <div class="screen-number">07</div>
+            <h3>Vagas & Oportunidades</h3>
+            <p>Empregos, freelances, startups e projetos procurando especialistas.</p>
+            <ul class="feature-list">
+              <li>Filtros por tecnologia</li><li>Senioridade</li><li>Remoto, híbrido ou presencial</li><li>Faixa salarial</li><li>Localização</li><li>Compatibilidade técnica com o perfil</li>
+            </ul>
+            <div class="mock">Backend Python Developer
+Tech Match: 8 tecnologias em comum com seu perfil
+
+Empregos | Freelances | Projetos | Startups procurando sócios</div>
+          </article>
+
+          <article class="screen-card">
+            <div class="screen-number">08</div>
+            <h3>Networking</h3>
+            <p>Descoberta profissional com recomendações contextualizadas.</p>
+            <ul class="feature-list">
+              <li>Pessoas que você deveria conhecer</li><li>Motivo da recomendação</li><li>Interesses e tecnologias em comum</li><li>Busca por sócios, freelancers, mentores, empregos e colaboradores</li>
+            </ul>
+            <div class="mock">Carlos Silva
+Backend Developer
+Python · Django · AWS
+
+Motivo: vocês participam da comunidade Python Brasil e utilizam 5 tecnologias semelhantes.
+
+[Conectar] [Ver perfil]</div>
+          </article>
+
+          <article class="screen-card">
+            <div class="screen-number">09</div>
+            <h3>Mensagens</h3>
+            <p>Chat inspirado no WhatsApp Web, porém conectado ao contexto profissional.</p>
+            <ul class="feature-list">
+              <li>Conversas privadas</li><li>Grupos de projeto</li><li>Envio de código</li><li>Envio de arquivos</li><li>Compartilhamento de projetos</li><li>Chamadas</li>
+            </ul>
+            <div class="mock">Gustavo → João
+“Vi que você está procurando alguém para React no projeto OpenFinance. Tenho interesse.”
+
+[Enviar código] [Enviar arquivo] [Compartilhar projeto] [Chamada]</div>
+          </article>
+
+          <article class="screen-card">
+            <div class="screen-number">10</div>
+            <h3>Central de Notificações</h3>
+            <p>Notificações sociais, técnicas, de carreira e de colaboração.</p>
+            <ul class="feature-list">
+              <li>Social</li><li>Projetos</li><li>Código</li><li>Carreira</li><li>Comunidades</li><li>Filtros por categoria</li>
+            </ul>
+            <div class="mock">Social — Maria começou a seguir você.
+Projeto — Carlos solicitou participação no seu projeto.
+Código — João comentou na sua contribuição.
+Carreira — Uma empresa visualizou seu perfil.</div>
+          </article>
+
+          <article class="screen-card">
+            <div class="screen-number">11</div>
+            <h3>Perfil da Empresa</h3>
+            <p>Empresas também possuem identidade, projetos e oportunidades dentro da rede.</p>
+            <ul class="feature-list">
+              <li>Sobre</li><li>Equipe</li><li>Projetos</li><li>Vagas</li><li>Posts</li><li>Tecnologias utilizadas</li><li>Desenvolvedores da empresa</li>
+            </ul>
+            <div class="mock">OpenAI
+Sobre | Equipe | Projetos | Vagas | Posts
+
+Python · Rust · Kubernetes · React</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="equipe">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Divisão entre os 11 desenvolvedores</h2>
+            <div class="section-sub">Cada dev assume um domínio principal, mantendo independência sem perder consistência visual.</div>
+          </div>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-card"><strong>Dev 01 — Feed</strong><span>Posts, cards, comentários, compartilhamento e criação de publicação.</span></div>
+          <div class="team-card"><strong>Dev 02 — Perfil</strong><span>Perfil, experiência, skills, portfólio e contribuições.</span></div>
+          <div class="team-card"><strong>Dev 03 — Explore</strong><span>Pesquisa, filtros, trending e descoberta.</span></div>
+          <div class="team-card"><strong>Dev 04 — Projetos</strong><span>Marketplace/feed de projetos e criação de projeto.</span></div>
+          <div class="team-card"><strong>Dev 05 — Workspace</strong><span>Dashboard do projeto, Kanban, equipe e roadmap.</span></div>
+          <div class="team-card"><strong>Dev 06 — Comunidades</strong><span>Grupos, discussões, membros e eventos.</span></div>
+          <div class="team-card"><strong>Dev 07 — Jobs</strong><span>Vagas, freelances, filtros e candidaturas.</span></div>
+          <div class="team-card"><strong>Dev 08 — Networking</strong><span>Conexões, seguidores e recomendações.</span></div>
+          <div class="team-card"><strong>Dev 09 — Chat</strong><span>Mensagens privadas e grupos.</span></div>
+          <div class="team-card"><strong>Dev 10 — Notificações</strong><span>Central de atividades.</span></div>
+          <div class="team-card"><strong>Dev 11 — Empresas</strong><span>Perfil corporativo, equipes, vagas e projetos.</span></div>
+        </div>
+
+        <div class="highlight" style="margin-top:20px">
+          Todos os módulos devem utilizar um <strong>Design System compartilhado</strong>, evitando que as 11 áreas pareçam aplicações diferentes.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="navegacao">
+      <div class="container nav-demo">
+        <div class="section-head">
+          <div>
+            <h2>Estrutura de navegação</h2>
+            <div class="section-sub">Uma navegação simples, rápida e centrada nas principais ações do usuário.</div>
+          </div>
+        </div>
+
+        <div class="app-nav">
+          <span>🏠 Home</span><span>🔎 Explorar</span><span>💻 Projetos</span><span>👥 Comunidades</span><span>💼 Oportunidades</span><span>💬 Mensagens</span><span>🔔 Notificações</span><span>👤 Avatar</span>
+        </div>
+
+        <div class="flow-card">
+          <div class="flow">
+            DESCOBRIR <span>→</span> CONECTAR <span>→</span> COLABORAR <span>→</span> CONSTRUIR <span>→</span> GERAR OPORTUNIDADES
+          </div>
+          <p style="color:var(--muted);max-width:860px;margin:18px auto 0">
+            Um usuário pode descobrir outro desenvolvedor por um post, visitar seu perfil, identificar competências semelhantes,
+            convidá-lo para um projeto, conversar pelo chat, desenvolver o projeto, registrar a colaboração nos dois perfis e,
+            posteriormente, receber oportunidades com base naquele trabalho.
+          </p>
+        </div>
+
+        <div class="highlight">
+          A identidade própria do produto está justamente na ligação entre <strong>rede social, conhecimento, portfólio real, projetos e mercado profissional</strong>.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Documento visual de conceito — Rede Social para Desenvolvedores · 11 módulos de front-end
+  </footer>
+</body>
+</html>
