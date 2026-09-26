@@ -8,6 +8,32 @@
 </head>
 <body>
 
+  <div class="barra-acessibilidade" role="region" aria-label="Opções de acessibilidade">
+    <span class="rotulo-acessibilidade">Acessibilidade:</span>
+
+    <span class="opcao-acessibilidade">
+      <input type="checkbox" id="modo-daltonico">
+      <label for="modo-daltonico">Modo para daltônicos</label>
+    </span>
+
+    <span class="opcao-acessibilidade">
+      <input type="checkbox" id="modo-alto-contraste">
+      <label for="modo-alto-contraste">Alto contraste</label>
+    </span>
+
+    <span class="opcao-acessibilidade">
+      <input type="checkbox" id="modo-fonte-grande">
+      <label for="modo-fonte-grande">Aumentar texto</label>
+    </span>
+
+    <span class="rotulo-acessibilidade">Aparência:</span>
+
+    <span class="opcao-acessibilidade">
+      <input type="checkbox" id="tema-escuro">
+      <label for="tema-escuro">Tema escuro</label>
+    </span>
+  </div>
+
   <header>
     <h1>DevNetwork</h1>
     <nav>
@@ -48,10 +74,22 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>HTML</td><td>↑ 12%</td></tr>
-          <tr><td>CSS</td><td>↑ 9%</td></tr>
-          <tr><td>JavaScript</td><td>↑ 15%</td></tr>
-          <tr><td>Git</td><td>↑ 7%</td></tr>
+          <tr>
+              <td>HTML</td>
+              <td>↑ 12%</td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+            <td>↑ 9%</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>↑ 15%</td>
+          </tr>
+          <tr>
+            <td>Java</td>
+            <td>↑ 7%</td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -70,11 +108,30 @@
       </article>
     </section>
 
+   <section class="secao-galeria" style="display: flex; flex-wrap: wrap; gap: 15px;">
+      <h2 style="width: 100%">Inspirações e Projetos</h2>
+      
+      <article class="cartao-foto" style="border: 1px solid #cccccc; padding: 10px; background-color: #f9f9f9; text-align: center;">
+        <img src="images/chatexplorar.png" alt="Código para debugar" style="max-width: 100%; height: auto;">
+        <p style="margin-top: 10px; font-weight: bold; color: #333333;">Debugar nunca foi tão fácil</p>
+      </article>
+
+      <article class="cartao-foto" style="border: 1px solid #cccccc; padding: 10px; background-color: #f9f9f9; text-align: center;">
+        <img src="https://img.freepik.com/vetores-premium/uma-equipe-de-desenvolvedores-e-programadores-codificando-e-depurando-juntos-em-um-espaco-de-trabalho-compartilhado_216520-123202.jpg?w=2000" alt="Equipe trabalhando junta" style="max-width: 100%; height: auto;">
+        <p style="margin-top: 10px; font-weight: bold; color: #333333;">Comunidade de Devs</p>
+      </article>
+
+      <article class="cartao-foto" style="border: 1px solid #cccccc; padding: 10px; background-color: #f9f9f9; text-align: center;">
+        <img src="images/siteexplorar.png" alt="Interface de um site sobre craques da copa no notebook" style="max-width: 100%; height: auto;">
+        <p style="margin-top: 10px; font-weight: bold; color: #333333;">Site sobre a craques da copa finalizado!</p>
+      </article>
+    </section>
+
   </main>
 
   <footer>
     <p>Rede Social para Desenvolvedores</p>
-    <p class="direitos-autorais">&copy; 2026 DevNetwork. Todos os direitos reservados.</p>
+    <p class="direitos-autorais">&copy; 2026 [SUA EMPRESA] LTDA. CNPJ: 00.000.000/0000-00. Todos os direitos reservados.</p>
   </footer>
 
 

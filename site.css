@@ -238,3 +238,188 @@ button:hover {
     flex-direction: column;
   }
 }
+
+
+.barra-acessibilidade {
+  background-color: #1a252f;
+  color: #ffffff;
+  padding: 8px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+}
+
+.rotulo-acessibilidade {
+  font-weight: bold;
+}
+
+.opcao-acessibilidade {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.opcao-acessibilidade input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+.opcao-acessibilidade label {
+  font-weight: normal;
+  margin: 0;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/* Foco visível reforçado — ajuda quem navega por teclado e tem baixa visão.
+   Os checkboxes de curtir/salvar ficam visualmente escondidos, então o
+   contorno de foco é aplicado no botão (label) associado a eles. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+.opcao-acessibilidade label:has(input:focus-visible) {
+  outline: 3px solid #ffb400;
+  outline-offset: 2px;
+}
+
+.input-curtir:focus-visible + .botao-curtir,
+.input-salvar:focus-visible + .botao-salvar {
+  outline: 3px solid #ffb400;
+  outline-offset: 2px;
+}
+
+/* ---- Modo para daltônicos ----
+   Em vez de depender só de cor para indicar "curtido"/"salvo", este modo
+   troca a paleta por cores mais distinguíveis (azul/laranja em vez de
+   rosa/azul-claro) e acrescenta texto "✓" — a recomendação de acessibilidade
+   (WCAG) é nunca comunicar um estado usando cor sozinha. */
+body:has(#modo-daltonico:checked) .input-curtir:checked + .botao-curtir {
+  width: auto;
+  padding: 4px 10px;
+  border-radius: 16px;
+  background-color: #005fcc;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+body:has(#modo-daltonico:checked) .input-curtir:checked + .botao-curtir::after {
+  content: "✓ Curtido";
+  font-size: 12px;
+  margin-left: 4px;
+  white-space: nowrap;
+}
+
+body:has(#modo-daltonico:checked) .input-salvar:checked + .botao-salvar {
+  width: auto;
+  padding: 4px 10px;
+  border-radius: 16px;
+  background-color: #ffb400;
+  color: #1a1a1a;
+  border: 2px solid #1a1a1a;
+}
+
+body:has(#modo-daltonico:checked) .input-salvar:checked + .botao-salvar::after {
+  content: "✓ Salvo";
+  font-size: 12px;
+  margin-left: 4px;
+  white-space: nowrap;
+}
+
+body:has(#modo-daltonico:checked) nav ul li a.ativo {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---- Alto contraste ----
+   Ajuda principalmente quem tem baixa visão (não substitui leitor de tela
+   para cegos totais, mas melhora muito a legibilidade). */
+body:has(#modo-alto-contraste:checked) {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body:has(#modo-alto-contraste:checked) header,
+body:has(#modo-alto-contraste:checked) footer,
+body:has(#modo-alto-contraste:checked) .barra-acessibilidade {
+  background-color: #000000;
+  border-color: #ffffff;
+  border-style: solid;
+  border-width: 0;
+  border-bottom-width: 2px;
+}
+
+body:has(#modo-alto-contraste:checked) section,
+body:has(#modo-alto-contraste:checked) .cartao {
+  background-color: #000000;
+  border: 2px solid #ffffff;
+}
+
+body:has(#modo-alto-contraste:checked) a,
+body:has(#modo-alto-contraste:checked) .contador,
+body:has(#modo-alto-contraste:checked) .opcao-acessibilidade label {
+  color: #ffff00;
+}
+
+body:has(#modo-alto-contraste:checked) button {
+  background-color: #ffff00;
+  color: #000000;
+}
+
+body:has(#modo-alto-contraste:checked) .botao-acao {
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  color: #ffff00;
+}
+
+body:has(#modo-alto-contraste:checked) input,
+body:has(#modo-alto-contraste:checked) textarea {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+/* ---- Aumentar texto ----
+   Útil para baixa visão. Aumenta a variável global de fonte e os títulos. */
+body:has(#modo-fonte-grande:checked) {
+  --tamanho-fonte-base: 20px;
+}
+
+body:has(#modo-fonte-grande:checked) h1 {
+  font-size: 2rem;
+}
+
+body:has(#modo-fonte-grande:checked) h2 {
+  font-size: 1.6rem;
+}
+
+body:has(#modo-fonte-grande:checked) h3 {
+  font-size: 1.3rem;
+}
+
+body:has(#modo-fonte-grande:checked) .contador,
+body:has(#modo-fonte-grande:checked) nav ul li a {
+  font-size: 1.1rem;
+}
+
+/* ---- Tema escuro ----
+   Como as cores do site inteiro agora vêm de variáveis (--cor-fundo-pagina,
+   --cor-texto, etc.), basta redefinir essas variáveis aqui: todo o resto do
+   CSS (header, cartões, tabelas, formulário, chat, etc.) se atualiza sozinho,
+   sem precisar reescrever regra por regra. */
+body:has(#tema-escuro:checked) {
+  --cor-fundo-pagina: #121212;
+  --cor-fundo-cartao: #1e1e1e;
+  --cor-texto: #e0e0e0;
+  --cor-borda: #444444;
+  --cor-borda-clara: #333333;
+  --cor-fundo-cabecalho-tabela: #2a2a2a;
+  --cor-mensagem-recebida: #333333;
+  --cor-mensagem-enviada: #274b6d;
+  --cor-fundo-botao-acao: rgba(255, 255, 255, 0.08);
+  --cor-curtido-fundo: #4a1e29;
+  --cor-curtido-icone: #ff6b81;
+  --cor-salvo-fundo: #16324a;
+  --cor-salvo-icone: #74c0fc;
+}
