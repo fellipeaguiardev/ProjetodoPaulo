@@ -1,0 +1,591 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --tamanho-fonte-base: 16px;
+
+  --cor-fundo-pagina: #f2f2f2;
+  --cor-fundo-cartao: #ffffff;
+  --cor-texto: #333333;
+  --cor-texto-claro: #ffffff;
+  --cor-primaria: #2c3e50;
+  --cor-primaria-hover: #1a252f;
+  --cor-destaque: #4aa8ff;
+  --cor-borda: #cccccc;
+  --cor-borda-clara: #eeeeee;
+  --cor-fundo-cabecalho-tabela: #e6e6e6;
+  --cor-mensagem-recebida: #e6e6e6;
+  --cor-mensagem-enviada: #cfe8ff;
+
+  --cor-fundo-botao-acao: rgba(0, 0, 0, 0.06);
+  --cor-icone: var(--cor-texto);
+  --cor-curtido-fundo: #ffe3e8;
+  --cor-curtido-icone: #d6336c;
+  --cor-salvo-fundo: #d6ecff;
+  --cor-salvo-icone: #1971c2;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--tamanho-fonte-base);
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-fundo-pagina);
+  color: var(--cor-texto);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--cor-primaria);
+}
+
+
+header {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+nav ul li a {
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+nav ul li a.ativo {
+  color: var(--cor-destaque);
+}
+
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 15px;
+  flex: 1;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  border-bottom: 2px solid var(--cor-primaria);
+  padding-bottom: 5px;
+}
+
+.cartao {
+  background-color: var(--cor-fundo-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.cartao h3 {
+  margin-top: 0;
+}
+
+
+footer {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid var(--cor-borda);
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--cor-fundo-cabecalho-tabela);
+}
+
+form {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 4px;
+  font-family: inherit;
+  background-color: var(--cor-fundo-cartao);
+  color: var(--cor-texto);
+}
+
+button {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+button:hover {
+  background-color: var(--cor-primaria-hover);
+}
+
+.quadro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.coluna {
+  background-color: var(--cor-fundo-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  padding: 10px;
+  flex: 1;
+  min-width: 180px;
+}
+
+.coluna h3 {
+  text-align: center;
+}
+
+.coluna ul {
+  list-style: none;
+  padding: 0;
+}
+
+.coluna li {
+  background-color: var(--cor-fundo-pagina);
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+.chat {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.lista-contatos {
+  background-color: var(--cor-fundo-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  padding: 10px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.lista-contatos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-contatos li {
+  padding: 8px;
+  border-bottom: 1px solid var(--cor-borda-clara);
+}
+
+.conversa {
+  background-color: var(--cor-fundo-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  padding: 10px;
+  flex: 2;
+  min-width: 250px;
+}
+
+.mensagem {
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  max-width: 80%;
+}
+
+.mensagem-recebida {
+  background-color: var(--cor-mensagem-recebida);
+}
+
+.mensagem-enviada {
+  background-color: var(--cor-mensagem-enviada);
+  margin-left: auto;
+}
+
+.notificacao {
+  border-left: 4px solid var(--cor-primaria);
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: var(--cor-fundo-cartao);
+}
+
+/*responsivo*/
+
+@media (max-width: 600px) {
+  .quadro, .chat {
+    flex-direction: column;
+  }
+}
+
+
+/* ===== Reações rápidas (emoji) ===== */
+
+.reacoes-rapidas {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.emoji-reacao {
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 50%;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.emoji-reacao:hover {
+  transform: scale(1.3);
+  background-color: var(--cor-fundo-pagina);
+}
+
+/* ===== Barra de ações (curtir, comentar, salvar, compartilhar) ===== */
+
+.barra-acoes {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--cor-borda-clara);
+}
+
+.acao {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.botao-acao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--cor-fundo-botao-acao);
+  color: var(--cor-icone);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.botao-acao:hover {
+  background-color: var(--cor-fundo-cabecalho-tabela);
+}
+
+.icone-acao {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.contador {
+  font-size: 13px;
+  color: var(--cor-texto);
+}
+
+/* Esconde os checkboxes reais e usa o <label> como botão clicável.
+   Isso permite reagir (curtir/salvar) sem nenhum JavaScript. */
+.input-curtir,
+.input-salvar {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.input-curtir:checked + .botao-curtir {
+  background-color: var(--cor-curtido-fundo);
+  color: var(--cor-curtido-icone);
+}
+
+.input-curtir:checked + .botao-curtir .icone-acao {
+  animation: subir-coracao 0.4s ease forwards;
+}
+
+@keyframes subir-coracao {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  40% {
+    transform: scale(1.5) translateY(-10px);
+  }
+  100% {
+    transform: scale(1.15) translateY(0);
+  }
+}
+
+.input-salvar:checked + .botao-salvar {
+  background-color: var(--cor-salvo-fundo);
+  color: var(--cor-salvo-icone);
+}
+
+.input-salvar:checked + .botao-salvar .icone-acao {
+  transform: scale(1.2);
+}
+
+/* ===== Rodapé — linha de direitos autorais ===== */
+
+.direitos-autorais {
+  margin-top: 4px;
+  font-size: 13px;
+}
+
+
+/* =======================================================
+   ACESSIBILIDADE
+   ======================================================= */
+
+/* Link "pular para o conteúdo" — fica invisível até receber foco
+   pelo teclado (essencial para quem usa leitor de tela). */
+.pular-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background-color: #1a252f;
+  color: #ffffff;
+  padding: 10px 16px;
+  z-index: 1000;
+  border-radius: 0 0 6px 0;
+  text-decoration: none;
+}
+
+.pular-link:focus {
+  left: 0;
+}
+
+/* Barra de opções de acessibilidade */
+.barra-acessibilidade {
+  background-color: #1a252f;
+  color: #ffffff;
+  padding: 8px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+}
+
+.rotulo-acessibilidade {
+  font-weight: bold;
+}
+
+.opcao-acessibilidade {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.opcao-acessibilidade input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+.opcao-acessibilidade label {
+  font-weight: normal;
+  margin: 0;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/* Foco visível reforçado — ajuda quem navega por teclado e tem baixa visão.
+   Os checkboxes de curtir/salvar ficam visualmente escondidos, então o
+   contorno de foco é aplicado no botão (label) associado a eles. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+.opcao-acessibilidade label:has(input:focus-visible) {
+  outline: 3px solid #ffb400;
+  outline-offset: 2px;
+}
+
+.input-curtir:focus-visible + .botao-curtir,
+.input-salvar:focus-visible + .botao-salvar {
+  outline: 3px solid #ffb400;
+  outline-offset: 2px;
+}
+
+/* ---- Modo para daltônicos ----
+   Em vez de depender só de cor para indicar "curtido"/"salvo", este modo
+   troca a paleta por cores mais distinguíveis (azul/laranja em vez de
+   rosa/azul-claro) e acrescenta texto "✓" — a recomendação de acessibilidade
+   (WCAG) é nunca comunicar um estado usando cor sozinha. */
+body:has(#modo-daltonico:checked) .input-curtir:checked + .botao-curtir {
+  width: auto;
+  padding: 4px 10px;
+  border-radius: 16px;
+  background-color: #005fcc;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+body:has(#modo-daltonico:checked) .input-curtir:checked + .botao-curtir::after {
+  content: "✓ Curtido";
+  font-size: 12px;
+  margin-left: 4px;
+  white-space: nowrap;
+}
+
+body:has(#modo-daltonico:checked) .input-salvar:checked + .botao-salvar {
+  width: auto;
+  padding: 4px 10px;
+  border-radius: 16px;
+  background-color: #ffb400;
+  color: #1a1a1a;
+  border: 2px solid #1a1a1a;
+}
+
+body:has(#modo-daltonico:checked) .input-salvar:checked + .botao-salvar::after {
+  content: "✓ Salvo";
+  font-size: 12px;
+  margin-left: 4px;
+  white-space: nowrap;
+}
+
+body:has(#modo-daltonico:checked) nav ul li a.ativo {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---- Alto contraste ----
+   Ajuda principalmente quem tem baixa visão (não substitui leitor de tela
+   para cegos totais, mas melhora muito a legibilidade). */
+body:has(#modo-alto-contraste:checked) {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body:has(#modo-alto-contraste:checked) header,
+body:has(#modo-alto-contraste:checked) footer,
+body:has(#modo-alto-contraste:checked) .barra-acessibilidade {
+  background-color: #000000;
+  border-color: #ffffff;
+  border-style: solid;
+  border-width: 0;
+  border-bottom-width: 2px;
+}
+
+body:has(#modo-alto-contraste:checked) section,
+body:has(#modo-alto-contraste:checked) .cartao {
+  background-color: #000000;
+  border: 2px solid #ffffff;
+}
+
+body:has(#modo-alto-contraste:checked) a,
+body:has(#modo-alto-contraste:checked) .contador,
+body:has(#modo-alto-contraste:checked) .opcao-acessibilidade label {
+  color: #ffff00;
+}
+
+body:has(#modo-alto-contraste:checked) button {
+  background-color: #ffff00;
+  color: #000000;
+}
+
+body:has(#modo-alto-contraste:checked) .botao-acao {
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  color: #ffff00;
+}
+
+body:has(#modo-alto-contraste:checked) input,
+body:has(#modo-alto-contraste:checked) textarea {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+/* ---- Aumentar texto ----
+   Útil para baixa visão. Aumenta a variável global de fonte e os títulos. */
+body:has(#modo-fonte-grande:checked) {
+  --tamanho-fonte-base: 20px;
+}
+
+body:has(#modo-fonte-grande:checked) h1 {
+  font-size: 2rem;
+}
+
+body:has(#modo-fonte-grande:checked) h2 {
+  font-size: 1.6rem;
+}
+
+body:has(#modo-fonte-grande:checked) h3 {
+  font-size: 1.3rem;
+}
+
+body:has(#modo-fonte-grande:checked) .contador,
+body:has(#modo-fonte-grande:checked) nav ul li a {
+  font-size: 1.1rem;
+}
+
+/* ---- Tema escuro ----
+   Como as cores do site inteiro agora vêm de variáveis (--cor-fundo-pagina,
+   --cor-texto, etc.), basta redefinir essas variáveis aqui: todo o resto do
+   CSS (header, cartões, tabelas, formulário, chat, etc.) se atualiza sozinho,
+   sem precisar reescrever regra por regra. */
+body:has(#tema-escuro:checked) {
+  --cor-fundo-pagina: #121212;
+  --cor-fundo-cartao: #1e1e1e;
+  --cor-texto: #e0e0e0;
+  --cor-borda: #444444;
+  --cor-borda-clara: #333333;
+  --cor-fundo-cabecalho-tabela: #2a2a2a;
+  --cor-mensagem-recebida: #333333;
+  --cor-mensagem-enviada: #274b6d;
+  --cor-fundo-botao-acao: rgba(255, 255, 255, 0.08);
+  --cor-curtido-fundo: #4a1e29;
+  --cor-curtido-icone: #ff6b81;
+  --cor-salvo-fundo: #16324a;
+  --cor-salvo-icone: #74c0fc;
+}
