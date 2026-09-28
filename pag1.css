@@ -258,7 +258,6 @@ button:hover {
   background-color: var(--cor-fundo-cartao);
 }
 
-/*responsivo*/
 
 @media (max-width: 600px) {
   .quadro, .chat {
@@ -266,8 +265,6 @@ button:hover {
   }
 }
 
-
-/* ===== Reações rápidas (emoji) ===== */
 
 .reacoes-rapidas {
   display: flex;
@@ -288,7 +285,6 @@ button:hover {
   background-color: var(--cor-fundo-pagina);
 }
 
-/* ===== Barra de ações (curtir, comentar, salvar, compartilhar) ===== */
 
 .barra-acoes {
   display: flex;
@@ -335,8 +331,7 @@ button:hover {
   color: var(--cor-texto);
 }
 
-/* Esconde os checkboxes reais e usa o <label> como botão clicável.
-   Isso permite reagir (curtir/salvar) sem nenhum JavaScript. */
+
 .input-curtir,
 .input-salvar {
   position: absolute;
@@ -375,20 +370,12 @@ button:hover {
   transform: scale(1.2);
 }
 
-/* ===== Rodapé — linha de direitos autorais ===== */
 
 .direitos-autorais {
   margin-top: 4px;
   font-size: 13px;
 }
 
-
-/* =======================================================
-   ACESSIBILIDADE
-   ======================================================= */
-
-/* Link "pular para o conteúdo" — fica invisível até receber foco
-   pelo teclado (essencial para quem usa leitor de tela). */
 .pular-link {
   position: absolute;
   left: -9999px;
@@ -405,7 +392,7 @@ button:hover {
   left: 0;
 }
 
-/* Barra de opções de acessibilidade */
+
 .barra-acessibilidade {
   background-color: #1a252f;
   color: #ffffff;
@@ -439,9 +426,7 @@ button:hover {
   color: #ffffff;
 }
 
-/* Foco visível reforçado — ajuda quem navega por teclado e tem baixa visão.
-   Os checkboxes de curtir/salvar ficam visualmente escondidos, então o
-   contorno de foco é aplicado no botão (label) associado a eles. */
+
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -456,11 +441,7 @@ input:focus-visible,
   outline-offset: 2px;
 }
 
-/* ---- Modo para daltônicos ----
-   Em vez de depender só de cor para indicar "curtido"/"salvo", este modo
-   troca a paleta por cores mais distinguíveis (azul/laranja em vez de
-   rosa/azul-claro) e acrescenta texto "✓" — a recomendação de acessibilidade
-   (WCAG) é nunca comunicar um estado usando cor sozinha. */
+
 body:has(#modo-daltonico:checked) .input-curtir:checked + .botao-curtir {
   width: auto;
   padding: 4px 10px;
@@ -498,9 +479,7 @@ body:has(#modo-daltonico:checked) nav ul li a.ativo {
   text-underline-offset: 4px;
 }
 
-/* ---- Alto contraste ----
-   Ajuda principalmente quem tem baixa visão (não substitui leitor de tela
-   para cegos totais, mas melhora muito a legibilidade). */
+
 body:has(#modo-alto-contraste:checked) {
   background-color: #000000;
   color: #ffffff;
@@ -546,8 +525,7 @@ body:has(#modo-alto-contraste:checked) textarea {
   border: 2px solid #ffffff;
 }
 
-/* ---- Aumentar texto ----
-   Útil para baixa visão. Aumenta a variável global de fonte e os títulos. */
+
 body:has(#modo-fonte-grande:checked) {
   --tamanho-fonte-base: 20px;
 }
@@ -569,11 +547,6 @@ body:has(#modo-fonte-grande:checked) nav ul li a {
   font-size: 1.1rem;
 }
 
-/* ---- Tema escuro ----
-   Como as cores do site inteiro agora vêm de variáveis (--cor-fundo-pagina,
-   --cor-texto, etc.), basta redefinir essas variáveis aqui: todo o resto do
-   CSS (header, cartões, tabelas, formulário, chat, etc.) se atualiza sozinho,
-   sem precisar reescrever regra por regra. */
 body:has(#tema-escuro:checked) {
   --cor-fundo-pagina: #121212;
   --cor-fundo-cartao: #1e1e1e;
