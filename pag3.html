@@ -5,34 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevNetwork - Explorar</title>
   <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="pag3.css">
 </head>
 <body>
 
-  <div class="barra-acessibilidade" role="region" aria-label="Opções de acessibilidade">
-    <span class="rotulo-acessibilidade">Acessibilidade:</span>
+  <details class="painel-acessibilidade">
+    <summary class="botao-painel-acessibilidade">
+      <span class="conteudo-botao-painel">
+        <svg class="icone-painel" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm9 6.5-6 1.2V13l2 8.5-2 .5-2.4-7h-1.2L9 22l-2-.5L9 13V9.7L3 8.5l.4-2L12 8l8.6-1.5.4 2z"/>
+        </svg>
+        <span>Acessibilidade</span>
+      </span>
+    </summary>
 
-    <span class="opcao-acessibilidade">
-      <input type="checkbox" id="modo-daltonico">
-      <label for="modo-daltonico">Modo para daltônicos</label>
-    </span>
+    <form class="barra-acessibilidade conteudo-painel" aria-labelledby="titulo-painel-acessibilidade">
+      <p id="titulo-painel-acessibilidade" class="titulo-painel">Opções de acessibilidade</p>
 
-    <span class="opcao-acessibilidade">
-      <input type="checkbox" id="modo-alto-contraste">
-      <label for="modo-alto-contraste">Alto contraste</label>
-    </span>
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Visão</legend>
 
-    <span class="opcao-acessibilidade">
-      <input type="checkbox" id="modo-fonte-grande">
-      <label for="modo-fonte-grande">Aumentar texto</label>
-    </span>
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-daltonico">
+          <label for="modo-daltonico">Modo para daltônicos</label>
+        </span>
 
-    <span class="rotulo-acessibilidade">Aparência:</span>
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-alto-contraste">
+          <label for="modo-alto-contraste">Alto contraste</label>
+        </span>
 
-    <span class="opcao-acessibilidade">
-      <input type="checkbox" id="tema-escuro">
-      <label for="tema-escuro">Tema escuro</label>
-    </span>
-  </div>
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-fonte-grande">
+          <label for="modo-fonte-grande">Aumentar texto</label>
+        </span>
+      </fieldset>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Leitura</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-destacar-links">
+          <label for="modo-destacar-links">Destacar links e botões</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-espacamento">
+          <label for="modo-espacamento">Espaçamento de leitura</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-sem-animacoes">
+          <label for="modo-sem-animacoes">Pausar animações</label>
+        </span>
+      </fieldset>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Aparência</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="tema-escuro">
+          <label for="tema-escuro">Tema escuro</label>
+        </span>
+      </fieldset>
+
+      <button type="reset" class="botao-restaurar">Restaurar padrão</button>
+      <p class="aviso-painel">As opções valem enquanto você estiver nesta página.</p>
+    </form>
+  </details>
 
   <header>
     <h1>DevNetwork</h1>
