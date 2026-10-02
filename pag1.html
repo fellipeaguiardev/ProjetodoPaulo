@@ -10,37 +10,76 @@
 
   <a href="#conteudo-principal" class="pular-link">Pular para o conteúdo principal</a>
 
-  <div class="barra-acessibilidade" role="region" aria-label="Opções de acessibilidade">
-    <span class="rotulo-acessibilidade">Acessibilidade:</span>
+  <details class="painel-acessibilidade">
+    <summary class="botao-painel-acessibilidade">
+      <span class="conteudo-botao-painel">
+        <svg class="icone-painel" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm9 6.5-6 1.2V13l2 8.5-2 .5-2.4-7h-1.2L9 22l-2-.5L9 13V9.7L3 8.5l.4-2L12 8l8.6-1.5.4 2z"/>
+        </svg>
+        <span>Acessibilidade</span>
+      </span>
+    </summary>
 
-    <span class="opcao-acessibilidade">
-      <input type="checkbox" id="modo-daltonico">
-      <label for="modo-daltonico">Modo para daltônicos</label>
-    </span>
+    <form class="barra-acessibilidade conteudo-painel" aria-labelledby="titulo-painel-acessibilidade">
+      <p id="titulo-painel-acessibilidade" class="titulo-painel">Opções de acessibilidade</p>
 
-    <span class="opcao-acessibilidade">
-      <input type="checkbox" id="modo-alto-contraste">
-      <label for="modo-alto-contraste">Alto contraste</label>
-    </span>
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Visão</legend>
 
-    <span class="opcao-acessibilidade">
-      <input type="checkbox" id="modo-fonte-grande">
-      <label for="modo-fonte-grande">Aumentar texto</label>
-    </span>
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-daltonico">
+          <label for="modo-daltonico">Modo para daltônicos</label>
+        </span>
 
-    <span class="rotulo-acessibilidade">Aparência:</span>
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-alto-contraste">
+          <label for="modo-alto-contraste">Alto contraste</label>
+        </span>
 
-    <span class="opcao-acessibilidade">
-      <input type="checkbox" id="tema-escuro">
-      <label for="tema-escuro">Tema escuro</label>
-    </span>
-  </div>
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-fonte-grande">
+          <label for="modo-fonte-grande">Aumentar texto</label>
+        </span>
+      </fieldset>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Leitura</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-destacar-links">
+          <label for="modo-destacar-links">Destacar links e botões</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-espacamento">
+          <label for="modo-espacamento">Espaçamento de leitura</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-sem-animacoes">
+          <label for="modo-sem-animacoes">Pausar animações</label>
+        </span>
+      </fieldset>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Aparência</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="tema-escuro">
+          <label for="tema-escuro">Tema escuro</label>
+        </span>
+      </fieldset>
+
+      <button type="reset" class="botao-restaurar">Restaurar padrão</button>
+      <p class="aviso-painel">As opções valem enquanto você estiver nesta página.</p>
+    </form>
+  </details>
 
   <header>
     <h1>DevNetwork</h1>
     <nav>
       <ul>
-        <li><a href="pag1.html" class="ativo">Feed</a></li>
+        <li><a href="pag1.html" class="ativo" aria-current="page">Feed</a></li>
         <li><a href="pag2.html">Perfil.10</a></li>
         <li><a href="pag3.html">Explorar</a></li>
         <li><a href="pag4.html">Projetos</a></li>
@@ -74,13 +113,28 @@
         <p>Como criei meu primeiro site em HTML e CSS 🚀</p>
         <p>Quero colocar um botão personalizado. Quem souber como estilizar com CSS, comenta aqui!</p>
 
-        <div class="reacoes-rapidas">
-          <span class="emoji-reacao" title="Curtir" aria-hidden="true">👍</span>
-          <span class="emoji-reacao" title="Amei" aria-hidden="true">❤️</span>
-          <span class="emoji-reacao" title="Uau" aria-hidden="true">😮</span>
-          <span class="emoji-reacao" title="Aplausos" aria-hidden="true">👏</span>
-          <span class="emoji-reacao" title="Ideia" aria-hidden="true">💡</span>
-        </div>
+        <fieldset class="reacoes-rapidas">
+          <legend class="visualmente-oculto">Reagir à publicação de Neymar Junior</legend>
+
+          <input type="radio" name="reacao-1" id="reacao-1-nenhuma" class="input-reacao input-reacao-nenhuma" checked>
+
+          <input type="radio" name="reacao-1" id="reacao-1-curtir" class="input-reacao" value="curtir">
+          <label for="reacao-1-curtir" class="emoji-reacao" title="Curtir" data-emoji="👍"><span aria-hidden="true">👍</span><span class="visualmente-oculto">Curtir</span></label>
+
+          <input type="radio" name="reacao-1" id="reacao-1-amei" class="input-reacao" value="amei">
+          <label for="reacao-1-amei" class="emoji-reacao" title="Amei" data-emoji="❤️"><span aria-hidden="true">❤️</span><span class="visualmente-oculto">Amei</span></label>
+
+          <input type="radio" name="reacao-1" id="reacao-1-uau" class="input-reacao" value="uau">
+          <label for="reacao-1-uau" class="emoji-reacao" title="Uau" data-emoji="😮"><span aria-hidden="true">😮</span><span class="visualmente-oculto">Uau</span></label>
+
+          <input type="radio" name="reacao-1" id="reacao-1-aplausos" class="input-reacao" value="aplausos">
+          <label for="reacao-1-aplausos" class="emoji-reacao" title="Aplausos" data-emoji="👏"><span aria-hidden="true">👏</span><span class="visualmente-oculto">Aplausos</span></label>
+
+          <input type="radio" name="reacao-1" id="reacao-1-ideia" class="input-reacao" value="ideia">
+          <label for="reacao-1-ideia" class="emoji-reacao" title="Ideia" data-emoji="💡"><span aria-hidden="true">💡</span><span class="visualmente-oculto">Ideia</span></label>
+
+          <label for="reacao-1-nenhuma" class="remover-reacao"><span aria-hidden="true">✕</span> Remover reação</label>
+        </fieldset>
 
         <p class="barra-acoes">
           <span class="acao">
@@ -126,13 +180,28 @@
         <h3>Lionel Messi</h3>
         <p>Terminei minha página de perfil usando JavaScript básico 📊</p>
 
-        <div class="reacoes-rapidas">
-          <span class="emoji-reacao" title="Curtir" aria-hidden="true">👍</span>
-          <span class="emoji-reacao" title="Amei" aria-hidden="true">❤️</span>
-          <span class="emoji-reacao" title="Uau" aria-hidden="true">😮</span>
-          <span class="emoji-reacao" title="Aplausos" aria-hidden="true">👏</span>
-          <span class="emoji-reacao" title="Ideia" aria-hidden="true">💡</span>
-        </div>
+        <fieldset class="reacoes-rapidas">
+          <legend class="visualmente-oculto">Reagir à publicação de Lionel Messi</legend>
+
+          <input type="radio" name="reacao-2" id="reacao-2-nenhuma" class="input-reacao input-reacao-nenhuma" checked>
+
+          <input type="radio" name="reacao-2" id="reacao-2-curtir" class="input-reacao" value="curtir">
+          <label for="reacao-2-curtir" class="emoji-reacao" title="Curtir" data-emoji="👍"><span aria-hidden="true">👍</span><span class="visualmente-oculto">Curtir</span></label>
+
+          <input type="radio" name="reacao-2" id="reacao-2-amei" class="input-reacao" value="amei">
+          <label for="reacao-2-amei" class="emoji-reacao" title="Amei" data-emoji="❤️"><span aria-hidden="true">❤️</span><span class="visualmente-oculto">Amei</span></label>
+
+          <input type="radio" name="reacao-2" id="reacao-2-uau" class="input-reacao" value="uau">
+          <label for="reacao-2-uau" class="emoji-reacao" title="Uau" data-emoji="😮"><span aria-hidden="true">😮</span><span class="visualmente-oculto">Uau</span></label>
+
+          <input type="radio" name="reacao-2" id="reacao-2-aplausos" class="input-reacao" value="aplausos">
+          <label for="reacao-2-aplausos" class="emoji-reacao" title="Aplausos" data-emoji="👏"><span aria-hidden="true">👏</span><span class="visualmente-oculto">Aplausos</span></label>
+
+          <input type="radio" name="reacao-2" id="reacao-2-ideia" class="input-reacao" value="ideia">
+          <label for="reacao-2-ideia" class="emoji-reacao" title="Ideia" data-emoji="💡"><span aria-hidden="true">💡</span><span class="visualmente-oculto">Ideia</span></label>
+
+          <label for="reacao-2-nenhuma" class="remover-reacao"><span aria-hidden="true">✕</span> Remover reação</label>
+        </fieldset>
 
         <p class="barra-acoes">
           <span class="acao">
@@ -178,13 +247,28 @@
         <h3>Cristiano Ronaldo</h3>
         <p>Alguém já usou HTML com tags básicas? Queria tirar uma dúvida simples sobre estruturação.</p>
 
-        <div class="reacoes-rapidas">
-          <span class="emoji-reacao" title="Curtir" aria-hidden="true">👍</span>
-          <span class="emoji-reacao" title="Amei" aria-hidden="true">❤️</span>
-          <span class="emoji-reacao" title="Uau" aria-hidden="true">😮</span>
-          <span class="emoji-reacao" title="Aplausos" aria-hidden="true">👏</span>
-          <span class="emoji-reacao" title="Ideia" aria-hidden="true">💡</span>
-        </div>
+        <fieldset class="reacoes-rapidas">
+          <legend class="visualmente-oculto">Reagir à publicação de Cristiano Ronaldo</legend>
+
+          <input type="radio" name="reacao-3" id="reacao-3-nenhuma" class="input-reacao input-reacao-nenhuma" checked>
+
+          <input type="radio" name="reacao-3" id="reacao-3-curtir" class="input-reacao" value="curtir">
+          <label for="reacao-3-curtir" class="emoji-reacao" title="Curtir" data-emoji="👍"><span aria-hidden="true">👍</span><span class="visualmente-oculto">Curtir</span></label>
+
+          <input type="radio" name="reacao-3" id="reacao-3-amei" class="input-reacao" value="amei">
+          <label for="reacao-3-amei" class="emoji-reacao" title="Amei" data-emoji="❤️"><span aria-hidden="true">❤️</span><span class="visualmente-oculto">Amei</span></label>
+
+          <input type="radio" name="reacao-3" id="reacao-3-uau" class="input-reacao" value="uau">
+          <label for="reacao-3-uau" class="emoji-reacao" title="Uau" data-emoji="😮"><span aria-hidden="true">😮</span><span class="visualmente-oculto">Uau</span></label>
+
+          <input type="radio" name="reacao-3" id="reacao-3-aplausos" class="input-reacao" value="aplausos">
+          <label for="reacao-3-aplausos" class="emoji-reacao" title="Aplausos" data-emoji="👏"><span aria-hidden="true">👏</span><span class="visualmente-oculto">Aplausos</span></label>
+
+          <input type="radio" name="reacao-3" id="reacao-3-ideia" class="input-reacao" value="ideia">
+          <label for="reacao-3-ideia" class="emoji-reacao" title="Ideia" data-emoji="💡"><span aria-hidden="true">💡</span><span class="visualmente-oculto">Ideia</span></label>
+
+          <label for="reacao-3-nenhuma" class="remover-reacao"><span aria-hidden="true">✕</span> Remover reação</label>
+        </fieldset>
 
         <p class="barra-acoes">
           <span class="acao">

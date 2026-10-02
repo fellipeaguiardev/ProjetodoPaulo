@@ -562,3 +562,316 @@ body:has(#tema-escuro:checked) {
   --cor-salvo-fundo: #16324a;
   --cor-salvo-icone: #74c0fc;
 }
+
+.visualmente-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+
+.painel-acessibilidade {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 900;
+}
+
+.botao-painel-acessibilidade {
+  display: block;
+  list-style: none;
+  cursor: pointer;
+  background-color: #1a252f;
+  color: #ffffff;
+  padding: 10px 8px;
+  border-radius: 8px 0 0 8px;
+  font-size: 0.7em;
+  font-weight: bold;
+  user-select: none;
+}
+
+.botao-painel-acessibilidade::-webkit-details-marker {
+  display: none;
+}
+
+.botao-painel-acessibilidade::marker {
+  content: "";
+}
+
+.conteudo-botao-painel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.icone-painel {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+  display: block;
+}
+
+.painel-acessibilidade:has(.conteudo-painel input:checked) .conteudo-botao-painel::after {
+  content: "● ativo";
+  font-weight: normal;
+}
+
+.botao-painel-acessibilidade:focus-visible {
+  outline: 3px solid #ffb400;
+  outline-offset: 2px;
+}
+
+.barra-acessibilidade.conteudo-painel {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 6px);
+  transform: translateY(-50%);
+  width: min(290px, calc(100vw - 110px));
+  max-height: 85vh;
+  overflow-y: auto;
+  margin: 0;
+  padding: 16px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 14px;
+  border-radius: 8px;
+  font-size: 0.85em;
+}
+
+.titulo-painel {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.15em;
+}
+
+.grupo-acessibilidade {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.grupo-acessibilidade legend {
+  padding: 0;
+  margin-bottom: 6px;
+}
+
+.conteudo-painel .opcao-acessibilidade {
+  gap: 8px;
+}
+
+.conteudo-painel .opcao-acessibilidade input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.botao-restaurar {
+  margin: 0;
+  border: 1px solid #ffffff;
+}
+
+.aviso-painel {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+body:has(#modo-alto-contraste:checked) .botao-painel-acessibilidade {
+  background-color: #000000;
+  color: #ffff00;
+  border: 2px solid #ffffff;
+  border-right-width: 0;
+}
+
+body:has(#modo-alto-contraste:checked) .barra-acessibilidade.conteudo-painel {
+  border-width: 2px;
+}
+
+
+
+.reacoes-rapidas {
+  border: 0;
+  padding: 0;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.input-reacao {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.reacoes-rapidas .emoji-reacao {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  font-weight: normal;
+}
+
+.input-reacao:checked + .emoji-reacao {
+  background-color: var(--cor-salvo-fundo);
+  box-shadow: 0 0 0 2px var(--cor-destaque);
+  animation: reagir-emoji 0.45s ease forwards;
+}
+
+@keyframes reagir-emoji {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.6) translateY(-8px) rotate(-12deg);
+  }
+  70% {
+    transform: scale(0.95) rotate(6deg);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+.input-reacao:checked + .emoji-reacao::after {
+  content: attr(data-emoji);
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  pointer-events: none;
+  opacity: 0;
+  animation: emoji-flutuar 0.8s ease-out;
+}
+
+@keyframes emoji-flutuar {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, 8px) scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -28px) scale(1.4);
+  }
+}
+
+.input-reacao:focus-visible + .emoji-reacao {
+  outline: 3px solid #ffb400;
+  outline-offset: 2px;
+}
+
+/* "Remover reação" só aparece quando alguma reação está marcada */
+.remover-reacao {
+  display: none;
+  align-items: center;
+  gap: 4px;
+  margin: 0 0 0 4px;
+  padding: 2px 10px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 16px;
+  font-size: 0.8em;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.reacoes-rapidas:has(.input-reacao:not(.input-reacao-nenhuma):checked) .remover-reacao,
+.input-reacao-nenhuma:focus-visible ~ .remover-reacao {
+  display: inline-flex;
+}
+
+.input-reacao-nenhuma:focus-visible ~ .remover-reacao {
+  outline: 3px solid #ffb400;
+  outline-offset: 2px;
+}
+
+body:has(#modo-alto-contraste:checked) .input-reacao:checked + .emoji-reacao {
+  background-color: #000000;
+  box-shadow: 0 0 0 2px #ffff00;
+}
+
+body:has(#modo-alto-contraste:checked) .remover-reacao {
+  color: #ffff00;
+  border-color: #ffffff;
+}
+
+
+
+body:has(#modo-daltonico:checked) .input-reacao:checked + .emoji-reacao {
+  border-radius: 16px;
+  padding: 4px 10px;
+  box-shadow: 0 0 0 2px currentColor;
+}
+
+body:has(#modo-daltonico:checked) .input-reacao:checked + .emoji-reacao .visualmente-oculto {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0 0 0 4px;
+  overflow: visible;
+  clip: auto;
+  font-size: 12px;
+}
+
+body:has(#modo-daltonico:checked) .input-reacao:checked + .emoji-reacao .visualmente-oculto::before {
+  content: "✓ ";
+}
+
+
+
+body:has(#modo-destacar-links:checked) a:not(.botao-acao):not(.pular-link) {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+body:has(#modo-destacar-links:checked) .botao-acao,
+body:has(#modo-destacar-links:checked) .emoji-reacao {
+  box-shadow: 0 0 0 2px currentColor;
+}
+
+
+
+body:has(#modo-espacamento:checked) main {
+  line-height: 1.8;
+  letter-spacing: 0.12em;
+  word-spacing: 0.16em;
+}
+
+body:has(#modo-espacamento:checked) main p:not(.barra-acoes) {
+  margin-bottom: 2em;
+}
+
+
+
+body:has(#modo-sem-animacoes:checked) *,
+body:has(#modo-sem-animacoes:checked) *::before,
+body:has(#modo-sem-animacoes:checked) *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
