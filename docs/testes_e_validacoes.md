@@ -1,8 +1,8 @@
-# Testes e Validações — DevNetwork
+Testes e Validações — DevNetwork
 
-## 1. Navegação (links entre páginas)
+1. Navegação (links entre páginas)
 
-Verificamos todos os links internos (`href`, `src` e `poster`) de todas as páginas: **nenhum link quebrado**.
+Verificamos todos os links internos (href, src e poster) de todas as páginas: nenhum link quebrado.
 
 | Teste                                                        | Resultado |
 |--------------------------------------------------------------|-----------|
@@ -11,7 +11,7 @@ Verificamos todos os links internos (`href`, `src` e `poster`) de todas as pági
 | Todas as imagens locais são encontradas na pasta `img/`      | OK        |
 | Links de "Ver perfil" na página Rede levam ao Perfil         | OK        |
 
-## 2. Formulário de contato (`contato.html`)
+ 2. Formulário de contato (contato.html)
 
 | Campo              | Validação usada                                  | Teste feito                         | Resultado esperado          |
 |--------------------|--------------------------------------------------|-------------------------------------|-----------------------------|
@@ -27,7 +27,7 @@ Verificamos todos os links internos (`href`, `src` e `poster`) de todas as pági
 
 Todos os campos têm `<label for="...">` ligado ao `id` do campo.
 
-## 3. Multimídia
+3. Multimídia
 
 | Recurso   | Página          | Detalhes                                  |
 |-----------|-----------------|-------------------------------------------|
@@ -35,7 +35,7 @@ Todos os campos têm `<label for="...">` ligado ao `id` do campo.
 | `<audio>` | `index.html`    | `controls`                                |
 | `<iframe>`| `contato.html`  | Mapa do OpenStreetMap com `title`         |
 
-## 4. Validação W3C
+4. Validação W3C
 
 Validar cada página em https://validator.w3.org/ (aba "Validate by File Upload") e anotar o resultado aqui. Se possível, guardar um print de cada resultado na pasta `docs/`.
 
@@ -56,7 +56,7 @@ Validar cada página em https://validator.w3.org/ (aba "Validate by File Upload"
 | contato.html                 |       |        |      |
 | orcamento_hospedagem.html    |       |        |      |
 
-## 5. Pendências encontradas para a entrega final
+5. Pendências encontradas para a entrega final
 
 Problemas que vimos durante a revisão e que vamos corrigir na entrega final (nesta entrega deixamos o código como foi feito, para registrar a evolução):
 
