@@ -563,6 +563,7 @@ body:has(#tema-escuro:checked) {
   --cor-salvo-icone: #74c0fc;
 }
 
+
 .visualmente-oculto {
   position: absolute;
   width: 1px;
@@ -728,6 +729,7 @@ body:has(#modo-alto-contraste:checked) .barra-acessibilidade.conteudo-painel {
   font-weight: normal;
 }
 
+/* emoji escolhido: fica destacado e dá um "pulo" */
 .input-reacao:checked + .emoji-reacao {
   background-color: var(--cor-salvo-fundo);
   box-shadow: 0 0 0 2px var(--cor-destaque);
@@ -749,6 +751,7 @@ body:has(#modo-alto-contraste:checked) .barra-acessibilidade.conteudo-painel {
   }
 }
 
+/* uma cópia do emoji sobe e some, como nas redes sociais */
 .input-reacao:checked + .emoji-reacao::after {
   content: attr(data-emoji);
   position: absolute;
@@ -874,4 +877,70 @@ body:has(#modo-sem-animacoes:checked) *::after {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+
+
+.autor-publicacao {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  text-align: left;
+}
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  font-weight: bold;
+}
+
+.dados-autor {
+  min-width: 0;
+}
+
+.cartao .dados-autor h3 {
+  margin: 0;
+}
+
+.cargo-autor,
+.tempo-publicacao {
+  margin: 0;
+  font-size: 0.85em;
+}
+
+.tags-publicacao {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.imagem-publicacao {
+  margin: 12px 0;
+}
+
+.imagem-publicacao img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+body:has(#modo-alto-contraste:checked) .autor-publicacao {
+  background-color: transparent;
+  border-width: 0;
+}
+
+body:has(#modo-alto-contraste:checked) .avatar {
+  background-color: #000000;
+  border: 2px solid #ffffff;
 }

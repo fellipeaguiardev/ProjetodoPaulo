@@ -10,6 +10,7 @@
 
   <a href="#conteudo-principal" class="pular-link">Pular para o conteúdo principal</a>
 
+  <!-- Painel de acessibilidade estilo gov.br/VLibras: <details> abre e fecha sem JavaScript -->
   <details class="painel-acessibilidade">
     <summary class="botao-painel-acessibilidade">
       <span class="conteudo-botao-painel">
@@ -20,6 +21,7 @@
       </span>
     </summary>
 
+    <!-- O <form> permite o botão "Restaurar padrão" (type="reset") desmarcar tudo sem JS -->
     <form class="barra-acessibilidade conteudo-painel" aria-labelledby="titulo-painel-acessibilidade">
       <p id="titulo-painel-acessibilidade" class="titulo-painel">Opções de acessibilidade</p>
 
@@ -109,9 +111,25 @@
       <h2>Feed de publicações</h2>
 
       <article class="cartao">
-        <h3>Neymar Junior</h3>
-        <p>Como criei meu primeiro site em HTML e CSS 🚀</p>
-        <p>Quero colocar um botão personalizado. Quem souber como estilizar com CSS, comenta aqui!</p>
+        <header class="autor-publicacao">
+          <span class="avatar" aria-hidden="true">NJ</span>
+          <div class="dados-autor">
+            <h3>Neymar Junior</h3>
+            <p class="cargo-autor">Desenvolvedor Back-end Pleno no Santos-FC</p>
+            <p class="tempo-publicacao"><time datetime="2026-10-02T09:15">há 2 horas</time></p>
+          </div>
+        </header>
+
+        <p>Hoje faz 11 anos que entrei no Santos-FC! 🎉</p>
+        <p>Comecei corrigindo bugs pequenos no checkout e hoje cuido da API de conciliação bancária, em Java com Spring Boot. Nesse tempo aprendi que code review é onde a gente mais cresce: cada comentário do time me ensinou algo que nenhum curso ensinou.</p>
+        <p>Obrigado ao time de Plataforma pela paciência no começo.</p>
+        <p class="tags-publicacao">#Java #SpringBoot #Carreira</p>
+
+        
+        <figure class="imagem-publicacao">
+          <img src="images/neymar.jpg" alt="Neymar" width="1408" height="768" loading="lazy">
+        </figure>
+        
 
         <fieldset class="reacoes-rapidas">
           <legend class="visualmente-oculto">Reagir à publicação de Neymar Junior</legend>
@@ -177,12 +195,31 @@
       </article>
 
       <article class="cartao">
-        <h3>Lionel Messi</h3>
-        <p>Terminei minha página de perfil usando JavaScript básico 📊</p>
+        <header class="autor-publicacao">
+          <span class="avatar" aria-hidden="true">LM</span>
+          <div class="dados-autor">
+            <h3>Leonel Messi</h3>
+            <p class="cargo-autor">Desenvolvedor Front-end pelo Barcelo-FC</p>
+            <p class="tempo-publicacao"><time datetime="2026-10-01T18:40">ontem</time></p>
+          </div>
+        </header>
+
+        <p>Projeto finalizado! 🚀</p>
+        <p>Entregamos o novo portal de agendamento de uma rede de clínicas. Foram 4 meses de trabalho e o foco foi acessibilidade desde o primeiro dia: navegação completa por teclado, contraste dentro da WCAG e testes com leitor de tela.</p>
+        <p>Se alguém quiser trocar ideia sobre acessibilidade sem depender de framework, me chama aqui!</p>
+        <p class="tags-publicacao">#Frontend #Acessibilidade #HTML #CSS</p>
+
+        
+        <figure class="imagem-publicacao">
+          <img src="images/messi.jpg" alt="Messi" width="1408" height="768" loading="lazy">
+          
+        </figure>
+        
 
         <fieldset class="reacoes-rapidas">
-          <legend class="visualmente-oculto">Reagir à publicação de Lionel Messi</legend>
+          <legend class="visualmente-oculto">Reagir à publicação de Leonel Messi</legend>
 
+          <!-- "Sem reação": radio oculto que começa marcado; o botão Remover reação aponta para ele -->
           <input type="radio" name="reacao-2" id="reacao-2-nenhuma" class="input-reacao input-reacao-nenhuma" checked>
 
           <input type="radio" name="reacao-2" id="reacao-2-curtir" class="input-reacao" value="curtir">
@@ -244,12 +281,30 @@
       </article>
 
       <article class="cartao">
-        <h3>Cristiano Ronaldo</h3>
-        <p>Alguém já usou HTML com tags básicas? Queria tirar uma dúvida simples sobre estruturação.</p>
+        <header class="autor-publicacao">
+          <span class="avatar" aria-hidden="true">CR7</span>
+          <div class="dados-autor">
+            <h3>Cristiano Ronaldo</h3>
+            <p class="cargo-autor">Engenheiro de Dados no Real Madrid</p>
+            <p class="tempo-publicacao"><time datetime="2026-09-30T11:05">há 2 dias</time></p>
+          </div>
+        </header>
+
+        <p>Encerrando um ciclo: hoje é meu último dia no Real Madrid, depois de 9 anos.</p>
+        <p>Quando cheguei, o rastreio das entregas era feito em planilhas. Saio deixando um pipeline que atualiza a posição de mais de 2 mil veículos quase em tempo real, com MySQL e Kafka. Mas o que eu mais vou levar são as pessoas.</p>
+        <p>Semana que vem começa um novo desafio, conto mais em breve. 😉</p>
+        <p class="tags-publicacao">#Dados #MySQL #NovoCiclo</p>
+
+       
+        <figure class="imagem-publicacao">
+          <img src="images/ronaldo.jpg" alt="Descreva o que aparece na foto" width="1408" height="768" loading="lazy">
+        </figure>
+        
 
         <fieldset class="reacoes-rapidas">
           <legend class="visualmente-oculto">Reagir à publicação de Cristiano Ronaldo</legend>
 
+          <!-- "Sem reação": radio oculto que começa marcado; o botão Remover reação aponta para ele -->
           <input type="radio" name="reacao-3" id="reacao-3-nenhuma" class="input-reacao input-reacao-nenhuma" checked>
 
           <input type="radio" name="reacao-3" id="reacao-3-curtir" class="input-reacao" value="curtir">
