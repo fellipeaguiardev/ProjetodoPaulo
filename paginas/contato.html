@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevNetwork - Contato</title>
+  <link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+
+  <header>
+    <h1>DevNetwork</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="pag1.html">Feed</a></li>
+        <li><a href="pag2.html">Perfil</a></li>
+        <li><a href="pag3.html">Explorar</a></li>
+        <li><a href="pag4.html">Projetos</a></li>
+        <li><a href="pag5.html">Workspace</a></li>
+        <li><a href="pag6.html">Comunidades</a></li>
+        <li><a href="pag7.html">Vagas</a></li>
+        <li><a href="pag8.html">Rede</a></li>
+        <li><a href="pag9.html">Mensagens</a></li>
+        <li><a href="pag10.html">Notificações</a></li>
+        <li><a href="pag11.html">Empresa</a></li>
+        <li><a href="contato.html" class="ativo" aria-current="page">Contato</a></li>
+        <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Fale com a DevNetwork</h2>
+      <p>Dúvidas, sugestões ou parcerias? Preencha o formulário abaixo ou use um dos nossos canais.</p>
+    </section>
+
+    <section>
+      <h2>Dados da empresa</h2>
+      <p><em>Dados fictícios, criados apenas para este projeto acadêmico.</em></p>
+      <address>
+        <strong>DevNetwork Tecnologia Ltda.</strong><br>
+        Av. Paulista, 1000 — Bela Vista<br>
+        São Paulo — SP, CEP 01310-100<br>
+        E-mail: <a href="mailto:contato@devnetwork.com.br">contato@devnetwork.com.br</a><br>
+        Telefone: <a href="tel:+551130000000">(11) 3000-0000</a>
+      </address>
+    </section>
+
+    <section>
+      <h2>Formulário de contato</h2>
+      <form action="#" method="post">
+
+        <p>
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" required minlength="3" placeholder="Seu nome">
+        </p>
+
+        <p>
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required placeholder="voce@email.com">
+        </p>
+
+        <p>
+          <label for="telefone">Telefone (formato: (11) 91234-5678)</label>
+          <input type="tel" id="telefone" name="telefone" required pattern="\(\d{2}\) \d{4,5}-\d{4}" placeholder="(11) 91234-5678" title="Use o formato (11) 91234-5678">
+        </p>
+
+        <p>
+          <label for="cpf">CPF (formato: 000.000.000-00)</label>
+          <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" title="Use o formato 000.000.000-00">
+        </p>
+
+        <p>
+          <label for="nascimento">Data de nascimento</label>
+          <input type="date" id="nascimento" name="nascimento" required min="1920-01-01" max="2012-12-31">
+        </p>
+
+        <p>
+          <label for="experiencia">Anos de experiência com programação</label>
+          <input type="number" id="experiencia" name="experiencia" required min="0" max="50" step="1" placeholder="0">
+        </p>
+
+        <p>
+          <label for="assunto">Assunto</label>
+          <select id="assunto" name="assunto" required>
+            <option value="">Selecione um assunto</option>
+            <option value="duvida">Dúvida</option>
+            <option value="sugestao">Sugestão</option>
+            <option value="parceria">Parceria</option>
+            <option value="problema">Relatar um problema</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required minlength="10" placeholder="Escreva sua mensagem..."></textarea>
+        </p>
+
+        <p>
+          <input type="checkbox" id="aceite" name="aceite" required>
+          <label for="aceite">Concordo em ser contatado(a) pela equipe DevNetwork.</label>
+        </p>
+
+        <p>
+          <button type="submit">Enviar</button>
+          <button type="reset">Limpar</button>
+        </p>
+
+      </form>
+    </section>
+
+    <section>
+      <h2>Onde estamos</h2>
+      <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-46.6600%2C-23.5680%2C-46.6480%2C-23.5600&amp;layer=mapnik&amp;marker=-23.5640%2C-46.6540" width="600" height="350" title="Mapa da localização fictícia da DevNetwork na Av. Paulista, São Paulo" loading="lazy"></iframe>
+      <p><small>Mapa: &copy; colaboradores do <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>.</small></p>
+    </section>
+
+    <section>
+      <h2>Membros do grupo</h2>
+      <p>Equipe responsável pelo projeto DevNetwork e página desenvolvida por cada integrante:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Integrante</th>
+            <th>Página</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Giovanni Rodrigues</td><td><a href="pag1.html">Feed (pag1)</a></td></tr>
+          <tr><td>João Cassini</td><td><a href="pag2.html">Perfil (pag2)</a></td></tr>
+          <tr><td>Fellipe Aguiar</td><td><a href="pag3.html">Explorar (pag3)</a></td></tr>
+          <tr><td>Davi</td><td><a href="pag4.html">Projetos (pag4)</a></td></tr>
+          <tr><td>Gabriel</td><td><a href="pag5.html">Workspace (pag5)</a></td></tr>
+          <tr><td>Leonardo</td><td><a href="pag6.html">Comunidades (pag6)</a></td></tr>
+          <tr><td>Anderson</td><td><a href="pag7.html">Vagas (pag7)</a></td></tr>
+          <tr><td>Guilherme</td><td><a href="pag8.html">Rede (pag8)</a></td></tr>
+          <tr><td>Gustavo</td><td><a href="pag9.html">Mensagens (pag9)</a></td></tr>
+          <tr><td>Kayky</td><td><a href="pag10.html">Notificações (pag10)</a></td></tr>
+          <tr><td>Julio</td><td><a href="pag11.html">Empresa (pag11)</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Rede Social para Desenvolvedores</p>
+    <p class="direitos-autorais">&copy; 2026 DevNetwork. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

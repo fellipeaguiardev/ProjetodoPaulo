@@ -1,0 +1,2 @@
+Pasta reservada para os scripts JavaScript do site.
+Na 1ª entrega o JavaScript não é obrigatório, então ainda não há scripts aqui.

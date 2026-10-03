@@ -1,0 +1,2 @@
+Pasta reservada para arquivos complementares (fontes, PDFs, áudios, vídeos locais e materiais para download).
+Na 1ª entrega o vídeo e o áudio da página inicial são carregados de fontes externas (MDN Web Docs, CC0).
