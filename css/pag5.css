@@ -1,0 +1,485 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+  --tamanho-fonte-base: 16px;
+
+  --cor-fundo-pagina: #f2f2f2;
+  --cor-fundo-cartao: #ffffff;
+  --cor-texto: #333333;
+  --cor-texto-claro: #ffffff;
+  --cor-primaria: #2c3e50;
+  --cor-primaria-hover: #1a252f;
+  --cor-destaque: #4aa8ff;
+  --cor-borda: #cccccc;
+  --cor-borda-clara: #eeeeee;
+  --cor-fundo-cabecalho-tabela: #e6e6e6;
+  --cor-mensagem-recebida: #e6e6e6;
+  --cor-mensagem-enviada: #cfe8ff;
+
+  --cor-fundo-botao-acao: rgba(0, 0, 0, 0.06);
+  --cor-icone: var(--cor-texto);
+  --cor-curtido-fundo: #ffe3e8;
+  --cor-curtido-icone: #d6336c;
+  --cor-salvo-fundo: #d6ecff;
+  --cor-salvo-icone: #1971c2;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+    background-color: var(--cor-fundo-pagina);
+}
+
+
+
+
+header {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  padding: 20px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+header h1 {
+  margin: 0 0 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+nav ul li a {
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+nav ul li a.ativo {
+  color: var(--cor-destaque);
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+
+    max-width: 1400px;
+    margin: auto;
+    padding: 40px;
+}
+
+
+/* =========================
+   PROJETO
+========================= */
+
+.projeto-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+
+
+.acoes {
+
+    display: flex;
+    gap: 10px;
+}
+
+
+button {
+
+    cursor: pointer;
+    font-family: inherit;
+
+}
+
+
+.btn-principal {
+
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+.btn-secundario {
+
+    background: white;
+    border: 1px solid #d1d5db;
+    padding: 11px 18px;
+    border-radius: 8px;
+    color: #374151;
+}
+
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
+.informacoes {
+
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 35px;
+}
+
+
+.informacoes div {
+
+    border-right: 1px solid #e5e7eb;
+    padding-left: 20px;
+}
+
+
+.informacoes strong {
+
+    display: block;
+    font-size: 12px;
+    color: #7a7c7e;
+    margin-bottom: 7px;
+}
+
+
+.informacoes span {
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.status {
+
+    color: #ebca0e;
+
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+.secao-titulo {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+
+.secao-titulo h2 {
+
+    font-size: 25px;
+
+}
+
+a
+.secao-titulo p {
+
+    color: #2d3035;
+    font-size: 15px;
+    margin-top: 4px;
+    
+}
+
+
+.filtro {
+
+    background: white;
+    border: 1px solid #d1d5db;
+    padding: 9px 16px;
+    border-radius: 7px;
+}
+
+
+/* =========================
+   KANBAN
+========================= */
+
+.kanban {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+
+
+.coluna-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+
+.coluna-header h3 {
+
+    font-size: 14px;
+
+}
+
+
+.coluna-header span {
+
+    background: #dfe3e8;
+    border-radius: 20px;
+    padding: 3px 9px;
+    font-size: 11px;
+
+}
+
+
+.tarefas {
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.tarefa {
+
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 9px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+
+
+.tarefa h4 {
+
+    font-size: 14px;
+    margin: 9px 0 6px;
+
+}
+
+
+
+.tag {
+
+    font-size: 9px;
+    font-weight: bold;
+    padding: 4px 7px;
+    border-radius: 4px;
+
+}
+
+
+.azul {
+
+    background: #6b6f72;
+    color: #fdfdfd;
+}
+
+
+.roxo {
+
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+
+.verde {
+
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+
+.amarelo {
+
+    background: #fef3c7;
+    color: #d97706;
+}
+
+
+.tarefa-footer {
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    color: #9ca3af;
+    font-size: 10px;
+}
+
+
+/* =========================
+   EQUIPE
+========================= */
+
+.equipe {
+
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 35px;
+}
+
+.equipe p {
+
+    font-size: 15px;
+}
+
+
+.membros {
+
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+.membro {
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 220px;
+}
+
+
+.avatar {
+
+    width: 42px;
+    height: 42px;
+    background: #8c919b;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.membro h4 {
+
+    font-size: 13px;
+
+}
+
+
+.membro span {
+
+    font-size: 11px;
+    color: #9ca3af;
+    display: block;
+    margin-top: 4px;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  line-height: 1.5;
+}
+
+footer p {
+  margin: 16px 0;
+}
+
+.direitos-autorais {
+  margin-top: 4px;
+  font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .kanban {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    main {
+
+        padding: 25px 15px;
+
+    }
+
+    .projeto-header {
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+
+    }
+
+    .informacoes {
+
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+    }
+
+    .informacoes div {
+
+        border: none;
+        padding: 0;
+
+    }
+
+    .kanban {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    
+}
