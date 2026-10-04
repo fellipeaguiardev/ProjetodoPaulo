@@ -1,16 +1,3 @@
-/* ==========================================================
-   pag8.css - Estilos da página Rede (pag8.html)
-
-   Este arquivo é carregado DEPOIS do site.css, então ele só
-   acrescenta detalhes da página Rede. A fonte (Arial), o
-   cabeçalho, o menu e o rodapé continuam vindo do site.css.
-   As cores abaixo são as mesmas usadas nas outras páginas.
-   ========================================================== */
-
-
-/* ---------- Variáveis de cor (mesmas do pag3.css) ----------
-   Uma variável guarda um valor para usar em vários lugares.
-   Se quiser mudar uma cor, troque aqui e muda na página toda. */
 :root {
   --cor-fundo-pagina: #f2f2f2;
   --cor-fundo-cartao: #ffffff;
@@ -24,11 +11,6 @@
   --cor-fundo-cabecalho-tabela: #e6e6e6;
 }
 
-
-/* ---------- Cartões das pessoas sugeridas ----------
-   A classe "cartao" (do site.css) já cria a caixa branca com borda.
-   Aqui só acrescentamos a faixa azul na lateral, igual à usada
-   nas notificações, e uma sombra leve quando o mouse passa por cima. */
 .cartao-pessoa {
   border-left: 4px solid var(--cor-primaria);
   transition: box-shadow 0.2s ease;
@@ -38,12 +20,10 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* O primeiro parágrafo depois do nome é o cargo: fica um pouco mais forte */
 .cartao-pessoa h3 + p {
   font-weight: bold;
 }
 
-/* Linha com o botão "Conectar" e o link "Ver perfil" lado a lado */
 .acoes-cartao {
   display: flex;
   align-items: center;
@@ -55,18 +35,10 @@
   margin-right: 0;
 }
 
-
-/* ---------- Tabela de comparação ----------
-   O formato da tabela vem do site.css. Aqui só pintamos a linha
-   em que o mouse está, para facilitar a leitura. */
 tbody tr:hover {
   background-color: var(--cor-fundo-cabecalho-tabela);
 }
 
-
-/* ---------- Resumo da rede (as 3 caixinhas com números) ----------
-   "quadro" e "coluna" vêm do site.css. Aqui só centralizamos
-   o texto e deixamos o número grande e em destaque. */
 .resumo-rede .coluna {
   text-align: center;
 }
@@ -78,46 +50,30 @@ tbody tr:hover {
   margin: 0;
 }
 
-
-/* ---------- Convites recebidos ----------
-   Reaproveita a classe "notificacao" do site.css.
-   Só tiramos a margem de cima do nome para ele não ficar "solto". */
 .convite h3 {
   margin-top: 0;
 }
 
-
-/* ---------- Lista "Continue navegando" ---------- */
 section ul li {
   margin-bottom: 6px;
 }
 
-
-/* ---------- Acessibilidade: foco visível ----------
-   Quem usa o teclado (tecla Tab) vê um contorno amarelo
-   no botão ou link selecionado. Mesmo padrão do Feed e do Explorar. */
 a:focus-visible,
 button:focus-visible {
   outline: 3px solid #ffb400;
   outline-offset: 2px;
 }
 
-
-/* ---------- Telas pequenas (celular) ---------- */
 @media (max-width: 600px) {
-  /* No celular o conteúdo nunca pode ser mais largo que a tela.
-     Sem isso o <main> cresce junto com as tabelas e aparece rolagem lateral. */
   main {
     width: 100%;
   }
 
-  /* Botão e link passam a ficar um embaixo do outro */
   .acoes-cartao {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  /* A tabela ganha rolagem lateral se não couber na tela */
   table {
     display: block;
     overflow-x: auto;
