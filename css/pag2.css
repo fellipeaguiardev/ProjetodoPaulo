@@ -1,1 +1,450 @@
+/* Configurações gerais */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f3f4f8;
+  color: #282638;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+a {
+  color: #6554c0;
+  text-decoration: none;
+}
+
+/* Cabeçalho e menu principal */
+.topbar {
+  min-height: 68px;
+  padding: 12px 4%;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5ed;
+}
+
+.logo {
+  margin: 0;
+  color: #6554c0;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.navegacao {
+  overflow-x: auto;
+}
+
+.navegacao ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.navegacao a {
+  padding: 8px 0;
+  display: block;
+  color: #666477;
+  white-space: nowrap;
+}
+
+.navegacao a:hover,
+.navegacao a.ativo {
+  color: #6554c0;
+}
+
+.navegacao a.ativo {
+  border-bottom: 2px solid #6554c0;
+}
+
+/* Colunas principais da página */
+.layout {
+  width: 92%;
+  max-width: 1220px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 245px 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.barra-lateral,
+.conteudo {
+  display: grid;
+  gap: 16px;
+}
+
+.cartao {
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid #e5e5ed;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px #2320460d;
+}
+
+/* Cartão resumido do perfil */
+.capa-pequena {
+  height: 60px;
+  margin: 0;
+  padding: 8px;
+  background-color: #6558b8;
+  color: #ffffff;
+}
+
+.capa-pequena h2 {
+  margin: 0;
+  font-size: 12px;
+}
+
+.resumo-conteudo {
+  padding: 0 17px 16px;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  background-color: #765ac5;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.avatar-pequeno {
+  width: 58px;
+  height: 58px;
+  margin: -29px 0 0;
+}
+
+.resumo-conteudo h2 {
+  margin: 8px 0 0;
+  font-size: 16px;
+}
+
+.resumo-conteudo > p {
+  color: #777587;
+}
+
+.resumo-conteudo > p.avatar {
+  color: #ffffff;
+}
+
+.estatistica {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0 0;
+  padding-top: 8px;
+  border-top: 1px solid #e5e5ed;
+}
+
+.estatistica b,
+.conexoes b {
+  color: #6554c0;
+}
+
+.atalhos {
+  padding: 16px;
+}
+
+.atalhos h2 {
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+
+.atalhos ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.atalhos a {
+  padding: 8px 0;
+  display: block;
+}
+
+/* Apresentação principal do perfil */
+.capa-grande {
+  height: 170px;
+  margin: 0;
+  padding: 18px 26px;
+  background-color: #6558b8;
+  color: #ffffff;
+}
+
+.capa-grande h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.perfil-conteudo {
+  position: relative;
+  padding: 0 26px 22px;
+}
+
+.avatar-grande {
+  width: 92px;
+  height: 92px;
+  margin: -46px 0 0;
+  font-size: 27px;
+}
+
+.botoes-perfil {
+  position: absolute;
+  top: 15px;
+  right: 24px;
+  display: flex;
+  gap: 8px;
+}
+
+.botao {
+  padding: 9px 14px;
+  display: inline-block;
+  border: 1px solid #6554c0;
+  border-radius: 6px;
+  background-color: #6554c0;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.botao-secundario {
+  background-color: #ffffff;
+  color: #6554c0;
+}
+
+.perfil-conteudo h2 {
+  margin: 10px 0 0;
+  font-size: 23px;
+}
+
+.perfil-conteudo p {
+  max-width: 700px;
+}
+
+.perfil-conteudo .cargo,
+.conexoes {
+  color: #777587;
+}
+
+/* Sobre, tecnologias e projetos */
+.secao {
+  padding: 20px 24px;
+}
+
+.secao h2,
+.titulo-secao h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.secao > p {
+  margin-bottom: 0;
+}
+
+.tecnologias {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  list-style: none;
+}
+
+.tecnologias li {
+  padding: 10px;
+  border: 1px solid #e5e5ed;
+  border-radius: 7px;
+}
+
+.tecnologias h3 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.tecnologias p {
+  margin: 3px 0 0;
+  color: #777587;
+  font-size: 12px;
+}
+
+.titulo-secao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.titulo-secao h2 {
+  margin-bottom: 0;
+}
+
+.texto-apoio {
+  margin: 3px 0 0;
+  color: #777587;
+}
+
+.lista-projetos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.projeto {
+  overflow: hidden;
+  border: 1px solid #e5e5ed;
+  border-radius: 8px;
+}
+
+.imagem-projeto {
+  height: 135px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.imagem-projeto.site {
+  background-color: #8879d5;
+}
+
+.imagem-projeto.jogos {
+  background-color: #40366f;
+}
+
+.texto-projeto {
+  padding: 14px;
+}
+
+.texto-projeto h3,
+.experiencia h3 {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.texto-projeto p {
+  color: #777587;
+}
+
+.texto-projeto p.status {
+  margin: 0;
+  color: #16815e;
+  font-size: 12px;
+}
+
+.texto-projeto p.andamento {
+  color: #a16c12;
+}
+
+.etiquetas {
+  margin: 12px 0;
+  padding: 0;
+  display: flex;
+  gap: 6px;
+  list-style: none;
+}
+
+.etiquetas li {
+  padding: 3px 8px;
+  border-radius: 4px;
+  background-color: #eeeafd;
+  color: #51439b;
+  font-size: 12px;
+}
+
+.texto-projeto > a {
+  margin-top: 12px;
+  padding-top: 9px;
+  display: block;
+  border-top: 1px solid #e5e5ed;
+  font-weight: bold;
+}
+
+/* Experiência */
+.experiencia {
+  margin-top: 12px;
+  padding: 8px 0 8px 14px;
+  border-left: 3px solid #8879d5;
+}
+
+.experiencia p {
+  margin: 3px 0;
+  color: #777587;
+}
+
+/* Rodapé */
+.rodape {
+  padding: 12px;
+  color: #777587;
+  text-align: center;
+}
+
+.rodape p {
+  margin: 0;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 900px) {
+  .topbar {
+    display: block;
+  }
+
+  .logo {
+    margin-bottom: 8px;
+  }
+
+  .layout {
+    grid-template-columns: 200px 1fr;
+    gap: 14px;
+  }
+
+  .tecnologias {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .layout {
+    width: 94%;
+    margin-top: 18px;
+    display: block;
+  }
+
+  .barra-lateral {
+    display: none;
+  }
+
+  .navegacao ul {
+    padding-bottom: 4px;
+  }
+
+  .perfil-conteudo {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .botoes-perfil {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .lista-projetos {
+    grid-template-columns: 1fr;
+  }
+
+  .secao {
+    padding: 17px;
+  }
+}
 
