@@ -3,17 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Conheça o perfil, as tecnologias e os projetos de João Cassiano na DevNetwork.">
-  <title>Perfil de João Cassiano | DevNetwork</title>
-  <link rel="stylesheet" href="perfil.css">
+  <title>DevNetwork - Feed</title>
+  <link rel="stylesheet" href="pag1.css">
+  <link rel="stylesheet" href="../css/pag1.css">
 </head>
 <body>
-  <header class="topbar">
-    <h1 class="logo">&lt;/&gt; DevNetwork</h1>
-    <nav class="navegacao">
+
+  <a href="#conteudo-principal" class="pular-link">Pular para o conteúdo principal</a>
+
+  <!-- Painel de acessibilidade estilo gov.br/VLibras: <details> abre e fecha sem JavaScript -->
+  <details class="painel-acessibilidade">
+    <summary class="botao-painel-acessibilidade">
+      <span class="conteudo-botao-painel">
+        <svg class="icone-painel" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm9 6.5-6 1.2V13l2 8.5-2 .5-2.4-7h-1.2L9 22l-2-.5L9 13V9.7L3 8.5l.4-2L12 8l8.6-1.5.4 2z"/>
+          <circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="12" cy="6.2" r="1.6"/>
+          <path d="M6.5 9.2 12 10l5.5-.8.3 1.4-4.3 1v2.6l1.6 5-1.4.5-1.7-4.6-1.7 4.6-1.4-.5 1.6-5v-2.6l-4.3-1z"/>
+        </svg>
+        <span>Acessibilidade</span>
+      </span>
+    </summary>
+
+    <!-- O <form> permite o botão "Restaurar padrão" (type="reset") desmarcar tudo sem JS -->
+    <form class="barra-acessibilidade conteudo-painel" aria-labelledby="titulo-painel-acessibilidade">
+      <p id="titulo-painel-acessibilidade" class="titulo-painel">Opções de acessibilidade</p>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Visão</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-daltonico">
+          <label for="modo-daltonico">Modo para daltônicos</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-alto-contraste">
+          <label for="modo-alto-contraste">Alto contraste</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-fonte-grande">
+          <label for="modo-fonte-grande">Aumentar texto</label>
+        </span>
+      </fieldset>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Leitura</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-destacar-links">
+          <label for="modo-destacar-links">Destacar links e botões</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-espacamento">
+          <label for="modo-espacamento">Espaçamento de leitura</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-sem-animacoes">
+          <label for="modo-sem-animacoes">Pausar animações</label>
+        </span>
+      </fieldset>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Aparência</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="tema-escuro">
+          <label for="tema-escuro">Tema escuro</label>
+        </span>
+      </fieldset>
+
+      <button type="reset" class="botao-restaurar">Restaurar padrão</button>
+      <p class="aviso-painel">As opções valem enquanto você estiver nesta página.</p>
+    </form>
+  </details>
+
+  <header>
+    <h1>DevNetwork</h1>
+    <nav>
       <ul>
-        <li><a href="pag1.html">Feed</a></li>
-        <li><a href="pag2.html" class="ativo">Perfil</a></li>
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="pag1.html" class="ativo" aria-current="page">Feed</a></li>
+        <li><a href="pag2.html">Perfil.10</a></li>
+        <li><a href="pag2.html">Perfil</a></li>
         <li><a href="pag3.html">Explorar</a></li>
         <li><a href="pag4.html">Projetos</a></li>
         <li><a href="pag5.html">Workspace</a></li>
@@ -23,127 +98,293 @@
         <li><a href="pag9.html">Mensagens</a></li>
         <li><a href="pag10.html">Notificações</a></li>
         <li><a href="pag11.html">Empresa</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="layout">
-    <aside class="barra-lateral">
-      <section class="cartao resumo-perfil">
-        <header class="capa-pequena">
-          <h2>Perfil de desenvolvedor</h2>
-        </header>
-        <section class="resumo-conteudo">
-          <p class="avatar avatar-pequeno">JC</p>
-          <h2>João Cassiano</h2>
-          <p>Desenvolvedor Front-end</p>
-          <p class="estatistica">Projetos <b>2</b></p>
-          <p class="estatistica">Conexões <b>128</b></p>
-        </section>
-      </section>
-      <nav class="cartao atalhos">
-        <h2>Seu espaço</h2>
-        <ul>
-          <li><a href="pag4.html">Meus projetos</a></li>
-          <li><a href="pag8.html">Minha rede</a></li>
-          <li><a href="pag6.html">Comunidades</a></li>
-        </ul>
-      </nav>
-    </aside>
+  <main id="conteudo-principal">
 
-    <section class="conteudo">
-      <article class="cartao perfil-principal">
-        <header class="capa-grande">
-          <h2>Portfólio de desenvolvimento web</h2>
+    <section>
+      <h2>Criar publicação</h2>
+      <form action="#">
+        <label for="publicacao">O que você quer compartilhar?</label>
+        <textarea id="publicacao" name="publicacao" rows="3" placeholder="Compartilhe um projeto, uma dúvida ou uma novidade..."></textarea>
+        <button type="submit">Publicar</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Feed de publicações</h2>
+
+      <article class="cartao">
+        <header class="autor-publicacao">
+          <span class="avatar" aria-hidden="true">NJ</span>
+          <div class="dados-autor">
+            <h3>Neymar Junior</h3>
+            <p class="cargo-autor">Desenvolvedor Back-end Pleno no Santos-FC</p>
+            <p class="tempo-publicacao"><time datetime="2026-10-02T09:15">há 2 horas</time></p>
+          </div>
         </header>
-        <section class="perfil-conteudo">
-          <p class="avatar avatar-grande">JC</p>
-          <nav class="botoes-perfil">
-            <a class="botao botao-secundario" href="pag8.html">Conectar</a>
-            <a class="botao" href="pag9.html">Mensagem</a>
-          </nav>
-          <h2>João Cassiano</h2>
-          <p class="cargo">Desenvolvedor Front-end iniciante · São Paulo, Brasil</p>
-          <p>Estou aprendendo a criar páginas para a internet usando HTML e CSS. Gosto de praticar fazendo projetos simples e colocando ideias em prática.</p>
-          <p class="conexoes"><b>128</b> conexões · Disponível para colaborar</p>
-        </section>
+
+        <p>Hoje faz 11 anos que entrei no Santos-FC! 🎉</p>
+        <p>Comecei corrigindo bugs pequenos no checkout e hoje cuido da API de conciliação bancária, em Java com Spring Boot. Nesse tempo aprendi que code review é onde a gente mais cresce: cada comentário do time me ensinou algo que nenhum curso ensinou.</p>
+        <p>Obrigado ao time de Plataforma pela paciência no começo.</p>
+        <p class="tags-publicacao">#Java #SpringBoot #Carreira</p>
+
+
+        <figure class="imagem-publicacao">
+          <img src="images/neymar.jpg" alt="Neymar" width="1408" height="768" loading="lazy">
+          <img src="../img/neymar.jpg" alt="Neymar" width="1408" height="768" loading="lazy">
+        </figure>
+
+
+        <fieldset class="reacoes-rapidas">
+          <legend class="visualmente-oculto">Reagir à publicação de Neymar Junior</legend>
+
+          <input type="radio" name="reacao-1" id="reacao-1-nenhuma" class="input-reacao input-reacao-nenhuma" checked>
+
+          <input type="radio" name="reacao-1" id="reacao-1-curtir" class="input-reacao" value="curtir">
+          <label for="reacao-1-curtir" class="emoji-reacao" title="Curtir" data-emoji="👍"><span aria-hidden="true">👍</span><span class="visualmente-oculto">Curtir</span></label>
+
+          <input type="radio" name="reacao-1" id="reacao-1-amei" class="input-reacao" value="amei">
+          <label for="reacao-1-amei" class="emoji-reacao" title="Amei" data-emoji="❤️"><span aria-hidden="true">❤️</span><span class="visualmente-oculto">Amei</span></label>
+
+          <input type="radio" name="reacao-1" id="reacao-1-uau" class="input-reacao" value="uau">
+          <label for="reacao-1-uau" class="emoji-reacao" title="Uau" data-emoji="😮"><span aria-hidden="true">😮</span><span class="visualmente-oculto">Uau</span></label>
+
+          <input type="radio" name="reacao-1" id="reacao-1-aplausos" class="input-reacao" value="aplausos">
+          <label for="reacao-1-aplausos" class="emoji-reacao" title="Aplausos" data-emoji="👏"><span aria-hidden="true">👏</span><span class="visualmente-oculto">Aplausos</span></label>
+
+          <input type="radio" name="reacao-1" id="reacao-1-ideia" class="input-reacao" value="ideia">
+          <label for="reacao-1-ideia" class="emoji-reacao" title="Ideia" data-emoji="💡"><span aria-hidden="true">💡</span><span class="visualmente-oculto">Ideia</span></label>
+
+          <label for="reacao-1-nenhuma" class="remover-reacao"><span aria-hidden="true">✕</span> Remover reação</label>
+        </fieldset>
+
+        <p class="barra-acoes">
+          <span class="acao">
+            <input type="checkbox" id="curtir-1" class="input-curtir" autocomplete="off">
+            <label for="curtir-1" class="botao-acao botao-curtir" aria-label="Curtir publicação">
+              <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 21s-6.7-4.3-9.3-8.1C1 10.1 1.6 6.6 4.4 4.9c2.3-1.4 5-0.8 6.6 1.1L12 7.1l1-1.1c1.6-1.9 4.3-2.5 6.6-1.1 2.8 1.7 3.4 5.2 1.7 8-2.6 3.8-9.3 8.1-9.3 8.1z"/>
+              </svg>
+            </label>
+            <span class="contador">128</span>
+          </span>
+
+          <span class="acao">
+            <a href="#" class="botao-acao" aria-label="Comentar">
+              <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>
+              </svg>
+            </a>
+            <span class="contador">14</span>
+          </span>
+
+          <span class="acao">
+            <input type="checkbox" id="salvar-1" class="input-salvar" autocomplete="off">
+            <label for="salvar-1" class="botao-acao botao-salvar" aria-label="Salvar publicação">
+              <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"/>
+              </svg>
+            </label>
+            <span class="contador">9</span>
+          </span>
+
+          <span class="acao">
+            <a href="https://github.com/fellipeaguiardev/ProjetodoPaulo" target="_blank" rel="noopener noreferrer" class="botao-acao" aria-label="Compartilhar - abre o repositório no GitHub em nova aba">
+              <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 2l5 5h-3v8h-4V7H7l5-5zM4 15h2v4a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-4h2v4a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-4z"/>
+              </svg>
+            </a>
+          </span>
+        </p>
       </article>
 
-      <section class="cartao secao">
-        <h2>Sobre</h2>
-        <p>Comecei a estudar programação e estou aprendendo os primeiros passos do desenvolvimento web. Quero continuar praticando e melhorar um pouco a cada projeto.</p>
-      </section>
-
-      <section class="cartao secao">
-        <h2>Tecnologias</h2>
-        <ul class="tecnologias">
-          <li><h3>HTML</h3><p>Estrutura de páginas</p></li>
-          <li><h3>CSS</h3><p>Estilos e cores</p></li>
-          <li><h3>JavaScript</h3><p>Estou aprendendo</p></li>
-          <li><h3>Git e GitHub</h3><p>Versionamento</p></li>
-        </ul>
-      </section>
-
-      <section class="cartao secao" id="projetos">
-        <header class="titulo-secao">
-          <section>
-            <h2>Projetos</h2>
-            <p class="texto-apoio">Alguns projetos que fiz para praticar.</p>
-          </section>
-          <a href="pag4.html">Ver todos os projetos</a>
+      <article class="cartao">
+        <header class="autor-publicacao">
+          <span class="avatar" aria-hidden="true">LM</span>
+          <div class="dados-autor">
+            <h3>Leonel Messi</h3>
+            <p class="cargo-autor">Desenvolvedor Front-end pelo Barcelo-FC</p>
+            <p class="tempo-publicacao"><time datetime="2026-10-01T18:40">ontem</time></p>
+          </div>
         </header>
-        <section class="lista-projetos">
-          <article class="projeto">
-            <figure class="imagem-projeto site">
-              <figcaption>Meu Primeiro Site</figcaption>
-            </figure>
-            <section class="texto-projeto">
-              <p class="status">Concluído · 2025</p>
-              <h3>Meu Primeiro Site</h3>
-              <p>Uma página simples feita com HTML para praticar títulos, textos e links.</p>
-              <ul class="etiquetas">
-                <li>HTML</li>
-                <li>CSS</li>
-              </ul>
-              <a href="pag4.html">Ver projetos</a>
-            </section>
-          </article>
-          <article class="projeto">
-            <figure class="imagem-projeto jogos">
-              <figcaption>GAME ZONE</figcaption>
-            </figure>
-            <section class="texto-projeto">
-              <p class="status andamento">Em andamento · 2025</p>
-              <h3>Landing Page de Jogos</h3>
-              <p>Uma página sobre jogos. Usei cores e estilos diferentes para praticar CSS.</p>
-              <ul class="etiquetas">
-                <li>HTML</li>
-                <li>CSS</li>
-              </ul>
-              <a href="pag4.html">Ver projetos</a>
-            </section>
-          </article>
-        </section>
-      </section>
 
-      <section class="cartao secao">
-        <h2>Experiência</h2>
-        <article class="experiencia">
-          <h3>Estudante de Programação</h3>
-          <p>Autodidata · 2025 até hoje</p>
-          <p>Estudando desenvolvimento web e criando projetos pessoais para praticar.</p>
-        </article>
-        <article class="experiencia">
-          <h3>Criador de Conteúdo Web</h3>
-          <p>Projetos pessoais · 2024 até hoje</p>
-          <p>Aprendendo a criar conteúdo e páginas para a internet.</p>
-        </article>
-      </section>
+        <p>Projeto finalizado! 🚀</p>
+        <p>Entregamos o novo portal de agendamento de uma rede de clínicas. Foram 4 meses de trabalho e o foco foi acessibilidade desde o primeiro dia: navegação completa por teclado, contraste dentro da WCAG e testes com leitor de tela.</p>
+        <p>Se alguém quiser trocar ideia sobre acessibilidade sem depender de framework, me chama aqui!</p>
+        <p class="tags-publicacao">#Frontend #Acessibilidade #HTML #CSS</p>
+
+
+        <figure class="imagem-publicacao">
+          <img src="images/messi.jpg" alt="Messi" width="1408" height="768" loading="lazy">
+          <img src="../img/messi.jpg" alt="Messi" width="1408" height="768" loading="lazy">
+
+        </figure>
+
+
+        <fieldset class="reacoes-rapidas">
+          <legend class="visualmente-oculto">Reagir à publicação de Leonel Messi</legend>
+
+          <!-- "Sem reação": radio oculto que começa marcado; o botão Remover reação aponta para ele -->
+          <input type="radio" name="reacao-2" id="reacao-2-nenhuma" class="input-reacao input-reacao-nenhuma" checked>
+
+          <input type="radio" name="reacao-2" id="reacao-2-curtir" class="input-reacao" value="curtir">
+          <label for="reacao-2-curtir" class="emoji-reacao" title="Curtir" data-emoji="👍"><span aria-hidden="true">👍</span><span class="visualmente-oculto">Curtir</span></label>
+
+          <input type="radio" name="reacao-2" id="reacao-2-amei" class="input-reacao" value="amei">
+          <label for="reacao-2-amei" class="emoji-reacao" title="Amei" data-emoji="❤️"><span aria-hidden="true">❤️</span><span class="visualmente-oculto">Amei</span></label>
+
+          <input type="radio" name="reacao-2" id="reacao-2-uau" class="input-reacao" value="uau">
+          <label for="reacao-2-uau" class="emoji-reacao" title="Uau" data-emoji="😮"><span aria-hidden="true">😮</span><span class="visualmente-oculto">Uau</span></label>
+
+          <input type="radio" name="reacao-2" id="reacao-2-aplausos" class="input-reacao" value="aplausos">
+          <label for="reacao-2-aplausos" class="emoji-reacao" title="Aplausos" data-emoji="👏"><span aria-hidden="true">👏</span><span class="visualmente-oculto">Aplausos</span></label>
+
+          <input type="radio" name="reacao-2" id="reacao-2-ideia" class="input-reacao" value="ideia">
+          <label for="reacao-2-ideia" class="emoji-reacao" title="Ideia" data-emoji="💡"><span aria-hidden="true">💡</span><span class="visualmente-oculto">Ideia</span></label>
+
+          <label for="reacao-2-nenhuma" class="remover-reacao"><span aria-hidden="true">✕</span> Remover reação</label>
+        </fieldset>
+
+        <p class="barra-acoes">
+          <span class="acao">
+            <input type="checkbox" id="curtir-2" class="input-curtir" autocomplete="off">
+            <label for="curtir-2" class="botao-acao botao-curtir" aria-label="Curtir publicação">
+              <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 21s-6.7-4.3-9.3-8.1C1 10.1 1.6 6.6 4.4 4.9c2.3-1.4 5-0.8 6.6 1.1L12 7.1l1-1.1c1.6-1.9 4.3-2.5 6.6-1.1 2.8 1.7 3.4 5.2 1.7 8-2.6 3.8-9.3 8.1-9.3 8.1z"/>
+              </svg>
+            </label>
+            <span class="contador">87</span>
+          </span>
+
+          <span class="acao">
+            <a href="#" class="botao-acao" aria-label="Comentar">
+              <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>
+              </svg>
+            </a>
+            <span class="contador">6</span>
+          </span>
+
+          <span class="acao">
+            <input type="checkbox" id="salvar-2" class="input-salvar" autocomplete="off">
+            <label for="salvar-2" class="botao-acao botao-salvar" aria-label="Salvar publicação">
+              <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"/>
+              </svg>
+            </label>
+            <span class="contador">3</span>
+          </span>
+
+          <span class="acao">
+            <a href="https://github.com/fellipeaguiardev/ProjetodoPaulo" target="_blank" rel="noopener noreferrer" class="botao-acao" aria-label="Compartilhar - abre o repositório no GitHub em nova aba">
+              <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 2l5 5h-3v8h-4V7H7l5-5zM4 15h2v4a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-4h2v4a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-4z"/>
+              </svg>
+            </a>
+          </span>
+        </p>
+      </article>
+
+      <article class="cartao">
+        <header class="autor-publicacao">
+          <span class="avatar" aria-hidden="true">CR7</span>
+          <div class="dados-autor">
+            <h3>Cristiano Ronaldo</h3>
+            <p class="cargo-autor">Engenheiro de Dados no Real Madrid</p>
+            <p class="tempo-publicacao"><time datetime="2026-09-30T11:05">há 2 dias</time></p>
+          </div>
+        </header>
+
+        <p>Encerrando um ciclo: hoje é meu último dia no Real Madrid, depois de 9 anos.</p>
+        <p>Quando cheguei, o rastreio das entregas era feito em planilhas. Saio deixando um pipeline que atualiza a posição de mais de 2 mil veículos quase em tempo real, com MySQL e Kafka. Mas o que eu mais vou levar são as pessoas.</p>
+        <p>Semana que vem começa um novo desafio, conto mais em breve. 😉</p>
+        <p class="tags-publicacao">#Dados #MySQL #NovoCiclo</p>
+
+
+        <figure class="imagem-publicacao">
+          <img src="images/ronaldo.jpg" alt="Descreva o que aparece na foto" width="1408" height="768" loading="lazy">
+          <img src="../img/ronaldo.jpg" alt="Descreva o que aparece na foto" width="1408" height="768" loading="lazy">
+        </figure>
+
+
+        <fieldset class="reacoes-rapidas">
+          <legend class="visualmente-oculto">Reagir à publicação de Cristiano Ronaldo</legend>
+
+          <!-- "Sem reação": radio oculto que começa marcado; o botão Remover reação aponta para ele -->
+          <input type="radio" name="reacao-3" id="reacao-3-nenhuma" class="input-reacao input-reacao-nenhuma" checked>
+
+          <input type="radio" name="reacao-3" id="reacao-3-curtir" class="input-reacao" value="curtir">
+          <label for="reacao-3-curtir" class="emoji-reacao" title="Curtir" data-emoji="👍"><span aria-hidden="true">👍</span><span class="visualmente-oculto">Curtir</span></label>
+
+          <input type="radio" name="reacao-3" id="reacao-3-amei" class="input-reacao" value="amei">
+          <label for="reacao-3-amei" class="emoji-reacao" title="Amei" data-emoji="❤️"><span aria-hidden="true">❤️</span><span class="visualmente-oculto">Amei</span></label>
+
+          <input type="radio" name="reacao-3" id="reacao-3-uau" class="input-reacao" value="uau">
+          <label for="reacao-3-uau" class="emoji-reacao" title="Uau" data-emoji="😮"><span aria-hidden="true">😮</span><span class="visualmente-oculto">Uau</span></label>
+
+          <input type="radio" name="reacao-3" id="reacao-3-aplausos" class="input-reacao" value="aplausos">
+          <label for="reacao-3-aplausos" class="emoji-reacao" title="Aplausos" data-emoji="👏"><span aria-hidden="true">👏</span><span class="visualmente-oculto">Aplausos</span></label>
+
+          <input type="radio" name="reacao-3" id="reacao-3-ideia" class="input-reacao" value="ideia">
+          <label for="reacao-3-ideia" class="emoji-reacao" title="Ideia" data-emoji="💡"><span aria-hidden="true">💡</span><span class="visualmente-oculto">Ideia</span></label>
+
+          <label for="reacao-3-nenhuma" class="remover-reacao"><span aria-hidden="true">✕</span> Remover reação</label>
+        </fieldset>
+
+        <p class="barra-acoes">
+          <span class="acao">
+            <input type="checkbox" id="curtir-3" class="input-curtir" autocomplete="off">
+            <label for="curtir-3" class="botao-acao botao-curtir" aria-label="Curtir publicação">
+              <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 21s-6.7-4.3-9.3-8.1C1 10.1 1.6 6.6 4.4 4.9c2.3-1.4 5-0.8 6.6 1.1L12 7.1l1-1.1c1.6-1.9 4.3-2.5 6.6-1.1 2.8 1.7 3.4 5.2 1.7 8-2.6 3.8-9.3 8.1-9.3 8.1z"/>
+              </svg>
+            </label>
+            <span class="contador">42</span>
+          </span>
+
+          <span class="acao">
+            <a href="#" class="botao-acao" aria-label="Comentar">
+              <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>
+              </svg>
+            </a>
+            <span class="contador">2</span>
+          </span>
+
+          <span class="acao">
+            <input type="checkbox" id="salvar-3" class="input-salvar" autocomplete="off">
+            <label for="salvar-3" class="botao-acao botao-salvar" aria-label="Salvar publicação">
+              <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"/>
+              </svg>
+            </label>
+            <span class="contador">5</span>
+          </span>
+
+          <span class="acao">
+            <a href="https://github.com/fellipeaguiardev/ProjetodoPaulo" target="_blank" rel="noopener noreferrer" class="botao-acao" aria-label="Compartilhar - abre o repositório no GitHub em nova aba">
+              <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 2l5 5h-3v8h-4V7H7l5-5zM4 15h2v4a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-4h2v4a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-4z"/>
+              </svg>
+            </a>
+          </span>
+        </p>
+      </article>
+
     </section>
+
   </main>
 
-  <footer class="rodape">
-    <p>Rede Social para Desenvolvedores · DevNetwork</p>
+  <footer>
+    <p>Rede Social para Desenvolvedores</p>
+    <p class="direitos-autorais">&copy; 2026 [SUA EMPRESA] LTDA. CNPJ: 00.000.000/0000-00. Todos os direitos reservados.</p>
   </footer>
+
 </body>
 </html>
+</html>    
