@@ -1,22 +1,15 @@
 <!DOCTYPE html>
-<!-- Página 8 - Rede: aqui o usuário gerencia as pessoas com quem se conecta -->
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevNetwork - Rede</title>
 
-  <!-- Este é o mesmo CSS das outras páginas.
-       É ele que deixa a fonte, as cores e os cartões iguais em todo o site.
-       "../" significa: sair da pasta "paginas" e entrar na pasta "css". -->
   <link rel="stylesheet" href="../css/site.css">
-
-  <!-- CSS só da página Rede (vem depois do site.css para poder acrescentar detalhes) -->
   <link rel="stylesheet" href="../css/pag8.css">
 </head>
 <body>
 
-  <!-- CABEÇALHO: título do site e menu de navegação (igual em todas as páginas) -->
   <header>
     <h1>DevNetwork</h1>
     <nav>
@@ -29,7 +22,6 @@
         <li><a href="pag5.html">Workspace</a></li>
         <li><a href="pag6.html">Comunidades</a></li>
         <li><a href="pag7.html">Vagas</a></li>
-        <!-- class="ativo" deixa o link da página atual destacado em azul -->
         <li><a href="pag8.html" class="ativo" aria-current="page">Rede</a></li>
         <li><a href="pag9.html">Mensagens</a></li>
         <li><a href="pag10.html">Notificações</a></li>
@@ -40,12 +32,8 @@
     </nav>
   </header>
 
-  <!-- CONTEÚDO PRINCIPAL: tudo o que é específico da página Rede -->
   <main>
 
-    <!-- SEÇÃO 1: resumo com os números da rede do usuário.
-         "quadro" e "coluna" vêm do site.css e colocam as caixas lado a lado.
-         Os números batem com o que aparece mais abaixo na página. -->
     <section class="resumo-rede">
       <h2>Resumo da sua rede</h2>
       <div class="quadro">
@@ -64,11 +52,10 @@
       </div>
     </section>
 
-    <!-- SEÇÃO 2: busca de pessoas (formulário igual ao da página Explorar) -->
     <section>
       <h2>Buscar pessoas</h2>
       <form action="#">
-        <!-- O "for" do label precisa ser igual ao "id" do campo -->
+
         <label for="busca-pessoa">Nome da pessoa</label>
         <input type="text" id="busca-pessoa" name="busca-pessoa" placeholder="Ex.: Ana Souza">
 
@@ -86,12 +73,10 @@
       </form>
     </section>
 
-    <!-- SEÇÃO 3: cartões com as pessoas sugeridas -->
     <section>
       <h2>Pessoas que você deveria conhecer</h2>
       <p>Sugestões baseadas nas comunidades que você participa e nas tecnologias que você usa.</p>
 
-      <!-- "cartao" vem do site.css; "cartao-pessoa" vem do pag8.css -->
       <article class="cartao cartao-pessoa">
         <h3>Lionel Messi</h3>
         <p>Frontend Developer — HTML, CSS, JavaScript</p>
@@ -113,12 +98,9 @@
       </article>
     </section>
 
-    <!-- SEÇÃO 4: convites que o usuário recebeu e ainda não respondeu.
-         Os nomes abaixo são só exemplos inventados. -->
     <section>
       <h2>Convites recebidos</h2>
 
-      <!-- "notificacao" vem do site.css (caixa com faixa azul na lateral) -->
       <article class="notificacao convite">
         <h3>Eduardo Ramos</h3>
         <p>Mobile Developer — Flutter, Dart</p>
@@ -140,7 +122,6 @@
       </article>
     </section>
 
-    <!-- SEÇÃO 5: lista de quem já está conectado com o usuário (também com nomes de exemplo) -->
     <section>
       <h2>Minhas conexões</h2>
       <table>
@@ -181,11 +162,10 @@
       </table>
     </section>
 
-    <!-- SEÇÃO 6: tabela comparando as sugestões (usa os mesmos dados dos cartões da seção 3) -->
     <section>
       <h2>Comparando as sugestões</h2>
       <table>
-        <!-- thead = linha de títulos da tabela -->
+
         <thead>
           <tr>
             <th>Pessoa</th>
@@ -193,7 +173,7 @@
             <th>Tecnologias</th>
           </tr>
         </thead>
-        <!-- tbody = linhas com os dados -->
+
         <tbody>
           <tr>
             <td>Lionel Messi</td>
@@ -209,9 +189,6 @@
       </table>
     </section>
 
-    <!-- SEÇÃO 7: links para as outras páginas do site (<ul> = lista com bolinhas).
-         Cada link (tag a) leva para uma página. As páginas estão na mesma
-         pasta "paginas", por isso só o link do Início usa "../". -->
     <section>
       <h2>Continue navegando</h2>
       <ul>
@@ -233,7 +210,6 @@
 
   </main>
 
-  <!-- RODAPÉ: igual ao das outras páginas -->
   <footer>
     <p>Rede Social para Desenvolvedores</p>
     <p class="direitos-autorais">&copy; 2026 DevNetwork. Todos os direitos reservados.</p>
