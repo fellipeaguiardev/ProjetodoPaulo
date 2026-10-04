@@ -318,7 +318,7 @@ section {
 
 .texto-apoio {
   margin: 3px 0 0;
-  color: var(--cor-texto-secundario);
+  color: var(--cor-texto-claro);
 }
 
 .lista-projetos {
