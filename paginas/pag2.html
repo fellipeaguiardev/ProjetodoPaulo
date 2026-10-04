@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevNetwork - Perfil</title>
-  <link rel="stylesheet" href="../css/site.css">
+  <meta name="description" content="Conheça o perfil, as tecnologias e os projetos de João Cassiano na DevNetwork.">
+  <title>Perfil de João Cassiano | DevNetwork</title>
+  <link rel="stylesheet" href="perfil.css">
 </head>
 <body>
-
-  <header>
-    <h1>DevNetwork</h1>
-    <nav>
+  <header class="topbar">
+    <h1 class="logo">&lt;/&gt; DevNetwork</h1>
+    <nav class="navegacao">
       <ul>
-        <li><a href="../index.html">Início</a></li>
         <li><a href="pag1.html">Feed</a></li>
-        <li><a href="pag2.html" class="ativo" aria-current="page">Perfil</a></li>
+        <li><a href="pag2.html" class="ativo">Perfil</a></li>
         <li><a href="pag3.html">Explorar</a></li>
         <li><a href="pag4.html">Projetos</a></li>
         <li><a href="pag5.html">Workspace</a></li>
@@ -24,69 +23,127 @@
         <li><a href="pag9.html">Mensagens</a></li>
         <li><a href="pag10.html">Notificações</a></li>
         <li><a href="pag11.html">Empresa</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main class="layout">
+    <aside class="barra-lateral">
+      <section class="cartao resumo-perfil">
+        <header class="capa-pequena">
+          <h2>Perfil de desenvolvedor</h2>
+        </header>
+        <section class="resumo-conteudo">
+          <p class="avatar avatar-pequeno">JC</p>
+          <h2>João Cassiano</h2>
+          <p>Desenvolvedor Front-end</p>
+          <p class="estatistica">Projetos <b>2</b></p>
+          <p class="estatistica">Conexões <b>128</b></p>
+        </section>
+      </section>
+      <nav class="cartao atalhos">
+        <h2>Seu espaço</h2>
+        <ul>
+          <li><a href="pag4.html">Meus projetos</a></li>
+          <li><a href="pag8.html">Minha rede</a></li>
+          <li><a href="pag6.html">Comunidades</a></li>
+        </ul>
+      </nav>
+    </aside>
 
-    <section>
-      <h2>Neymar Junior</h2>
-      <p>Desenvolvedor Front-end Iniciante | HTML | CSS | JavaScript</p>
-      <p>São Paulo, Brasil</p>
-      <p>
-        <button type="button">Conectar</button>
-        <button type="button">Seguir</button>
-        <button type="button">Mensagem</button>
-      </p>
-    </section>
-
-    <section>
-      <h2>Sobre</h2>
-      <p>Curte criar páginas web simples e estilizar com CSS. Começando agora na programação e aprendendo a base do desenvolvimento.</p>
-    </section>
-
-    <section>
-      <h2>Tecnologias</h2>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Git</li>
-        <li>GitHub</li>
-        <li>VS Code</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Projetos</h2>
-
-      <article class="cartao">
-        <h3>Meu Primeiro Site</h3>
-        <p>Página simples feita com HTML básico para treinar tags e estrutura.</p>
+    <section class="conteudo">
+      <article class="cartao perfil-principal">
+        <header class="capa-grande">
+          <h2>Portfólio de desenvolvimento web</h2>
+        </header>
+        <section class="perfil-conteudo">
+          <p class="avatar avatar-grande">JC</p>
+          <nav class="botoes-perfil">
+            <a class="botao botao-secundario" href="pag8.html">Conectar</a>
+            <a class="botao" href="pag9.html">Mensagem</a>
+          </nav>
+          <h2>João Cassiano</h2>
+          <p class="cargo">Desenvolvedor Front-end iniciante · São Paulo, Brasil</p>
+          <p>Estou aprendendo a criar páginas para a internet usando HTML e CSS. Gosto de praticar fazendo projetos simples e colocando ideias em prática.</p>
+          <p class="conexoes"><b>128</b> conexões · Disponível para colaborar</p>
+        </section>
       </article>
 
-      <article class="cartao">
-        <h3>Landing Page de Jogos</h3>
-        <p>Projeto básico de estilização com CSS e cores personalizadas.</p>
-      </article>
-    </section>
+      <section class="cartao secao">
+        <h2>Sobre</h2>
+        <p>Comecei a estudar programação e estou aprendendo os primeiros passos do desenvolvimento web. Quero continuar praticando e melhorar um pouco a cada projeto.</p>
+      </section>
 
-    <section>
-      <h2>Experiência</h2>
-      <ul>
-        <li>Estudante de Programação — Autodidata (2025 - atual)</li>
-        <li>Criador de Conteúdo Web — Projetos Pessoais (2024 - atual)</li>
-      </ul>
-    </section>
+      <section class="cartao secao">
+        <h2>Tecnologias</h2>
+        <ul class="tecnologias">
+          <li><h3>HTML</h3><p>Estrutura de páginas</p></li>
+          <li><h3>CSS</h3><p>Estilos e cores</p></li>
+          <li><h3>JavaScript</h3><p>Estou aprendendo</p></li>
+          <li><h3>Git e GitHub</h3><p>Versionamento</p></li>
+        </ul>
+      </section>
 
+      <section class="cartao secao" id="projetos">
+        <header class="titulo-secao">
+          <section>
+            <h2>Projetos</h2>
+            <p class="texto-apoio">Alguns projetos que fiz para praticar.</p>
+          </section>
+          <a href="pag4.html">Ver todos os projetos</a>
+        </header>
+        <section class="lista-projetos">
+          <article class="projeto">
+            <figure class="imagem-projeto site">
+              <figcaption>Meu Primeiro Site</figcaption>
+            </figure>
+            <section class="texto-projeto">
+              <p class="status">Concluído · 2025</p>
+              <h3>Meu Primeiro Site</h3>
+              <p>Uma página simples feita com HTML para praticar títulos, textos e links.</p>
+              <ul class="etiquetas">
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+              <a href="pag4.html">Ver projetos</a>
+            </section>
+          </article>
+          <article class="projeto">
+            <figure class="imagem-projeto jogos">
+              <figcaption>GAME ZONE</figcaption>
+            </figure>
+            <section class="texto-projeto">
+              <p class="status andamento">Em andamento · 2025</p>
+              <h3>Landing Page de Jogos</h3>
+              <p>Uma página sobre jogos. Usei cores e estilos diferentes para praticar CSS.</p>
+              <ul class="etiquetas">
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+              <a href="pag4.html">Ver projetos</a>
+            </section>
+          </article>
+        </section>
+      </section>
+
+      <section class="cartao secao">
+        <h2>Experiência</h2>
+        <article class="experiencia">
+          <h3>Estudante de Programação</h3>
+          <p>Autodidata · 2025 até hoje</p>
+          <p>Estudando desenvolvimento web e criando projetos pessoais para praticar.</p>
+        </article>
+        <article class="experiencia">
+          <h3>Criador de Conteúdo Web</h3>
+          <p>Projetos pessoais · 2024 até hoje</p>
+          <p>Aprendendo a criar conteúdo e páginas para a internet.</p>
+        </article>
+      </section>
+    </section>
   </main>
 
-  <footer>
-    <p>Rede Social para Desenvolvedores</p>
+  <footer class="rodape">
+    <p>Rede Social para Desenvolvedores · DevNetwork</p>
   </footer>
-
 </body>
 </html>
