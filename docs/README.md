@@ -39,7 +39,7 @@ Cada integrante ficou responsável por uma das 11 telas de conteúdo:
 | Integrante          | Página        | Tela         |
 |---------------------|---------------|--------------|
 | Giovanni Rodrigues  |  pag1.html    | Feed         |
-| João Cassini        |  pag2.html    | Perfil       |
+| João Cassiano        |  pag2.html    | Perfil       |
 | Fellipe Aguiar      |  pag3.html    | Explorar     |
 | Davi                |  pag4.html    | Projetos     |
 | Gabriel             |  pag5.html    | Workspace    |
