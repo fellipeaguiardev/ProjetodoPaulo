@@ -1,91 +1,416 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevNetwork - Workspace</title>
-  <link rel="stylesheet" href="../css/site.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevNetwork - Workspace</title>
+
+    <link rel="stylesheet" href="pag5.css">
 </head>
+
 <body>
 
-  <header>
+    <!--BOTÃO DE ACESSIBILIDADE-->
+
+
+
+    <!-- CABEÇALHO -->
+   <header>
     <h1>DevNetwork</h1>
     <nav>
       <ul>
-        <li><a href="../index.html">Início</a></li>
-        <li><a href="pag1.html">Feed</a></li>
+        <li><a href="../index.html">Feed</a></li>
         <li><a href="pag2.html">Perfil</a></li>
         <li><a href="pag3.html">Explorar</a></li>
         <li><a href="pag4.html">Projetos</a></li>
-        <li><a href="pag5.html" class="ativo" aria-current="page">Workspace</a></li>
+        <li><a href="pag5.html" class="ativo">Workspace</a></li>
         <li><a href="pag6.html">Comunidades</a></li>
         <li><a href="pag7.html">Vagas</a></li>
         <li><a href="pag8.html">Rede</a></li>
         <li><a href="pag9.html">Mensagens</a></li>
         <li><a href="pag10.html">Notificações</a></li>
         <li><a href="pag11.html">Empresa</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
 
-    <section>
-      <h2>Workspace — Site Pessoal Simples</h2>
-      <p>Ambiente colaborativo do projeto, com as tarefas organizadas por etapa.</p>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
 
-      <section class="quadro">
+        <!--Seção "Projetos"-->
 
-        <article class="coluna">
-          <h3>Backlog</h3>
-          <ul>
-            <li>Criar estrutura HTML básica</li>
-            <li>Definir cores principais</li>
-          </ul>
-        </article>
+        <section class="projeto-header">
 
-        <article class="coluna">
-          <h3>Em desenvolvimento</h3>
-          <ul>
-            <li>Estilização com CSS — Neymar</li>
-          </ul>
-        </article>
+            <div>
 
-        <article class="coluna">
-          <h3>Revisão</h3>
-          <ul>
-            <li>Organizar tags — Messi</li>
-          </ul>
-        </article>
+                <h1>
+                   Projeto
+                </h1>
+                
+            </div>
 
-        <article class="coluna">
-          <h3>Concluído</h3>
-          <ul>
-            <li>Criação do repositório</li>
-          </ul>
-        </article>
+            <div class="acoes">
 
-      </section>
-    </section>
+                <button class="btn-secundario">
+                    Compartilhar
+                </button>
 
-    <section>
-      <h2>Equipe do projeto</h2>
-      <ul>
-        <li>Neymar Junior — Front-end</li>
-        <li>Lionel Messi — Front-end</li>
-        <li>Cristiano Ronaldo — Web Developer</li>
-      </ul>
-    </section>
+                <button class="btn-principal">
+                    + Nova tarefa
+                </button>
 
-  </main>
+            </div>
 
-  <footer>
-    <p>Rede Social para Desenvolvedores</p>
-    <p class="direitos-autorais">&copy; 2026 DevNetwork. Todos os direitos reservados.</p>
+        </section>
+
+
+        <!-- INFORMAÇÕES DO PROJETO -->
+        <section class="informacoes">
+
+            <div>
+                <strong>Projeto</strong>
+                <span>Biblioteca</span>
+            </div>
+
+            <div>
+                <strong>Tecnologia</strong>
+                <span>HTML,  CSS e  C</span>
+            </div>
+
+            <div>
+                <strong>Status</strong>
+                <span class="status">Em desenvolvimento</span>
+            </div>
+
+            <div>
+                <strong>Progresso</strong>
+                <span>65%</span>
+            </div>
+
+        </section>
+
+
+        <!-- KANBAN -->
+        <section class="kanban-section">
+
+            <div class="secao-titulo">
+
+                <div>
+                    <h2>Quadro do projeto</h2>
+
+                    <p>
+                        Acompanhe o desenvolvimento das tarefas de sua equipe.
+                    </p>
+                </div>
+
+                <button class="filtro">
+                    Filtrar 
+                </button>
+
+            </div>
+
+
+            <div class="kanban">
+
+
+                <!-- BACKLOG -->
+                <div class="coluna">
+
+                    <div class="coluna-header">
+
+                        <h3>Backlog</h3>
+
+                        <span>2</span>
+
+                    </div>
+
+                    <div class="tarefas">
+
+                        <article class="tarefa">
+
+                            <span class="tag azul">
+                                FRONT-END
+                            </span>
+
+                            <h4>
+                                Criar página inicial
+                            </h4>
+
+                            <div class="tarefa-footer">
+
+                                <span> Gabriel R.</span>
+
+                                <span>24/09</span>
+
+                            </div>
+                                
+                        </article>
+
+
+                        <article class="tarefa">
+
+                            <span class="tag roxo">
+                                BANCO
+                            </span>
+
+                            <h4>
+                                Modelar banco de dados
+                            </h4>
+
+
+                            <div class="tarefa-footer">
+
+                                <span>Giovanni R.</span>
+
+                                <span>26/09</span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DESENVOLVIMENTO -->
+                <div class="coluna">
+
+                    <div class="coluna-header">
+
+                        <h3>Em desenvolvimento</h3>
+
+                        <span>2</span>
+
+                    </div>
+
+                    <div class="tarefas">
+
+                        <article class="tarefa">
+
+                            <span class="tag verde">
+                                BACK-END
+                            </span>
+
+                            <h4>
+                                Criar sistema de login
+                            </h4>
+
+                            <div class="tarefa-footer">
+
+                                <span>João C.</span>
+
+                                <span>28/09</span>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="tarefa">
+
+                            <span class="tag azul">
+                                FRONT-END
+                            </span>
+
+                            <h4>
+                                Criar dashboard
+                            </h4>
+
+                            <div class="tarefa-footer">
+
+                                <span>João C.</span>
+
+                                <span>29/09</span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REVISÃO -->
+                <div class="coluna">
+
+                    <div class="coluna-header">
+
+                        <h3>Revisão</h3>
+
+                        <span>1</span>
+
+                    </div>
+
+                    <div class="tarefas">
+
+                        <article class="tarefa">
+
+                            <span class="tag amarelo">
+                                TESTE
+                            </span>
+
+                            <h4>
+                                Testar formulário
+                            </h4>
+
+
+                            <div class="tarefa-footer">
+
+                                <span>Giovanni R.</span>
+
+                                <span>30/09</span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONCLUÍDO -->
+                <div class="coluna concluido">
+
+                    <div class="coluna-header">
+
+                        <h3>Concluído</h3>
+
+                        <span>2</span>
+
+                    </div>
+
+                    <div class="tarefas">
+
+                        <article class="tarefa">
+
+                            <span class="tag verde">
+                                CONCLUÍDO
+                            </span>
+
+                            <h4>
+                                Estrutura do projeto
+                            </h4>
+
+                            <div class="tarefa-footer">
+
+                                <span>✓ Finalizado</span>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="tarefa">
+
+                            <span class="tag verde">
+                                CONCLUÍDO
+                            </span>
+
+                            <h4>
+                                Layout inicial
+                            </h4>
+
+
+                            <div class="tarefa-footer">
+
+                                <span>✓ Finalizado</span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EQUIPE -->
+        <section class="equipe">
+
+            <div class="secao-titulo">
+
+                <div>
+
+                    <h2>
+                        Equipe do projeto
+                    </h2>
+
+                    <p>
+                        Pessoas colaborando neste projeto.
+                    </p>
+
+                </div>  
+
+                <button class="btn-secundario">
+                    + Convidar
+                </button>
+
+            </div>
+
+
+            <div class="membros">
+
+                <div class="membro">
+
+                    <div class="avatar">
+                        GR
+                    </div>
+
+                    <div>
+                        <h4>Gabriel Rocha</h4>
+                        <span>Desenvolvedor</span>
+                    </div>
+
+                </div>
+
+
+                <div class="membro">
+
+                    <div class="avatar">
+                        GR
+                    </div>  
+
+                    <div>
+                        <h4>Giovanni Rodrigues</h4>
+                        <span>UX/UI Designer</span>
+                    </div>
+
+                </div>
+
+
+                <div class="membro">
+
+                    <div class="avatar">
+                        JC
+                    </div>
+
+                    <div>
+                        <h4>João Costa</h4>
+                        <span>Desenvolvedor</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+            
+    </main>
+
+ <footer>
+        <p>Rede Social para Desenvolvedores</p>
+        <p class="direitos-autorais">&copy; 2026 [SUA EMPRESA] LTDA. CNPJ: 00.000.000/0000-00. Todos os direitos reservados.</p>
   </footer>
-
-
+   
 </body>
 </html>
