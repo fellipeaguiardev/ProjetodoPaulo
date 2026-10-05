@@ -1,10 +1,3 @@
-/* =====================================================================
-   pag10.css — NOTIFICAÇÕES (Kayky)
-   Só o que é exclusivo das Notificações. O resto vem de style.css.
-   (Cabeçalho, menu, fonte e cores próprias foram retirados para a
-   página ficar igual às outras.)
-   ===================================================================== */
-
 .notificacao {
   border: 1px solid var(--cor-borda);
   border-left: 4px solid var(--cor-primaria);

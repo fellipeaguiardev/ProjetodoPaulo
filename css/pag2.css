@@ -1,9 +1,4 @@
-/* =====================================================================
-   pag2.css — PERFIL (João Cassiano)
-   Só o que é exclusivo do Perfil. Cabeçalho, menu, rodapé, cores e
-   acessibilidade vêm de style.css.
-   ===================================================================== */
-/* Organização da página */
+
 .layout {
   width: 92%;
   max-width: 1050px;
@@ -34,7 +29,6 @@ section {
   box-shadow: 0 3px 10px var(--sombra-cartao);
 }
 
-/* Cartão resumido do perfil */
 .capa-pequena {
   height: 60px;
   margin: 0;
@@ -127,7 +121,6 @@ section {
   color: var(--cor-link);
 }
 
-/* Apresentação do perfil */
 .capa-grande {
   height: 150px;
   margin: 0;
@@ -202,7 +195,6 @@ section {
   color: var(--cor-texto-secundario);
 }
 
-/* Sobre e tecnologias */
 .secao {
   padding: 15px;
 }
@@ -245,7 +237,6 @@ section {
   font-size: 12px;
 }
 
-/* Projetos */
 .titulo-secao {
   display: flex;
   justify-content: space-between;
@@ -356,7 +347,6 @@ section {
   color: var(--cor-texto-secundario);
 }
 
-/* Ajustes para telas menores */
 @media (max-width: 900px) {
   .layout {
     grid-template-columns: 200px 1fr;
@@ -398,7 +388,6 @@ section {
   }
 }
 
-/* Alto contraste: etiquetas e caixas de tecnologia com fundo preto */
 body:has(#modo-alto-contraste:checked) .etiquetas li,
 body:has(#modo-alto-contraste:checked) .tecnologias li,
 body:has(#modo-alto-contraste:checked) .projeto {

@@ -1,10 +1,4 @@
-/* =====================================================================
-   pag1.css — FEED (Giovanni)
-   Só o que é exclusivo do Feed. O resto vem de style.css.
-   ===================================================================== */
 
-
-/* ---------- Cabeçalho do post: avatar, nome, cargo e tempo ---------- */
 
 .autor-publicacao {
   display: flex;
@@ -62,7 +56,6 @@ body:has(#modo-alto-contraste:checked) .avatar {
 }
 
 
-/* ---------- Reações com emoji (radio + label, sem JS) ---------- */
 
 .reacoes-rapidas {
   display: flex;
@@ -102,7 +95,6 @@ body:has(#modo-alto-contraste:checked) .avatar {
   padding: 0;
 }
 
-/* emoji escolhido: fica destacado e dá um "pulo" */
 .input-reacao:checked + .emoji-reacao {
   background-color: var(--cor-salvo-fundo);
   box-shadow: 0 0 0 2px var(--cor-destaque);
@@ -124,7 +116,6 @@ body:has(#modo-alto-contraste:checked) .avatar {
   }
 }
 
-/* uma cópia do emoji sobe e some, como nas redes sociais */
 .input-reacao:checked + .emoji-reacao::after {
   content: attr(data-emoji);
   position: absolute;
@@ -151,7 +142,6 @@ body:has(#modo-alto-contraste:checked) .avatar {
   outline-offset: 2px;
 }
 
-/* "Remover reação" só aparece quando alguma reação está marcada */
 .remover-reacao {
   display: none;
   align-items: center;
@@ -176,7 +166,6 @@ body:has(#modo-alto-contraste:checked) .avatar {
 }
 
 
-/* ---------- Barra de ações: curtir, comentar, salvar, compartilhar ---------- */
 
 .barra-acoes {
   display: flex;
@@ -270,9 +259,7 @@ body:has(#modo-alto-contraste:checked) .avatar {
 }
 
 
-/* ---------- Modos de acessibilidade aplicados ao Feed ---------- */
 
-/* Daltônicos: estado escrito, não só pintado */
 body:has(#modo-daltonico:checked) .input-curtir:checked + .botao-curtir {
   width: auto;
   padding: 4px 10px;
@@ -311,7 +298,6 @@ body:has(#modo-daltonico:checked) .input-reacao:checked + .emoji-reacao {
   box-shadow: 0 0 0 2px currentColor;
 }
 
-/* revela o nome da reação escolhida: "👏 ✓ Aplausos" */
 body:has(#modo-daltonico:checked) .input-reacao:checked + .emoji-reacao .visualmente-oculto {
   position: static;
   width: auto;
@@ -326,7 +312,6 @@ body:has(#modo-daltonico:checked) .input-reacao:checked + .emoji-reacao .visualm
   content: "✓ ";
 }
 
-/* Alto contraste */
 body:has(#modo-alto-contraste:checked) .botao-acao {
   background-color: #000000;
   border: 1px solid #ffffff;
@@ -347,18 +332,15 @@ body:has(#modo-alto-contraste:checked) .remover-reacao {
   border-color: #ffffff;
 }
 
-/* Aumentar texto */
 body:has(#modo-fonte-grande:checked) .contador {
   font-size: 1.1rem;
 }
 
-/* Destacar links e botões */
 body:has(#modo-destacar-links:checked) .botao-acao,
 body:has(#modo-destacar-links:checked) .emoji-reacao {
   box-shadow: 0 0 0 2px currentColor;
 }
 
-/* Espaçamento de leitura: a barra de ações não ganha espaço extra */
 body:has(#modo-espacamento:checked) main p.barra-acoes {
   margin-bottom: 0;
 }

@@ -1,16 +1,10 @@
-/* =====================================================================
-   pag6.css — COMUNIDADES (Leonardo)
-   Só o que é exclusivo das Comunidades. Cabeçalho, menu, rodapé, cores
-   e acessibilidade vêm de style.css.
-   (As cores e o menu antigos eram de outro projeto, "Liga dos Dev", e
-   foram trocados pela paleta da DevNetwork.)
-   ===================================================================== */
+
 
 main {
   max-width: 1000px;
 }
 
-/* Cartões das comunidades: 3 por linha no computador, 1 no celular */
+
 .lista-comunidades {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -27,13 +21,13 @@ main {
   padding-left: 20px;
 }
 
-/* o botão "Participar" fica sempre no pé do cartão */
+
 .lista-comunidades .botao {
   margin-top: auto;
   align-self: flex-start;
 }
 
-/* Tipo de comunidade: as opções ficam lado a lado */
+
 .opcoes-tipo {
   display: flex;
   flex-wrap: wrap;

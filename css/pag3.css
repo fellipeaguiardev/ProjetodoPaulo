@@ -1,10 +1,6 @@
-/* =====================================================================
-   pag3.css — EXPLORAR (Fellipe Aguiar)
-   Só o que é exclusivo do Explorar. O resto vem de style.css.
-   (Estes estilos estavam escritos direto no HTML com style="...".)
-   ===================================================================== */
 
-/* Galeria "Inspirações e Projetos" */
+
+
 .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

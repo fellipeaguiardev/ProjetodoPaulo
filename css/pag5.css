@@ -1,11 +1,4 @@
-/* =====================================================================
-   pag5.css — WORKSPACE (Gabriel)
-   Só o que é exclusivo do Workspace. Cabeçalho, menu, rodapé, cores e
-   acessibilidade vêm de style.css.
-   ===================================================================== */
 
-/* Zera margens só dentro do conteúdo desta página (antes o "* { margin: 0 }"
-   valia para o site inteiro e bagunçava o cabeçalho e o painel). */
 main * {
   margin: 0;
   padding: 0;
@@ -18,7 +11,6 @@ main {
 }
 
 
-/* ---------- Projeto ---------- */
 
 .projeto-header {
   display: flex;
@@ -71,7 +63,6 @@ main {
 }
 
 
-/* ---------- Informações ---------- */
 
 .informacoes {
   background: var(--cor-fundo-cartao);
@@ -110,7 +101,6 @@ main {
 }
 
 
-/* ---------- Títulos das seções ---------- */
 
 .secao-titulo {
   display: flex;
@@ -132,7 +122,6 @@ main {
 }
 
 
-/* ---------- Kanban ---------- */
 
 .kanban {
   display: grid;
@@ -140,7 +129,6 @@ main {
   gap: 15px;
 }
 
-/* a .coluna do style.css tem fundo e borda; aqui a coluna é "transparente" */
 .kanban .coluna {
   background: none;
   border: 0;
@@ -174,8 +162,7 @@ main {
   list-style: none;
 }
 
-/* ".kanban .tarefa" (e não só ".tarefa") para vencer a regra ".coluna li"
-   do style.css, que pintaria o cartão de cinza */
+
 .kanban .tarefa {
   margin: 0;
   background: var(--cor-fundo-cartao);
@@ -227,7 +214,7 @@ main {
 }
 
 
-/* ---------- Equipe ---------- */
+
 
 .equipe {
   background: var(--cor-fundo-cartao);
@@ -283,7 +270,6 @@ main {
 }
 
 
-/* ---------- Acessibilidade nesta página ---------- */
 
 body:has(#modo-alto-contraste:checked) .tarefa,
 body:has(#modo-alto-contraste:checked) .informacoes,
@@ -308,8 +294,7 @@ body:has(#modo-alto-contraste:checked) .filtro {
   border: 2px solid #ffff00;
 }
 
-/* Daltônicos: as etiquetas já têm o nome escrito (FRONT-END, TESTE...),
-   então ganham só um contorno para não dependerem da cor de fundo. */
+
 body:has(#modo-daltonico:checked) .tag {
   border: 1px solid currentColor;
 }

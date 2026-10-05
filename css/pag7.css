@@ -1,8 +1,4 @@
-/* =====================================================================
-   pag7.css — VAGAS (Anderson)
-   Só o que é exclusivo das Vagas. Cabeçalho, menu, rodapé, cores e
-   acessibilidade vêm de style.css.
-   ===================================================================== */
+
 
 main {
   max-width: 1000px;
@@ -51,13 +47,13 @@ main {
   color: var(--cor-texto-secundario);
 }
 
-/* Destaque para o salário */
+
 .vaga .salario {
   font-weight: bold;
   color: var(--cor-status-ok);
 }
 
-/* Destaque para as tecnologias */
+
 .vaga .tecnologias-vaga {
   font-weight: 600;
   color: var(--cor-salvo-icone);
