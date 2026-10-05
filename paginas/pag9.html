@@ -4,86 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevNetwork - Mensagens</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="csspag7.css">
+  <style>
+    .seletor-chat { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); }
+    .lista-contatos label { color: blue; text-decoration: underline; cursor: pointer; }
+    .conversa article { display: none; }
+    #messi:checked ~ .conversa #messi-chat,
+    #ronaldo:checked ~ .conversa #ronaldo-chat,
+    #grupo:checked ~ .conversa #grupo-chat { display: block; }
+    #messi:focus-visible ~ .lista-contatos label[for="messi"],
+    #ronaldo:focus-visible ~ .lista-contatos label[for="ronaldo"],
+    #grupo:focus-visible ~ .lista-contatos label[for="grupo"] { outline: 2px solid #0066cc; }
+  </style>
 </head>
 <body>
 
-  <a href="#conteudo-principal" class="pular-link">Pular para o conteúdo principal</a>
-
-  <!-- Painel de acessibilidade (igual em todas as páginas). Abre e fecha
-       com <details>, sem JavaScript. -->
-  <details class="painel-acessibilidade">
-    <summary class="botao-painel-acessibilidade">
-      <span class="conteudo-botao-painel">
-        <svg class="icone-painel" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="12" cy="6.2" r="1.6"/>
-          <path d="M6.5 9.2 12 10l5.5-.8.3 1.4-4.3 1v2.6l1.6 5-1.4.5-1.7-4.6-1.7 4.6-1.4-.5 1.6-5v-2.6l-4.3-1z"/>
-        </svg>
-        <span>Acessibilidade</span>
-      </span>
-    </summary>
-
-    <form class="barra-acessibilidade conteudo-painel" aria-labelledby="titulo-painel-acessibilidade">
-      <p id="titulo-painel-acessibilidade" class="titulo-painel">Opções de acessibilidade</p>
-
-      <fieldset class="grupo-acessibilidade">
-        <legend class="rotulo-acessibilidade">Visão</legend>
-
-        <span class="opcao-acessibilidade">
-          <input type="checkbox" id="modo-daltonico">
-          <label for="modo-daltonico">Modo para daltônicos</label>
-        </span>
-
-        <span class="opcao-acessibilidade">
-          <input type="checkbox" id="modo-alto-contraste">
-          <label for="modo-alto-contraste">Alto contraste</label>
-        </span>
-
-        <span class="opcao-acessibilidade">
-          <input type="checkbox" id="modo-fonte-grande">
-          <label for="modo-fonte-grande">Aumentar texto</label>
-        </span>
-      </fieldset>
-
-      <fieldset class="grupo-acessibilidade">
-        <legend class="rotulo-acessibilidade">Leitura</legend>
-
-        <span class="opcao-acessibilidade">
-          <input type="checkbox" id="modo-destacar-links">
-          <label for="modo-destacar-links">Destacar links e botões</label>
-        </span>
-
-        <span class="opcao-acessibilidade">
-          <input type="checkbox" id="modo-espacamento">
-          <label for="modo-espacamento">Espaçamento de leitura</label>
-        </span>
-
-        <span class="opcao-acessibilidade">
-          <input type="checkbox" id="modo-sem-animacoes">
-          <label for="modo-sem-animacoes">Pausar animações</label>
-        </span>
-      </fieldset>
-
-      <fieldset class="grupo-acessibilidade">
-        <legend class="rotulo-acessibilidade">Aparência</legend>
-
-        <span class="opcao-acessibilidade">
-          <input type="checkbox" id="tema-escuro">
-          <label for="tema-escuro">Tema escuro</label>
-        </span>
-      </fieldset>
-
-      <button type="reset" class="botao-restaurar">Restaurar padrão</button>
-      <p class="aviso-painel">As opções valem enquanto você estiver nesta página.</p>
-    </form>
-  </details>
-
-  <header class="cabecalho-site">
+  <header>
     <h1>DevNetwork</h1>
-    <nav class="menu-principal" aria-label="Menu principal">
+    <nav>
       <ul>
-        <li><a href="../index.html">Início</a></li>
         <li><a href="pag1.html">Feed</a></li>
         <li><a href="pag2.html">Perfil</a></li>
         <li><a href="pag3.html">Explorar</a></li>
@@ -92,44 +31,54 @@
         <li><a href="pag6.html">Comunidades</a></li>
         <li><a href="pag7.html">Vagas</a></li>
         <li><a href="pag8.html">Rede</a></li>
-        <li><a href="pag9.html" class="ativo" aria-current="page">Mensagens</a></li>
+        <li><a href="pag9.2.html" class="ativo" aria-current="page">Mensagens</a></li>
         <li><a href="pag10.html">Notificações</a></li>
         <li><a href="pag11.html">Empresa</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
       </ul>
     </nav>
   </header>
 
-<main id="conteudo-principal">
+  <main>
+    <section class="chat" aria-label="Mensagens">
+      <input class="seletor-chat" type="radio" name="conversa" id="messi" checked>
+      <input class="seletor-chat" type="radio" name="conversa" id="ronaldo">
+      <input class="seletor-chat" type="radio" name="conversa" id="grupo">
 
-    <section class="chat">
-
-      <article class="lista-contatos">
+      <aside class="lista-contatos">
         <h2>Conversas</h2>
         <ul>
-          <li>Lionel Messi</li>
-          <li>Cristiano Ronaldo</li>
-          <li>Grupo — Site Pessoal Simples</li>
+          <li><label for="messi">Lionel Messi</label></li>
+          <li><label for="ronaldo">Cristiano Ronaldo</label></li>
+          <li><label for="grupo">Grupo — Site Pessoal Simples</label></li>
         </ul>
-      </article>
+      </aside>
 
-      <article class="conversa">
-        <h2>Lionel Messi</h2>
-        <p class="mensagem mensagem-recebida">Vi que você postou sobre HTML básico. Curti bastante o seu site!</p>
-        <p class="mensagem mensagem-enviada">Valeu! Tô treinando todo dia pra aprender mais.</p>
-        <p>
-          <button type="button">Enviar código</button>
-          <button type="button">Enviar arquivo</button>
-          <button type="button">Compartilhar projeto</button>
-        </p>
-      </article>
-
+      <section class="conversa" aria-label="Conversa selecionada">
+        <article id="messi-chat">
+          <h2>Lionel Messi</h2>
+          <p>Vi que você postou sobre HTML básico. Curti bastante o seu site!</p>
+          <p>Valeu! Tô treinando todo dia pra aprender mais.</p>
+        </article>
+        <article id="ronaldo-chat">
+          <h2>Cristiano Ronaldo</h2>
+          <p>Estou montando uma página para o portfólio do time.</p>
+          <p>Legal! Posso ajudar com HTML e CSS.</p>
+        </article>
+        <article id="grupo-chat">
+          <h2>Grupo — Site Pessoal Simples</h2>
+          <p>Ana: atualizei o layout da página inicial.</p>
+          <p>Vou revisar os links e já retorno por aqui.</p>
+        </article>
+        <form action="#" method="post">
+          <label for="mensagem">Mensagem</label>
+          <input type="text" id="mensagem" name="mensagem" required>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
     </section>
-
   </main>
 
-  <footer class="rodape-site">
+  <footer>
     <p>Rede Social para Desenvolvedores</p>
     <p class="direitos-autorais">&copy; 2026 DevNetwork. Todos os direitos reservados.</p>
   </footer>
