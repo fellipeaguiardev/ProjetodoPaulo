@@ -4,13 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevNetwork - Notificações</title>
-  <link rel="stylesheet" href="../css/site.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/pag10.css">
 </head>
 <body>
 
-  <header>
+  <a href="#conteudo-principal" class="pular-link">Pular para o conteúdo principal</a>
+
+  <!-- Painel de acessibilidade (igual em todas as páginas). Abre e fecha
+       com <details>, sem JavaScript. -->
+  <details class="painel-acessibilidade">
+    <summary class="botao-painel-acessibilidade">
+      <span class="conteudo-botao-painel">
+        <svg class="icone-painel" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="12" cy="6.2" r="1.6"/>
+          <path d="M6.5 9.2 12 10l5.5-.8.3 1.4-4.3 1v2.6l1.6 5-1.4.5-1.7-4.6-1.7 4.6-1.4-.5 1.6-5v-2.6l-4.3-1z"/>
+        </svg>
+        <span>Acessibilidade</span>
+      </span>
+    </summary>
+
+    <form class="barra-acessibilidade conteudo-painel" aria-labelledby="titulo-painel-acessibilidade">
+      <p id="titulo-painel-acessibilidade" class="titulo-painel">Opções de acessibilidade</p>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Visão</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-daltonico">
+          <label for="modo-daltonico">Modo para daltônicos</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-alto-contraste">
+          <label for="modo-alto-contraste">Alto contraste</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-fonte-grande">
+          <label for="modo-fonte-grande">Aumentar texto</label>
+        </span>
+      </fieldset>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Leitura</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-destacar-links">
+          <label for="modo-destacar-links">Destacar links e botões</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-espacamento">
+          <label for="modo-espacamento">Espaçamento de leitura</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-sem-animacoes">
+          <label for="modo-sem-animacoes">Pausar animações</label>
+        </span>
+      </fieldset>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Aparência</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="tema-escuro">
+          <label for="tema-escuro">Tema escuro</label>
+        </span>
+      </fieldset>
+
+      <button type="reset" class="botao-restaurar">Restaurar padrão</button>
+      <p class="aviso-painel">As opções valem enquanto você estiver nesta página.</p>
+    </form>
+  </details>
+
+  <header class="cabecalho-site">
     <h1>DevNetwork</h1>
-    <nav>
+    <nav class="menu-principal" aria-label="Menu principal">
       <ul>
         <li><a href="../index.html">Início</a></li>
         <li><a href="pag1.html">Feed</a></li>
@@ -30,7 +102,7 @@
     </nav>
   </header>
 
-  <main>
+<main id="conteudo-principal">
 
     <section>
       <h2>Notificações</h2>
@@ -55,11 +127,10 @@
 
   </main>
 
-  <footer>
+  <footer class="rodape-site">
     <p>Rede Social para Desenvolvedores</p>
     <p class="direitos-autorais">&copy; 2026 DevNetwork. Todos os direitos reservados.</p>
   </footer>
-
 
 </body>
 </html>

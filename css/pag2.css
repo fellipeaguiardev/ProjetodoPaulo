@@ -1,66 +1,8 @@
-/* Cores compartilhadas com o restante do site */
-:root {
-  --cor-fundo-pagina: #f2f2f2;
-  --cor-fundo-cartao: #ffffff;
-  --cor-texto-claro: #ffffff;
-  --cor-texto: #333333;
-  --cor-texto-secundario: #555555;
-  --cor-primaria: #2c3e50;
-  --cor-primaria-hover: #1a252f;
-  --cor-destaque: #4aa8ff;
-  --cor-borda: #cccccc;
-  --cor-borda-clara: #e6e6e6;
-  --cor-status-ok: #26734d;
-  --cor-status-andamento: #8a5a00;
-  --sombra-cartao: #2c3e5014;
-}
-/* Estilos próprios da página de perfil */
-
-/* Menu principal */
-.topbar {
-  display: block;
-  padding: 20px;
-  background-color: var(--cor-primaria);
-  color: var(--cor-texto-claro);
-  text-align: center;
-}
-
-.logo {
-  margin: 0 0 10px;
-  color: var(--cor-texto-claro);
-  font-size: 24px;
-}
-
-.navegacao {
-  overflow-x: auto;
-}
-
-.navegacao ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.navegacao li {
-  display: inline-block;
-  margin: 0 8px;
-}
-
-.navegacao a {
-  padding: 8px 0;
-  color: var(--cor-texto-claro);
-  font-weight: bold;
-  white-space: nowrap;
-}
-
-.navegacao a:hover {
-  text-decoration: underline;
-}
-
-.navegacao a.ativo {
-  color: var(--cor-destaque);
-}
-
+/* =====================================================================
+   pag2.css — PERFIL (João Cassiano)
+   Só o que é exclusivo do Perfil. Cabeçalho, menu, rodapé, cores e
+   acessibilidade vêm de style.css.
+   ===================================================================== */
 /* Organização da página */
 .layout {
   width: 92%;
@@ -156,7 +98,7 @@ section {
 
 .estatistica b,
 .conexoes b {
-  color: var(--cor-primaria);
+  color: var(--cor-link);
 }
 
 .atalhos {
@@ -182,7 +124,7 @@ section {
 .atalhos a {
   padding: 8px 0;
   display: block;
-  color: var(--cor-primaria);
+  color: var(--cor-link);
 }
 
 /* Apresentação do perfil */
@@ -237,7 +179,7 @@ section {
 
 .botao-secundario {
   background-color: var(--cor-fundo-cartao);
-  color: var(--cor-primaria);
+  color: var(--cor-link);
 }
 
 .botao-secundario:hover {
@@ -318,7 +260,7 @@ section {
 
 .texto-apoio {
   margin: 3px 0 0;
-  color: var(--cor-texto-claro);
+  color: var(--cor-texto-secundario);
 }
 
 .lista-projetos {
@@ -389,7 +331,7 @@ section {
   padding: 3px 8px;
   border-radius: 4px;
   background-color: var(--cor-borda-clara);
-  color: var(--cor-primaria);
+  color: var(--cor-link);
   font-size: 12px;
 }
 
@@ -398,11 +340,11 @@ section {
   padding-top: 9px;
   display: block;
   border-top: 1px solid var(--cor-borda);
-  color: var(--cor-primaria);
+  color: var(--cor-link);
   font-weight: bold;
 }
 
-/* Experiência e rodapé */
+/* Experiência */
 .experiencia {
   margin-top: 12px;
   padding: 8px 0 8px 14px;
@@ -412,18 +354,6 @@ section {
 .experiencia p {
   margin: 3px 0;
   color: var(--cor-texto-secundario);
-}
-
-.rodape {
-  margin-top: 20px;
-  padding: 15px;
-  background-color: var(--cor-primaria);
-  color: var(--cor-texto-claro);
-  text-align: center;
-}
-
-.rodape p {
-  margin: 0;
 }
 
 /* Ajustes para telas menores */
@@ -449,11 +379,6 @@ section {
     display: none;
   }
 
-  .navegacao ul {
-    padding-bottom: 4px;
-    white-space: nowrap;
-  }
-
   .perfil-conteudo {
     padding-right: 16px;
     padding-left: 16px;
@@ -471,4 +396,12 @@ section {
   .secao {
     padding: 15px;
   }
+}
+
+/* Alto contraste: etiquetas e caixas de tecnologia com fundo preto */
+body:has(#modo-alto-contraste:checked) .etiquetas li,
+body:has(#modo-alto-contraste:checked) .tecnologias li,
+body:has(#modo-alto-contraste:checked) .projeto {
+  background-color: #000000;
+  border: 1px solid #ffffff;
 }

@@ -4,26 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevNetwork - Feed</title>
-  <link rel="stylesheet" href="pag1.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/pag1.css">
 </head>
 <body>
 
   <a href="#conteudo-principal" class="pular-link">Pular para o conteúdo principal</a>
 
-  <!-- Painel de acessibilidade estilo gov.br/VLibras: <details> abre e fecha sem JavaScript -->
+  <!-- Painel de acessibilidade (igual em todas as páginas). Abre e fecha
+       com <details>, sem JavaScript. -->
   <details class="painel-acessibilidade">
     <summary class="botao-painel-acessibilidade">
       <span class="conteudo-botao-painel">
         <svg class="icone-painel" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
           <circle cx="12" cy="6.2" r="1.6"/>
-           <path d="M6.5 9.2 12 10l5.5-.8.3 1.4-4.3 1v2.6l1.6 5-1.4.5-1.7-4.6-1.7 4.6-1.4-.5 1.6-5v-2.6l-4.3-1z"/>
+          <path d="M6.5 9.2 12 10l5.5-.8.3 1.4-4.3 1v2.6l1.6 5-1.4.5-1.7-4.6-1.7 4.6-1.4-.5 1.6-5v-2.6l-4.3-1z"/>
         </svg>
         <span>Acessibilidade</span>
       </span>
     </summary>
 
-    <!-- O <form> permite o botão "Restaurar padrão" (type="reset") desmarcar tudo sem JS -->
     <form class="barra-acessibilidade conteudo-painel" aria-labelledby="titulo-painel-acessibilidade">
       <p id="titulo-painel-acessibilidade" class="titulo-painel">Opções de acessibilidade</p>
 
@@ -79,9 +80,9 @@
     </form>
   </details>
 
-  <header>
+  <header class="cabecalho-site">
     <h1>DevNetwork</h1>
-    <nav>
+    <nav class="menu-principal" aria-label="Menu principal">
       <ul>
         <li><a href="../index.html">Início</a></li>
         <li><a href="pag1.html" class="ativo" aria-current="page">Feed</a></li>
@@ -101,7 +102,7 @@
     </nav>
   </header>
 
-  <main id="conteudo-principal">
+<main id="conteudo-principal">
 
     <section>
       <h2>Criar publicação</h2>
@@ -130,11 +131,9 @@
         <p>Obrigado ao time de Plataforma pela paciência no começo.</p>
         <p class="tags-publicacao">#Java #SpringBoot #Carreira</p>
 
-        
         <figure class="imagem-publicacao">
-         <img src="../img/neymar.jpg" alt="Neymar" width="1408" height="768" loading="lazy">
+         <img src="../img/neymar.jpg" alt="Neymar sorrindo enquanto digita, em um escritório com dois monitores e troféus na estante" width="1408" height="768" loading="lazy">
         </figure>
-        
 
         <fieldset class="reacoes-rapidas">
           <legend class="visualmente-oculto">Reagir à publicação de Neymar Junior</legend>
@@ -161,7 +160,7 @@
 
         <p class="barra-acoes">
           <span class="acao">
-            <input type="checkbox" id="curtir-1" class="input-curtir" autocomplete="off">
+            <input type="checkbox" id="curtir-1" class="input-curtir">
             <label for="curtir-1" class="botao-acao botao-curtir" aria-label="Curtir publicação">
               <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M12 21s-6.7-4.3-9.3-8.1C1 10.1 1.6 6.6 4.4 4.9c2.3-1.4 5-0.8 6.6 1.1L12 7.1l1-1.1c1.6-1.9 4.3-2.5 6.6-1.1 2.8 1.7 3.4 5.2 1.7 8-2.6 3.8-9.3 8.1-9.3 8.1z"/>
@@ -171,7 +170,7 @@
           </span>
 
           <span class="acao">
-            <a href="#" class="botao-acao" aria-label="Comentar">
+            <a href="#publicacao" class="botao-acao" aria-label="Comentar - vai para a caixa de texto">
               <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>
               </svg>
@@ -180,7 +179,7 @@
           </span>
 
           <span class="acao">
-            <input type="checkbox" id="salvar-1" class="input-salvar" autocomplete="off">
+            <input type="checkbox" id="salvar-1" class="input-salvar">
             <label for="salvar-1" class="botao-acao botao-salvar" aria-label="Salvar publicação">
               <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"/>
@@ -203,7 +202,7 @@
         <header class="autor-publicacao">
           <span class="avatar" aria-hidden="true">LM</span>
           <div class="dados-autor">
-            <h3>Leonel Messi</h3>
+            <h3>Lionel Messi</h3>
             <p class="cargo-autor">Desenvolvedor Front-end pelo Barcelo-FC</p>
             <p class="tempo-publicacao"><time datetime="2026-10-01T18:40">ontem</time></p>
           </div>
@@ -214,15 +213,13 @@
         <p>Se alguém quiser trocar ideia sobre acessibilidade sem depender de framework, me chama aqui!</p>
         <p class="tags-publicacao">#Frontend #Acessibilidade #HTML #CSS</p>
 
-        
         <figure class="imagem-publicacao">
-          <img src="../img/messi.jpg" alt="Messi" width="1408" height="768" loading="lazy">
-          
+          <img src="../img/messi.jpg" alt="Messi programando em frente a dois monitores, com Bolas de Ouro e taças na estante ao fundo" width="1408" height="768" loading="lazy">
+
         </figure>
-        
 
         <fieldset class="reacoes-rapidas">
-          <legend class="visualmente-oculto">Reagir à publicação de Leonel Messi</legend>
+          <legend class="visualmente-oculto">Reagir à publicação de Lionel Messi</legend>
 
           <!-- "Sem reação": radio oculto que começa marcado; o botão Remover reação aponta para ele -->
           <input type="radio" name="reacao-2" id="reacao-2-nenhuma" class="input-reacao input-reacao-nenhuma" checked>
@@ -247,7 +244,7 @@
 
         <p class="barra-acoes">
           <span class="acao">
-            <input type="checkbox" id="curtir-2" class="input-curtir" autocomplete="off">
+            <input type="checkbox" id="curtir-2" class="input-curtir">
             <label for="curtir-2" class="botao-acao botao-curtir" aria-label="Curtir publicação">
               <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M12 21s-6.7-4.3-9.3-8.1C1 10.1 1.6 6.6 4.4 4.9c2.3-1.4 5-0.8 6.6 1.1L12 7.1l1-1.1c1.6-1.9 4.3-2.5 6.6-1.1 2.8 1.7 3.4 5.2 1.7 8-2.6 3.8-9.3 8.1-9.3 8.1z"/>
@@ -257,7 +254,7 @@
           </span>
 
           <span class="acao">
-            <a href="#" class="botao-acao" aria-label="Comentar">
+            <a href="#publicacao" class="botao-acao" aria-label="Comentar - vai para a caixa de texto">
               <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>
               </svg>
@@ -266,7 +263,7 @@
           </span>
 
           <span class="acao">
-            <input type="checkbox" id="salvar-2" class="input-salvar" autocomplete="off">
+            <input type="checkbox" id="salvar-2" class="input-salvar">
             <label for="salvar-2" class="botao-acao botao-salvar" aria-label="Salvar publicação">
               <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"/>
@@ -300,11 +297,9 @@
         <p>Semana que vem começa um novo desafio, conto mais em breve. 😉</p>
         <p class="tags-publicacao">#Dados #MySQL #NovoCiclo</p>
 
-       
         <figure class="imagem-publicacao">
-           <img src="../img/ronaldo.jpg" alt="Descreva o que aparece na foto" width="1408" height="768" loading="lazy">
+           <img src="../img/ronaldo.jpg" alt="Cristiano Ronaldo programando em um escritório com vista para a cidade e troféus ao fundo" width="1408" height="768" loading="lazy">
         </figure>
-        
 
         <fieldset class="reacoes-rapidas">
           <legend class="visualmente-oculto">Reagir à publicação de Cristiano Ronaldo</legend>
@@ -332,7 +327,7 @@
 
         <p class="barra-acoes">
           <span class="acao">
-            <input type="checkbox" id="curtir-3" class="input-curtir" autocomplete="off">
+            <input type="checkbox" id="curtir-3" class="input-curtir">
             <label for="curtir-3" class="botao-acao botao-curtir" aria-label="Curtir publicação">
               <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M12 21s-6.7-4.3-9.3-8.1C1 10.1 1.6 6.6 4.4 4.9c2.3-1.4 5-0.8 6.6 1.1L12 7.1l1-1.1c1.6-1.9 4.3-2.5 6.6-1.1 2.8 1.7 3.4 5.2 1.7 8-2.6 3.8-9.3 8.1-9.3 8.1z"/>
@@ -342,7 +337,7 @@
           </span>
 
           <span class="acao">
-            <a href="#" class="botao-acao" aria-label="Comentar">
+            <a href="#publicacao" class="botao-acao" aria-label="Comentar - vai para a caixa de texto">
               <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>
               </svg>
@@ -351,7 +346,7 @@
           </span>
 
           <span class="acao">
-            <input type="checkbox" id="salvar-3" class="input-salvar" autocomplete="off">
+            <input type="checkbox" id="salvar-3" class="input-salvar">
             <label for="salvar-3" class="botao-acao botao-salvar" aria-label="Salvar publicação">
               <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"/>
@@ -374,9 +369,9 @@
 
   </main>
 
-  <footer>
+  <footer class="rodape-site">
     <p>Rede Social para Desenvolvedores</p>
-    <p class="direitos-autorais">&copy; 2026 [SUA EMPRESA] LTDA. CNPJ: 00.000.000/0000-00. Todos os direitos reservados.</p>
+    <p class="direitos-autorais">&copy; 2026 DevNetwork. Todos os direitos reservados.</p>
   </footer>
 
 </body>

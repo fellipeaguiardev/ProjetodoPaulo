@@ -1,32 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>DevNetwork - Workspace</title>
-
-    <link rel="stylesheet" href="/css/pag5.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevNetwork - Workspace</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/pag5.css">
 </head>
-
 <body>
 
-    <!--BOTÃO DE ACESSIBILIDADE-->
+  <a href="#conteudo-principal" class="pular-link">Pular para o conteúdo principal</a>
 
+  <!-- Painel de acessibilidade (igual em todas as páginas). Abre e fecha
+       com <details>, sem JavaScript. -->
+  <details class="painel-acessibilidade">
+    <summary class="botao-painel-acessibilidade">
+      <span class="conteudo-botao-painel">
+        <svg class="icone-painel" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="12" cy="6.2" r="1.6"/>
+          <path d="M6.5 9.2 12 10l5.5-.8.3 1.4-4.3 1v2.6l1.6 5-1.4.5-1.7-4.6-1.7 4.6-1.4-.5 1.6-5v-2.6l-4.3-1z"/>
+        </svg>
+        <span>Acessibilidade</span>
+      </span>
+    </summary>
 
+    <form class="barra-acessibilidade conteudo-painel" aria-labelledby="titulo-painel-acessibilidade">
+      <p id="titulo-painel-acessibilidade" class="titulo-painel">Opções de acessibilidade</p>
 
-    <!-- CABEÇALHO -->
-   <header>
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Visão</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-daltonico">
+          <label for="modo-daltonico">Modo para daltônicos</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-alto-contraste">
+          <label for="modo-alto-contraste">Alto contraste</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-fonte-grande">
+          <label for="modo-fonte-grande">Aumentar texto</label>
+        </span>
+      </fieldset>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Leitura</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-destacar-links">
+          <label for="modo-destacar-links">Destacar links e botões</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-espacamento">
+          <label for="modo-espacamento">Espaçamento de leitura</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-sem-animacoes">
+          <label for="modo-sem-animacoes">Pausar animações</label>
+        </span>
+      </fieldset>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Aparência</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="tema-escuro">
+          <label for="tema-escuro">Tema escuro</label>
+        </span>
+      </fieldset>
+
+      <button type="reset" class="botao-restaurar">Restaurar padrão</button>
+      <p class="aviso-painel">As opções valem enquanto você estiver nesta página.</p>
+    </form>
+  </details>
+
+  <header class="cabecalho-site">
     <h1>DevNetwork</h1>
-    <nav>
+    <nav class="menu-principal" aria-label="Menu principal">
       <ul>
         <li><a href="../index.html">Início</a></li>
-        <li><a href="pag1.html" class="ativo" aria-current="page">Feed</a></li>
+        <li><a href="pag1.html">Feed</a></li>
         <li><a href="pag2.html">Perfil</a></li>
         <li><a href="pag3.html">Explorar</a></li>
         <li><a href="pag4.html">Projetos</a></li>
-        <li><a href="pag5.html">Workspace</a></li>
+        <li><a href="pag5.html" class="ativo" aria-current="page">Workspace</a></li>
         <li><a href="pag6.html">Comunidades</a></li>
         <li><a href="pag7.html">Vagas</a></li>
         <li><a href="pag8.html">Rede</a></li>
@@ -39,381 +102,162 @@
     </nav>
   </header>
 
-
-    <!-- CONTEÚDO PRINCIPAL -->
-    <main>
-
-        <!--Seção "Projetos"-->
-
-        <section class="projeto-header">
-
-            <div>
-
-                <h1>
-                   Projeto
-                </h1>
-                
-            </div>
-
-            <div class="acoes">
-
-                <button class="btn-secundario">
-                    Compartilhar
-                </button>
-
-                <button class="btn-principal">
-                    + Nova tarefa
-                </button>
-
-            </div>
-
-        </section>
-
-
-        <!-- INFORMAÇÕES DO PROJETO -->
-        <section class="informacoes">
-
-            <div>
-                <strong>Projeto</strong>
-                <span>Biblioteca</span>
-            </div>
-
-            <div>
-                <strong>Tecnologia</strong>
-                <span>HTML,  CSS e  C</span>
-            </div>
-
-            <div>
-                <strong>Status</strong>
-                <span class="status">Em desenvolvimento</span>
-            </div>
-
-            <div>
-                <strong>Progresso</strong>
-                <span>65%</span>
-            </div>
-
-        </section>
-
-
-        <!-- KANBAN -->
-        <section class="kanban-section">
-
-            <div class="secao-titulo">
-
-                <div>
-                    <h2>Quadro do projeto</h2>
-
-                    <p>
-                        Acompanhe o desenvolvimento das tarefas de sua equipe.
-                    </p>
-                </div>
-
-                <button class="filtro">
-                    Filtrar 
-                </button>
-
-            </div>
-
-
-            <div class="kanban">
-
-
-                <!-- BACKLOG -->
-                <div class="coluna">
-
-                    <div class="coluna-header">
-
-                        <h3>Backlog</h3>
-
-                        <span>2</span>
-
-                    </div>
-
-                    <div class="tarefas">
-
-                        <article class="tarefa">
-
-                            <span class="tag azul">
-                                FRONT-END
-                            </span>
-
-                            <h4>
-                                Criar página inicial
-                            </h4>
-
-                            <div class="tarefa-footer">
-
-                                <span> Gabriel R.</span>
-
-                                <span>24/09</span>
-
-                            </div>
-                                
-                        </article>
-
-
-                        <article class="tarefa">
-
-                            <span class="tag roxo">
-                                BANCO
-                            </span>
-
-                            <h4>
-                                Modelar banco de dados
-                            </h4>
-
-
-                            <div class="tarefa-footer">
-
-                                <span>Giovanni R.</span>
-
-                                <span>26/09</span>
-
-                            </div>
-
-                        </article>
-
-                    </div>
-
-                </div>
-
-
-                <!-- DESENVOLVIMENTO -->
-                <div class="coluna">
-
-                    <div class="coluna-header">
-
-                        <h3>Em desenvolvimento</h3>
-
-                        <span>2</span>
-
-                    </div>
-
-                    <div class="tarefas">
-
-                        <article class="tarefa">
-
-                            <span class="tag verde">
-                                BACK-END
-                            </span>
-
-                            <h4>
-                                Criar sistema de login
-                            </h4>
-
-                            <div class="tarefa-footer">
-
-                                <span>João C.</span>
-
-                                <span>28/09</span>
-
-                            </div>
-
-                        </article>
-
-
-                        <article class="tarefa">
-
-                            <span class="tag azul">
-                                FRONT-END
-                            </span>
-
-                            <h4>
-                                Criar dashboard
-                            </h4>
-
-                            <div class="tarefa-footer">
-
-                                <span>João C.</span>
-
-                                <span>29/09</span>
-
-                            </div>
-
-                        </article>
-
-                    </div>
-
-                </div>
-
-
-                <!-- REVISÃO -->
-                <div class="coluna">
-
-                    <div class="coluna-header">
-
-                        <h3>Revisão</h3>
-
-                        <span>1</span>
-
-                    </div>
-
-                    <div class="tarefas">
-
-                        <article class="tarefa">
-
-                            <span class="tag amarelo">
-                                TESTE
-                            </span>
-
-                            <h4>
-                                Testar formulário
-                            </h4>
-
-
-                            <div class="tarefa-footer">
-
-                                <span>Giovanni R.</span>
-
-                                <span>30/09</span>
-
-                            </div>
-
-                        </article>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CONCLUÍDO -->
-                <div class="coluna concluido">
-
-                    <div class="coluna-header">
-
-                        <h3>Concluído</h3>
-
-                        <span>2</span>
-
-                    </div>
-
-                    <div class="tarefas">
-
-                        <article class="tarefa">
-
-                            <span class="tag verde">
-                                CONCLUÍDO
-                            </span>
-
-                            <h4>
-                                Estrutura do projeto
-                            </h4>
-
-                            <div class="tarefa-footer">
-
-                                <span>✓ Finalizado</span>
-
-                            </div>
-
-                        </article>
-
-
-                        <article class="tarefa">
-
-                            <span class="tag verde">
-                                CONCLUÍDO
-                            </span>
-
-                            <h4>
-                                Layout inicial
-                            </h4>
-
-
-                            <div class="tarefa-footer">
-
-                                <span>✓ Finalizado</span>
-
-                            </div>
-
-                        </article>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- EQUIPE -->
-        <section class="equipe">
-
-            <div class="secao-titulo">
-
-                <div>
-
-                    <h2>
-                        Equipe do projeto
-                    </h2>
-
-                    <p>
-                        Pessoas colaborando neste projeto.
-                    </p>
-
-                </div>  
-
-                <button class="btn-secundario">
-                    + Convidar
-                </button>
-
-            </div>
-
-
-            <div class="membros">
-
-                <div class="membro">
-
-                    <div class="avatar">
-                        GR
-                    </div>
-
-                    <div>
-                        <h4>Gabriel Rocha</h4>
-                        <span>Desenvolvedor</span>
-                    </div>
-
-                </div>
-
-
-                <div class="membro">
-
-                    <div class="avatar">
-                        GR
-                    </div>  
-
-                    <div>
-                        <h4>Giovanni Rodrigues</h4>
-                        <span>UX/UI Designer</span>
-                    </div>
-
-                </div>
-
-
-                <div class="membro">
-
-                    <div class="avatar">
-                        JC
-                    </div>
-
-                    <div>
-                        <h4>João Costa</h4>
-                        <span>Desenvolvedor</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-            
-    </main>
-
- <footer>
-        <p>Rede Social para Desenvolvedores</p>
-        <p class="direitos-autorais">&copy; 2026 [SUA EMPRESA] LTDA. CNPJ: 00.000.000/0000-00. Todos os direitos reservados.</p>
+<main id="conteudo-principal">
+
+    <section class="projeto-header">
+      <h2>Projeto</h2>
+      <div class="acoes">
+        <button type="button" class="btn-secundario">Compartilhar</button>
+        <button type="button" class="btn-principal">+ Nova tarefa</button>
+      </div>
+    </section>
+
+    <section aria-label="Informações do projeto">
+      <dl class="informacoes">
+        <div>
+          <dt>Projeto</dt>
+          <dd>Biblioteca</dd>
+        </div>
+        <div>
+          <dt>Tecnologia</dt>
+          <dd>HTML, CSS e C</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd class="status">Em desenvolvimento</dd>
+        </div>
+        <div>
+          <dt>Progresso</dt>
+          <dd>65%</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="kanban-section">
+      <div class="secao-titulo">
+        <div>
+          <h2>Quadro do projeto</h2>
+          <p>Acompanhe o desenvolvimento das tarefas da sua equipe.</p>
+        </div>
+        <button type="button" class="filtro">Filtrar</button>
+      </div>
+
+      <div class="kanban">
+        <div class="coluna">
+          <div class="coluna-header">
+            <h3>Backlog</h3>
+            <span>2<span class="visualmente-oculto"> tarefas</span></span>
+          </div>
+          <ul class="tarefas">
+            <li class="tarefa">
+              <span class="tag azul">FRONT-END</span>
+              <h4>Criar página inicial</h4>
+              <p class="tarefa-footer"><span>Gabriel R.</span> <span>24/09</span></p>
+            </li>
+            <li class="tarefa">
+              <span class="tag roxo">BANCO</span>
+              <h4>Modelar banco de dados</h4>
+              <p class="tarefa-footer"><span>Giovanni R.</span> <span>26/09</span></p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="coluna">
+          <div class="coluna-header">
+            <h3>Em desenvolvimento</h3>
+            <span>2<span class="visualmente-oculto"> tarefas</span></span>
+          </div>
+          <ul class="tarefas">
+            <li class="tarefa">
+              <span class="tag verde">BACK-END</span>
+              <h4>Criar sistema de login</h4>
+              <p class="tarefa-footer"><span>João C.</span> <span>28/09</span></p>
+            </li>
+            <li class="tarefa">
+              <span class="tag azul">FRONT-END</span>
+              <h4>Criar dashboard</h4>
+              <p class="tarefa-footer"><span>João C.</span> <span>29/09</span></p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="coluna">
+          <div class="coluna-header">
+            <h3>Revisão</h3>
+            <span>1<span class="visualmente-oculto"> tarefas</span></span>
+          </div>
+          <ul class="tarefas">
+            <li class="tarefa">
+              <span class="tag amarelo">TESTE</span>
+              <h4>Testar formulário</h4>
+              <p class="tarefa-footer"><span>Giovanni R.</span> <span>30/09</span></p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="coluna concluido">
+          <div class="coluna-header">
+            <h3>Concluído</h3>
+            <span>2<span class="visualmente-oculto"> tarefas</span></span>
+          </div>
+          <ul class="tarefas">
+            <li class="tarefa">
+              <span class="tag verde">CONCLUÍDO</span>
+              <h4>Estrutura do projeto</h4>
+              <p class="tarefa-footer"><span>✓ Finalizado</span></p>
+            </li>
+            <li class="tarefa">
+              <span class="tag verde">CONCLUÍDO</span>
+              <h4>Layout inicial</h4>
+              <p class="tarefa-footer"><span>✓ Finalizado</span></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="equipe">
+      <div class="secao-titulo">
+        <div>
+          <h2>Equipe do projeto</h2>
+          <p>Pessoas colaborando neste projeto.</p>
+        </div>
+        <button type="button" class="btn-secundario">+ Convidar</button>
+      </div>
+
+      <ul class="membros">
+        <li class="membro">
+          <span class="avatar" aria-hidden="true">GR</span>
+          <div>
+            <h3>Gabriel Rocha</h3>
+            <p>Desenvolvedor</p>
+          </div>
+        </li>
+
+        <li class="membro">
+          <span class="avatar" aria-hidden="true">GR</span>
+          <div>
+            <h3>Giovanni Rodrigues</h3>
+            <p>UX/UI Designer</p>
+          </div>
+        </li>
+
+        <li class="membro">
+          <span class="avatar" aria-hidden="true">JC</span>
+          <div>
+            <h3>João Costa</h3>
+            <p>Desenvolvedor</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="rodape-site">
+    <p>Rede Social para Desenvolvedores</p>
+    <p class="direitos-autorais">&copy; 2026 DevNetwork. Todos os direitos reservados.</p>
   </footer>
-   
+
 </body>
 </html>

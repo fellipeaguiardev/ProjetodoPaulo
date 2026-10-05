@@ -1,0 +1,64 @@
+/* =====================================================================
+   pag7.css — VAGAS (Anderson)
+   Só o que é exclusivo das Vagas. Cabeçalho, menu, rodapé, cores e
+   acessibilidade vêm de style.css.
+   ===================================================================== */
+
+main {
+  max-width: 1000px;
+}
+
+/* Filtros lado a lado no computador */
+.filtros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0 15px;
+  align-items: end;
+}
+
+.filtros button {
+  margin-bottom: 10px;
+}
+
+/* Cartões de vaga */
+.lista-vagas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+.vaga {
+  margin-bottom: 0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vaga:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.vaga h3 {
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
+.vaga p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  color: var(--cor-texto-secundario);
+}
+
+/* Destaque para o salário */
+.vaga .salario {
+  font-weight: bold;
+  color: var(--cor-status-ok);
+}
+
+/* Destaque para as tecnologias */
+.vaga .tecnologias-vaga {
+  font-weight: 600;
+  color: var(--cor-salvo-icone);
+}

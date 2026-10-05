@@ -21,7 +21,9 @@ Estrutura de pastas
 devnetwork/
 ├── index.html                  Página inicial (resumo do tema + menu)
 ├── paginas/                    Páginas de conteúdo (uma por integrante)
-├── css/                        CSS (site.css, pag1.css, pag3.css)
+├── css/
+│   ├── style.css               CSS compartilhado por TODAS as páginas
+│   └── pag1.css ... pag10.css  Estilos exclusivos de cada tela
 ├── js/                         Scripts (vazio nesta entrega)
 ├── img/                        Imagens do site
 ├── assets/                     Arquivos complementares
@@ -31,6 +33,20 @@ devnetwork/
     ├── testes_e_validacoes.md
 ```
 
+
+Organização do CSS
+
+Todas as páginas carregam primeiro o `css/style.css`, que tem a paleta de cores (variáveis), o cabeçalho, o menu, o rodapé, formulários, tabelas, cartões e o painel de acessibilidade. Depois, se precisar, cada página carrega o próprio arquivo (`pag2.css`, `pag5.css`...), só com o que é exclusivo dela.
+
+Regras combinadas:
+
+- Não escrever cores soltas: usar sempre as variáveis do `style.css` (`var(--cor-texto)`, `var(--cor-fundo-cartao)`...). Assim o tema escuro e o alto contraste funcionam em todas as páginas.
+- Caminhos sempre relativos (`../css/style.css`), nunca começando com `/`, para o site funcionar abrindo o arquivo direto, no Live Server e no GitHub Pages.
+- Cada integrante mexe no próprio `pagN.css`; mudanças no `style.css` são combinadas com o grupo, para evitar conflito no Git.
+
+Acessibilidade
+
+Todas as páginas têm o link "Pular para o conteúdo principal" e o painel de acessibilidade (botão na lateral direita), feito só com HTML e CSS (`<details>` + checkboxes + `:has()`): modo para daltônicos, alto contraste, aumentar texto, destacar links, espaçamento de leitura, pausar animações e tema escuro. Sem JavaScript, as opções não ficam salvas ao trocar de página.
 
 Páginas e divisão de funções
 
@@ -62,4 +78,4 @@ Documentos relacionados
 
 - [Diário de bordo](diario_de_bordo.md)
 - [Testes e validações](testes_e_validacoes.md)
-- [Orçamento](orcamento_hospedagem.html)
+- [Orçamento](../paginas/orcamento_hospedagem.html)

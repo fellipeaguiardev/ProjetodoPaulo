@@ -1,210 +1,296 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comunidades - DevConnect</title>
+  <title>DevNetwork - Comunidades</title>
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/pag6.css">
 </head>
 <body>
 
-  <!-- Cabeçalho com o menu principal -->
-  <header class="cabecalho">
-    <h1>Liga dos Dev</h1>
-    <p>A rede social para quem vive de código</p>
+  <a href="#conteudo-principal" class="pular-link">Pular para o conteúdo principal</a>
 
-    <nav class="menu">
-      <a href="index.html">Início</a>
-      <a href="feed.html">Feed</a>
-      <a href="perfil.html">Perfil</a>
-      <a href="projetos.html">Projetos</a>
-      <a href="vagas.html">Vagas</a>
-      <a href="comunidades.html" class="pagina-atual">Comunidades</a>
-      <a href="eventos.html">Eventos</a>
-      <a href="mensagens.html">Mensagens</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="contato.html">Contato</a>
+  <!-- Painel de acessibilidade (igual em todas as páginas). Abre e fecha
+       com <details>, sem JavaScript. -->
+  <details class="painel-acessibilidade">
+    <summary class="botao-painel-acessibilidade">
+      <span class="conteudo-botao-painel">
+        <svg class="icone-painel" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="12" cy="6.2" r="1.6"/>
+          <path d="M6.5 9.2 12 10l5.5-.8.3 1.4-4.3 1v2.6l1.6 5-1.4.5-1.7-4.6-1.7 4.6-1.4-.5 1.6-5v-2.6l-4.3-1z"/>
+        </svg>
+        <span>Acessibilidade</span>
+      </span>
+    </summary>
+
+    <form class="barra-acessibilidade conteudo-painel" aria-labelledby="titulo-painel-acessibilidade">
+      <p id="titulo-painel-acessibilidade" class="titulo-painel">Opções de acessibilidade</p>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Visão</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-daltonico">
+          <label for="modo-daltonico">Modo para daltônicos</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-alto-contraste">
+          <label for="modo-alto-contraste">Alto contraste</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-fonte-grande">
+          <label for="modo-fonte-grande">Aumentar texto</label>
+        </span>
+      </fieldset>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Leitura</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-destacar-links">
+          <label for="modo-destacar-links">Destacar links e botões</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-espacamento">
+          <label for="modo-espacamento">Espaçamento de leitura</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-sem-animacoes">
+          <label for="modo-sem-animacoes">Pausar animações</label>
+        </span>
+      </fieldset>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Aparência</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="tema-escuro">
+          <label for="tema-escuro">Tema escuro</label>
+        </span>
+      </fieldset>
+
+      <button type="reset" class="botao-restaurar">Restaurar padrão</button>
+      <p class="aviso-painel">As opções valem enquanto você estiver nesta página.</p>
+    </form>
+  </details>
+
+  <header class="cabecalho-site">
+    <h1>DevNetwork</h1>
+    <nav class="menu-principal" aria-label="Menu principal">
+      <ul>
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="pag1.html">Feed</a></li>
+        <li><a href="pag2.html">Perfil</a></li>
+        <li><a href="pag3.html">Explorar</a></li>
+        <li><a href="pag4.html">Projetos</a></li>
+        <li><a href="pag5.html">Workspace</a></li>
+        <li><a href="pag6.html" class="ativo" aria-current="page">Comunidades</a></li>
+        <li><a href="pag7.html">Vagas</a></li>
+        <li><a href="pag8.html">Rede</a></li>
+        <li><a href="pag9.html">Mensagens</a></li>
+        <li><a href="pag10.html">Notificações</a></li>
+        <li><a href="pag11.html">Empresa</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main>
+<main id="conteudo-principal">
 
-    <!-- Apresentação da página -->
-    <section class="secao">
+    <section>
       <h2>Comunidades</h2>
-      <p>
-        As comunidades são espaços onde desenvolvedores com interesses em comum
-        se reúnem para conversar, tirar dúvidas, compartilhar projetos e
-        aprender juntos. Escolha uma comunidade abaixo ou crie a sua.
-      </p>
+      <p>As comunidades são espaços onde desenvolvedores com interesses em comum se reúnem para conversar, tirar dúvidas, compartilhar projetos e aprender juntos. Escolha uma comunidade abaixo ou crie a sua.</p>
     </section>
 
-    <!-- Lista das comunidades -->
-    <section class="secao">
+    <section>
       <h2>Comunidades em destaque</h2>
+      <div class="lista-comunidades">
+        <article class="cartao">
+          <h3>HTML e CSS Brasil</h3>
+          <p>Para quem está começando no front-end e quer trocar dicas sobre páginas web.</p>
+          <ul>
+            <li>Membros: 12.540</li>
+            <li>Nível: Iniciante</li>
+            <li>Categoria: Front-end</li>
+          </ul>
+          <a href="#como-participar" class="botao">Participar<span class="visualmente-oculto"> da comunidade HTML e CSS Brasil</span></a>
+        </article>
 
-      <article class="cartao">
-        <h3>HTML e CSS Brasil</h3>
-        <p>Para quem está começando no front-end e quer trocar dicas sobre páginas web.</p>
-        <ul>
-          <li>Membros: 12.540</li>
-          <li>Nível: Iniciante</li>
-          <li>Categoria: Front-end</li>
-        </ul>
-        <a href="#como-participar" class="botao">Participar</a>
-      </article>
+        <article class="cartao">
+          <h3>JavaScript Lovers</h3>
+          <p>Discussões sobre JavaScript, frameworks, bibliotecas e boas práticas.</p>
+          <ul>
+            <li>Membros: 9.870</li>
+            <li>Nível: Todos</li>
+            <li>Categoria: Front-end</li>
+          </ul>
+          <a href="#como-participar" class="botao">Participar<span class="visualmente-oculto"> da comunidade JavaScript Lovers</span></a>
+        </article>
 
-      <article class="cartao">
-        <h3>JavaScript Lovers</h3>
-        <p>Discussões sobre JavaScript, frameworks, bibliotecas e boas práticas.</p>
-        <ul>
-          <li>Membros: 9.870</li>
-          <li>Nível: Todos</li>
-          <li>Categoria: Front-end</li>
-        </ul>
-        <a href="#como-participar" class="botao">Participar</a>
-      </article>
+        <article class="cartao">
+          <h3>Python Devs</h3>
+          <p>Comunidade para quem usa Python em automação, dados e back-end.</p>
+          <ul>
+            <li>Membros: 15.210</li>
+            <li>Nível: Todos</li>
+            <li>Categoria: Back-end</li>
+          </ul>
+          <a href="#como-participar" class="botao">Participar<span class="visualmente-oculto"> da comunidade Python Devs</span></a>
+        </article>
 
-      <article class="cartao">
-        <h3>Python Devs</h3>
-        <p>Comunidade para quem usa Python em automação, dados e back-end.</p>
-        <ul>
-          <li>Membros: 15.210</li>
-          <li>Nível: Todos</li>
-          <li>Categoria: Back-end</li>
-        </ul>
-        <a href="#como-participar" class="botao">Participar</a>
-      </article>
+        <article class="cartao">
+          <h3>Banco de Dados</h3>
+          <p>Modelagem, SQL, MySQL, PostgreSQL e tudo sobre armazenar dados.</p>
+          <ul>
+            <li>Membros: 6.320</li>
+            <li>Nível: Intermediário</li>
+            <li>Categoria: Dados</li>
+          </ul>
+          <a href="#como-participar" class="botao">Participar<span class="visualmente-oculto"> da comunidade Banco de Dados</span></a>
+        </article>
 
-      <article class="cartao">
-        <h3>Banco de Dados</h3>
-        <p>Modelagem, SQL, MySQL, PostgreSQL e tudo sobre armazenar dados.</p>
-        <ul>
-          <li>Membros: 6.320</li>
-          <li>Nível: Intermediário</li>
-          <li>Categoria: Dados</li>
-        </ul>
-        <a href="#como-participar" class="botao">Participar</a>
-      </article>
+        <article class="cartao">
+          <h3>Mobile Dev</h3>
+          <p>Desenvolvimento de aplicativos para Android e iOS.</p>
+          <ul>
+            <li>Membros: 5.480</li>
+            <li>Nível: Todos</li>
+            <li>Categoria: Mobile</li>
+          </ul>
+          <a href="#como-participar" class="botao">Participar<span class="visualmente-oculto"> da comunidade Mobile Dev</span></a>
+        </article>
 
-      <article class="cartao">
-        <h3>Mobile Dev</h3>
-        <p>Desenvolvimento de aplicativos para Android e iOS.</p>
-        <ul>
-          <li>Membros: 5.480</li>
-          <li>Nível: Todos</li>
-          <li>Categoria: Mobile</li>
-        </ul>
-        <a href="#como-participar" class="botao">Participar</a>
-      </article>
-
-      <article class="cartao">
-        <h3>Primeiro Emprego Tech</h3>
-        <p>Dicas de currículo, entrevistas e como conseguir a primeira vaga na área.</p>
-        <ul>
-          <li>Membros: 20.100</li>
-          <li>Nível: Iniciante</li>
-          <li>Categoria: Carreira</li>
-        </ul>
-        <a href="#como-participar" class="botao">Participar</a>
-      </article>
+        <article class="cartao">
+          <h3>Primeiro Emprego Tech</h3>
+          <p>Dicas de currículo, entrevistas e como conseguir a primeira vaga na área.</p>
+          <ul>
+            <li>Membros: 20.100</li>
+            <li>Nível: Iniciante</li>
+            <li>Categoria: Carreira</li>
+          </ul>
+          <a href="#como-participar" class="botao">Participar<span class="visualmente-oculto"> da comunidade Primeiro Emprego Tech</span></a>
+        </article>
+      </div>
     </section>
 
-    <!-- Tabela com as regras -->
-    <section class="secao">
+    <section>
       <h2>Regras das comunidades</h2>
       <table>
-        <tr>
-          <th>Regra</th>
-          <th>Descrição</th>
-        </tr>
-        <tr>
-          <td>Respeito</td>
-          <td>Trate todos os membros com educação, sem ofensas.</td>
-        </tr>
-        <tr>
-          <td>Sem spam</td>
-          <td>Não faça propaganda nem envie mensagens repetidas.</td>
-        </tr>
-        <tr>
-          <td>Assunto da comunidade</td>
-          <td>Publique apenas conteúdo relacionado ao tema do grupo.</td>
-        </tr>
-        <tr>
-          <td>Código de qualidade</td>
-          <td>Ao pedir ajuda, mostre o código e explique o problema.</td>
-        </tr>
+        <thead>
+          <tr>
+            <th>Regra</th>
+            <th>Descrição</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Respeito</td>
+            <td>Trate todos os membros com educação, sem ofensas.</td>
+          </tr>
+          <tr>
+            <td>Sem spam</td>
+            <td>Não faça propaganda nem envie mensagens repetidas.</td>
+          </tr>
+          <tr>
+            <td>Assunto da comunidade</td>
+            <td>Publique apenas conteúdo relacionado ao tema do grupo.</td>
+          </tr>
+          <tr>
+            <td>Código de qualidade</td>
+            <td>Ao pedir ajuda, mostre o código e explique o problema.</td>
+          </tr>
+        </tbody>
       </table>
     </section>
 
-    <!-- Formulário para criar uma comunidade -->
-    <section class="secao" id="criar-comunidade">
+    <section id="criar-comunidade">
       <h2>Crie sua comunidade</h2>
       <p>Preencha o formulário abaixo para solicitar a criação de uma nova comunidade.</p>
 
       <form action="#" method="post">
+        <p>
+          <label for="nome_comunidade">Nome da comunidade</label>
+          <input type="text" id="nome_comunidade" name="nome_comunidade" placeholder="Ex.: React Brasil" required minlength="3">
+        </p>
 
-        <label for="nome_comunidade">Nome da comunidade:</label><br>
-        <input type="text" id="nome_comunidade" name="nome_comunidade" placeholder="Ex.: React Brasil" required>
-        <br><br>
+        <p>
+          <label for="nome_responsavel">Seu nome</label>
+          <input type="text" id="nome_responsavel" name="nome_responsavel" required minlength="3">
+        </p>
 
-        <label for="nome_responsavel">Seu nome:</label><br>
-        <input type="text" id="nome_responsavel" name="nome_responsavel" required>
-        <br><br>
+        <p>
+          <label for="email">Seu e-mail</label>
+          <input type="email" id="email" name="email" placeholder="voce@email.com" required>
+        </p>
 
-        <label for="email">Seu e-mail:</label><br>
-        <input type="email" id="email" name="email" placeholder="voce@email.com" required>
-        <br><br>
+        <p>
+          <label for="telefone">Telefone (formato: (11) 99999-9999)</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required pattern="\(\d{2}\) \d{4,5}-\d{4}" title="Use o formato (11) 99999-9999">
+        </p>
 
-        <label for="telefone">Telefone:</label><br>
-        <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
-        <br><br>
+        <p>
+          <label for="categoria">Categoria</label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Selecione...</option>
+            <option value="front-end">Front-end</option>
+            <option value="back-end">Back-end</option>
+            <option value="mobile">Mobile</option>
+            <option value="dados">Dados</option>
+            <option value="carreira">Carreira</option>
+          </select>
+        </p>
 
-        <label for="categoria">Categoria:</label><br>
-        <select id="categoria" name="categoria" required>
-          <option value="">Selecione...</option>
-          <option value="front-end">Front-end</option>
-          <option value="back-end">Back-end</option>
-          <option value="mobile">Mobile</option>
-          <option value="dados">Dados</option>
-          <option value="carreira">Carreira</option>
-        </select>
-        <br><br>
+        <p>
+          <label for="limite_membros">Limite de membros (de 10 a 100.000)</label>
+          <input type="number" id="limite_membros" name="limite_membros" min="10" max="100000" required>
+        </p>
 
-        <label for="limite_membros">Limite de membros:</label><br>
-        <input type="number" id="limite_membros" name="limite_membros" min="10" max="100000" required>
-        <br><br>
-
-        <label for="data_criacao">Data de criação desejada:</label><br>
-        <input type="date" id="data_criacao" name="data_criacao" required>
-        <br><br>
+        <p>
+          <label for="data_criacao">Data de criação desejada</label>
+          <input type="date" id="data_criacao" name="data_criacao" required>
+        </p>
 
         <fieldset>
           <legend>Tipo de comunidade</legend>
-          <input type="radio" id="publica" name="tipo" value="publica" checked>
-          <label for="publica">Pública</label>
-          <input type="radio" id="privada" name="tipo" value="privada">
-          <label for="privada">Privada</label>
+          <div class="opcoes-tipo">
+            <p class="campo-opcao">
+              <input type="radio" id="publica" name="tipo" value="publica" checked>
+              <label for="publica">Pública</label>
+            </p>
+            <p class="campo-opcao">
+              <input type="radio" id="privada" name="tipo" value="privada">
+              <label for="privada">Privada</label>
+            </p>
+          </div>
         </fieldset>
-        <br>
 
-        <label for="descricao">Descrição:</label><br>
-        <textarea id="descricao" name="descricao" rows="5" cols="40" placeholder="Fale sobre o objetivo da comunidade" required></textarea>
-        <br><br>
+        <p>
+          <label for="descricao">Descrição</label>
+          <textarea id="descricao" name="descricao" rows="5" placeholder="Fale sobre o objetivo da comunidade" required minlength="10"></textarea>
+        </p>
 
-        <input type="checkbox" id="termos" name="termos" required>
-        <label for="termos">Li e aceito as regras das comunidades</label>
-        <br><br>
+        <p class="campo-opcao">
+          <input type="checkbox" id="termos" name="termos" required>
+          <label for="termos">Li e aceito as regras das comunidades</label>
+        </p>
 
-        <button type="submit">Enviar solicitação</button>
+        <p>
+          <button type="submit">Enviar solicitação</button>
+        </p>
       </form>
     </section>
 
-    <!-- Como participar -->
-    <section class="secao" id="como-participar">
+    <section id="como-participar">
       <h2>Como participar</h2>
       <ol>
-        <li>Crie sua conta na DevConnect.</li>
+        <li>Crie sua conta na DevNetwork.</li>
         <li>Escolha uma comunidade da lista.</li>
         <li>Clique em <strong>Participar</strong>.</li>
         <li>Apresente-se e comece a interagir!</li>
@@ -214,13 +300,9 @@
 
   </main>
 
-  <!-- Rodapé -->
-  <footer class="rodape">
-    <p>&copy; 2026 Liga dos Dev - Projeto acadêmico de Front-End</p>
-    <p>
-      <a href="contato.html">Fale conosco</a> |
-      <a href="sobre.html">Sobre o projeto</a>
-    </p>
+  <footer class="rodape-site">
+    <p>Rede Social para Desenvolvedores</p>
+    <p class="direitos-autorais">&copy; 2026 DevNetwork. Todos os direitos reservados.</p>
   </footer>
 
 </body>

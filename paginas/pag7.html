@@ -4,13 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevNetwork - Vagas</title>
-  <link rel="stylesheet" href="../css/site.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/pag7.css">
 </head>
 <body>
 
-  <header>
+  <a href="#conteudo-principal" class="pular-link">Pular para o conteúdo principal</a>
+
+  <!-- Painel de acessibilidade (igual em todas as páginas). Abre e fecha
+       com <details>, sem JavaScript. -->
+  <details class="painel-acessibilidade">
+    <summary class="botao-painel-acessibilidade">
+      <span class="conteudo-botao-painel">
+        <svg class="icone-painel" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="12" cy="6.2" r="1.6"/>
+          <path d="M6.5 9.2 12 10l5.5-.8.3 1.4-4.3 1v2.6l1.6 5-1.4.5-1.7-4.6-1.7 4.6-1.4-.5 1.6-5v-2.6l-4.3-1z"/>
+        </svg>
+        <span>Acessibilidade</span>
+      </span>
+    </summary>
+
+    <form class="barra-acessibilidade conteudo-painel" aria-labelledby="titulo-painel-acessibilidade">
+      <p id="titulo-painel-acessibilidade" class="titulo-painel">Opções de acessibilidade</p>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Visão</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-daltonico">
+          <label for="modo-daltonico">Modo para daltônicos</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-alto-contraste">
+          <label for="modo-alto-contraste">Alto contraste</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-fonte-grande">
+          <label for="modo-fonte-grande">Aumentar texto</label>
+        </span>
+      </fieldset>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Leitura</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-destacar-links">
+          <label for="modo-destacar-links">Destacar links e botões</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-espacamento">
+          <label for="modo-espacamento">Espaçamento de leitura</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-sem-animacoes">
+          <label for="modo-sem-animacoes">Pausar animações</label>
+        </span>
+      </fieldset>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Aparência</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="tema-escuro">
+          <label for="tema-escuro">Tema escuro</label>
+        </span>
+      </fieldset>
+
+      <button type="reset" class="botao-restaurar">Restaurar padrão</button>
+      <p class="aviso-painel">As opções valem enquanto você estiver nesta página.</p>
+    </form>
+  </details>
+
+  <header class="cabecalho-site">
     <h1>DevNetwork</h1>
-    <nav>
+    <nav class="menu-principal" aria-label="Menu principal">
       <ul>
         <li><a href="../index.html">Início</a></li>
         <li><a href="pag1.html">Feed</a></li>
@@ -30,60 +102,134 @@
     </nav>
   </header>
 
-  <main>
+<main id="conteudo-principal">
 
     <section>
       <h2>Filtrar vagas</h2>
-      <form action="#">
-        <label for="tecnologia">Tecnologia</label>
-        <select id="tecnologia" name="tecnologia">
-          <option>HTML</option>
-          <option>CSS</option>
-          <option>JavaScript</option>
-        </select>
+      <form action="#" class="filtros">
+        <p>
+          <label for="tecnologia">Tecnologia</label>
+          <select id="tecnologia" name="tecnologia">
+            <option value="">Todas</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+            <option value="cpp">C++</option>
+            <option value="java">Java</option>
+            <option value="python">Python</option>
+          </select>
+        </p>
 
-        <label for="senioridade">Senioridade</label>
-        <select id="senioridade" name="senioridade">
-          <option>Júnior</option>
-          <option>Pleno</option>
-          <option>Sênior</option>
-        </select>
+        <p>
+          <label for="senioridade">Senioridade</label>
+          <select id="senioridade" name="senioridade">
+            <option value="">Todas</option>
+            <option value="trainee">Trainee</option>
+            <option value="junior">Júnior</option>
+            <option value="pleno">Pleno</option>
+            <option value="senior">Sênior</option>
+          </select>
+        </p>
 
-        <label for="modalidade">Modalidade</label>
-        <select id="modalidade" name="modalidade">
-          <option>Remoto</option>
-          <option>Híbrido</option>
-          <option>Presencial</option>
-        </select>
+        <p>
+          <label for="modalidade">Modalidade</label>
+          <select id="modalidade" name="modalidade">
+            <option value="">Todas</option>
+            <option value="home-office">Home Office</option>
+            <option value="hibrido">Híbrido</option>
+            <option value="presencial">Presencial</option>
+          </select>
+        </p>
 
-        <button type="submit">Filtrar</button>
+        <p>
+          <button type="submit">Filtrar</button>
+        </p>
       </form>
     </section>
 
     <section>
       <h2>Vagas disponíveis</h2>
+      <div class="lista-vagas">
+        <article class="cartao vaga">
+          <h3>Front-end HTML/CSS Developer</h3>
+          <p class="salario">R$ 2.500 – R$ 3.500</p>
+          <p class="tecnologias-vaga">HTML — CSS</p>
+          <p>4 tecnologias em comum com seu perfil</p>
+          <p>Home Office — Sênior</p>
+          <p>São Paulo — SP, a 15 km</p>
+        </article>
 
-      <article class="cartao">
-        <h3>Front-end HTML/CSS Developer</h3>
-        <p>4 tecnologias em comum com seu perfil</p>
-        <p>Remoto — Júnior</p>
-      </article>
+        <article class="cartao vaga">
+          <h3>Desenvolvedor Web Júnior</h3>
+          <p class="salario">R$ 2.500 – R$ 3.500</p>
+          <p class="tecnologias-vaga">Java — CSS — Python</p>
+          <p>3 tecnologias em comum com seu perfil</p>
+          <p>Híbrido — Júnior</p>
+          <p>São Paulo — SP, a 7 km</p>
+        </article>
 
-      <article class="cartao">
-        <h3>Web Developer Júnior</h3>
-        <p>3 tecnologias em comum com seu perfil</p>
-        <p>Híbrido — Júnior</p>
-      </article>
+        <article class="cartao vaga">
+          <h3>Estágio em TI/Desenvolvimento de Sistemas</h3>
+          <p class="salario">R$ 1.500 – R$ 2.200</p>
+          <p class="tecnologias-vaga">HTML — CSS</p>
+          <p>5 tecnologias em comum com seu perfil</p>
+          <p>Presencial — Trainee</p>
+          <p>São Paulo — SP, a 25 km</p>
+        </article>
 
+        <article class="cartao vaga">
+          <h3>Engenheiro de Software Sênior</h3>
+          <p class="salario">R$ 10.000 – R$ 15.000</p>
+          <p class="tecnologias-vaga">Java — Python — JavaScript</p>
+          <p>4 tecnologias em comum com seu perfil</p>
+          <p>Híbrido ou Presencial — Sênior</p>
+          <p>Guarulhos — SP, a 27 km</p>
+        </article>
+
+        <article class="cartao vaga">
+          <h3>Desenvolvedor Full Stack Pleno</h3>
+          <p class="salario">R$ 6.000 – R$ 9.000</p>
+          <p class="tecnologias-vaga">Java — JavaScript — CSS</p>
+          <p>6 tecnologias em comum com seu perfil</p>
+          <p>Presencial ou Híbrido — Pleno</p>
+          <p>São Paulo — SP, a 12 km</p>
+        </article>
+
+        <article class="cartao vaga">
+          <h3>Desenvolvedor C++ Sênior</h3>
+          <p class="salario">R$ 9.000 – R$ 14.000</p>
+          <p class="tecnologias-vaga">C++ — Python — Java</p>
+          <p>5 tecnologias em comum com seu perfil</p>
+          <p>Home Office ou Presencial — Sênior</p>
+          <p>Tatuapé, São Paulo — SP, a 21 km</p>
+        </article>
+
+        <article class="cartao vaga">
+          <h3>Desenvolvedor Python Trainee</h3>
+          <p class="salario">R$ 2.000 – R$ 3.000</p>
+          <p class="tecnologias-vaga">Python — JavaScript — HTML</p>
+          <p>3 tecnologias em comum com seu perfil</p>
+          <p>Presencial — Trainee</p>
+          <p>São Paulo — SP, a 33 km</p>
+        </article>
+
+        <article class="cartao vaga">
+          <h3>Desenvolvedor Full Stack Sênior</h3>
+          <p class="salario">R$ 10.000 – R$ 16.000</p>
+          <p class="tecnologias-vaga">Java — CSS — HTML</p>
+          <p>3 tecnologias em comum com seu perfil</p>
+          <p>Híbrido — Sênior</p>
+          <p>São Paulo — SP, a 10 km</p>
+        </article>
+      </div>
     </section>
 
   </main>
 
-  <footer>
+  <footer class="rodape-site">
     <p>Rede Social para Desenvolvedores</p>
     <p class="direitos-autorais">&copy; 2026 DevNetwork. Todos os direitos reservados.</p>
   </footer>
-
 
 </body>
 </html>

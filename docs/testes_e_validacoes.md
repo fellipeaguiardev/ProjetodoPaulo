@@ -37,35 +37,50 @@ Todos os campos têm `<label for="...">` ligado ao `id` do campo.
 
 4. Validação W3C
 
-Validar cada página em https://validator.w3.org/ (aba "Validate by File Upload") e anotar o resultado aqui. Se possível, guardar um print de cada resultado na pasta `docs/`.
+Todas as páginas foram validadas com o Nu HTML Checker (o mesmo validador do https://validator.w3.org/).
 
-| Página                       | Erros | Avisos | Data |
-|------------------------------|-------|--------|------|
-| index.html                   |       |        |      |
-| pag1.html                    |       |        |      |
-| pag2.html                    |       |        |      |
-| pag3.html                    |       |        |      |
-| pag4.html                    |       |        |      |
-| pag5.html                    |       |        |      |
-| pag6.html                    |       |        |      |
-| pag7.html                    |       |        |      |
-| pag8.html                    |       |        |      |
-| pag9.html                    |       |        |      |
-| pag10.html                   |       |        |      |
-| pag11.html                   |       |        |      |
-| contato.html                 |       |        |      |
-| orcamento_hospedagem.html    |       |        |      |
+| Página                       | Erros | Observação |
+|------------------------------|-------|------------|
+| index.html                   | 0     |            |
+| pag1.html a pag11.html       | 0     |            |
+| contato.html                 | 0     | Versões antigas do validador acusam `loading` no `<iframe>`, mas o atributo é válido no HTML atual. |
+| orcamento_hospedagem.html    | 0     |            |
 
-5. Pendências encontradas para a entrega final
+Os avisos de CSS sobre `:has()` também são de versões antigas do validador: o seletor é padrão e funciona no Chrome, Edge, Firefox e Safari atuais.
 
-Problemas que vimos durante a revisão e que vamos corrigir na entrega final (nesta entrega deixamos o código como foi feito, para registrar a evolução):
+5. Testes visuais e de acessibilidade
 
-- `pag1.html`: o link do menu aparece como "Perfil.10" em vez de "Perfil".
-- `pag1.html` e `pag3.html`: rodapé ainda com o texto modelo "[SUA EMPRESA] LTDA. CNPJ: 00.000.000/0000-00".
-- `pag1.html`: imagem do post do Cristiano Ronaldo com `alt="Descreva o que aparece na foto"` (texto modelo). Nome "Leonel Messi" escrito diferente das outras páginas ("Lionel").
-- `pag3.html`: estilos escritos direto no HTML (`style="..."`), que devem ir para o CSS.
-- `pag3.html`: imagem externa do Freepik sem indicação de fonte/autoria na página.
-- `img/siteexplorar.png` tem cerca de 2,5 MB — precisa ser otimizada (ex.: converter para JPG/WebP e reduzir tamanho).
-- Ícones `img/comentar.svg`, `compartilhar.svg`, `coracao.svg` e `salvar.svg` não são usados por nenhuma página.
-- Três arquivos CSS (`site.css`, `pag1.css`, `pag3.css`): na entrega final devem virar um único `css/style.css`.
-- O painel de acessibilidade só existe no Feed e no Explorar.
+| Teste                                                              | Resultado |
+|--------------------------------------------------------------------|-----------|
+| Todas as páginas com o mesmo cabeçalho, menu, painel e rodapé      | OK        |
+| Link do menu da página atual destacado (e com `aria-current`)      | OK        |
+| Nenhuma página rola para o lado em 380 px (celular) e 1200 px      | OK        |
+| Tema escuro legível em todas as páginas                            | OK        |
+| Alto contraste em todas as páginas                                 | OK        |
+| Painel abre e fecha pelo teclado (Tab + Enter)                     | OK        |
+| Botão "Restaurar padrão" desmarca todas as opções                  | OK        |
+| Links internos, imagens e poster do vídeo encontrados              | OK        |
+
+6. Pendências da 1ª entrega que foram corrigidas
+
+- `index.html` tinha sido apagado da pasta: restaurado pelo histórico do Git.
+- `pag1.html`, `pag5.html` e `pag7.html` usavam caminho absoluto (`/css/...`) e `pag10.html` apontava para `/css/p.css`, que não existe: todos trocados por `../css/`.
+- `pag6.html` tinha cabeçalho, menu e rodapé de outro projeto ("Liga dos Dev"), com links quebrados: refeitos no padrão DevNetwork.
+- `pag5.html` marcava "Feed" como página ativa, tinha dois `<h1>` e botões sem `type`; o `pag5.css` tinha um seletor quebrado (`a .secao-titulo p`) e um `* { margin: 0 }` que afetava o site inteiro.
+- `pag2.css`: o texto de apoio estava branco sobre fundo branco.
+- `pag7.html`: erros de digitação nas vagas ("Sãp Paulo", "á 15 Km", "hTML") e cabeçalho com `gap: 310px` que quebrava no celular.
+- `pag10.css` usava outra fonte (Segoe UI) e outro tom de azul: alinhado à paleta do site.
+- Menu "Perfil.10", nome "Leonel Messi", "João Cassini" e textos alternativos modelo corrigidos.
+- Rodapé com "[SUA EMPRESA] LTDA" trocado em todas as páginas.
+- `pag3.html`: estilos `style="..."` foram para o `pag3.css`; imagem do Freepik ganhou crédito.
+- `img/siteexplorar.png` (2,5 MB) convertida para `img/siteexplorar.jpg` (138 KB).
+- Poster do vídeo (`img/poster-video.svg`) criado, porque não existia.
+- `site.css`, `pag1.css` e `pag3.css` (quase iguais) viraram o `style.css` compartilhado + arquivos por página.
+- Painel de acessibilidade presente em todas as páginas.
+- `docs/orcamento_hospedagem.html` era uma cópia idêntica de `paginas/orcamento_hospedagem.html`: removida.
+
+7. Ainda em aberto
+
+- Os ícones `img/comentar.svg`, `compartilhar.svg`, `coracao.svg` e `salvar.svg` não são usados (o Feed desenha os ícones direto no HTML com `<svg>`).
+- A imagem do Freepik é carregada do site deles; o ideal é baixá-la para a pasta `img/` respeitando a licença.
+- Sem JavaScript, as opções de acessibilidade não ficam salvas ao trocar de página.

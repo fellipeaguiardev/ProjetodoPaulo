@@ -1,141 +1,45 @@
-/* Estilo do site  */
+/* =====================================================================
+   pag6.css — COMUNIDADES (Leonardo)
+   Só o que é exclusivo das Comunidades. Cabeçalho, menu, rodapé, cores
+   e acessibilidade vêm de style.css.
+   (As cores e o menu antigos eram de outro projeto, "Liga dos Dev", e
+   foram trocados pela paleta da DevNetwork.)
+   ===================================================================== */
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f6f8;
-  color: #222222;
-  margin: 0;
-}
-
-/* Cabeçalho */
-.cabecalho {
-  background-color: #1e1e2f;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-.cabecalho h1 {
-  color: #4fc3f7;
-  margin: 0;
-}
-
-/* Menu */
-.menu {
-  margin-top: 15px;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 14px;
-}
-
-.menu a:hover {
-  background-color: #4fc3f7;
-  color: #1e1e2f;
-}
-
-.pagina-atual {
-  background-color: #4fc3f7;
-  color: #1e1e2f;
-}
-
-/* Conteúdo principal */
 main {
   max-width: 1000px;
-  margin: 20px auto;
 }
 
-.secao {
-  background-color: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
+/* Cartões das comunidades: 3 por linha no computador, 1 no celular */
+.lista-comunidades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
 }
 
-.secao h2 {
-  color: #1e1e2f;
+.lista-comunidades .cartao {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
 }
 
-/* Cartões das comunidades (3 por linha) */
-.cartao {
-  display: inline-block;
-  vertical-align: top;
-  width: 25%;
-  padding: 2%;
-  margin: 1%;
-  border: 1px solid #dddddd;
-  border-radius: 8px;
-  background-color: #fafafa;
+.lista-comunidades .cartao ul {
+  padding-left: 20px;
 }
 
-/* Botão Participar */
-.botao {
-  background-color: #4fc3f7;
-  color: #1e1e2f;
-  padding: 8px 16px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
+/* o botão "Participar" fica sempre no pé do cartão */
+.lista-comunidades .botao {
+  margin-top: auto;
+  align-self: flex-start;
 }
 
-.botao:hover {
-  background-color: #1e1e2f;
-  color: white;
+/* Tipo de comunidade: as opções ficam lado a lado */
+.opcoes-tipo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-/* Tabela */
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  border: 1px solid #cccccc;
-  padding: 10px;
-  text-align: left;
-}
-
-th {
-  background-color: #1e1e2f;
-  color: white;
-}
-
-/* Formulário */
-input, select, textarea {
-  padding: 8px;
-  width: 300px;
-  border: 1px solid #aaaaaa;
-  border-radius: 4px;
-}
-
-input[type="radio"], input[type="checkbox"] {
-  width: auto;
-}
-
-button {
-  background-color: #1e1e2f;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #4fc3f7;
-  color: #1e1e2f;
-}
-
-/* Rodapé */
-.rodape {
-  background-color: #1e1e2f;
-  color: white;
-  text-align: center;
-  padding: 15px;
-}
-
-.rodape a {
-  color: #4fc3f7;
+.opcoes-tipo .campo-opcao {
+  margin: 0;
 }

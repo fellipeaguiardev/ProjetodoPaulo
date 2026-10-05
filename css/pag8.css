@@ -1,15 +1,7 @@
-:root {
-  --cor-fundo-pagina: #f2f2f2;
-  --cor-fundo-cartao: #ffffff;
-  --cor-texto: #333333;
-  --cor-texto-claro: #ffffff;
-  --cor-primaria: #2c3e50;
-  --cor-primaria-hover: #1a252f;
-  --cor-destaque: #4aa8ff;
-  --cor-borda: #cccccc;
-  --cor-borda-clara: #eeeeee;
-  --cor-fundo-cabecalho-tabela: #e6e6e6;
-}
+/* =====================================================================
+   pag8.css — REDE (Guilherme)
+   Só o que é exclusivo da Rede. O resto vem de style.css.
+   ===================================================================== */
 
 .cartao-pessoa {
   border-left: 4px solid var(--cor-primaria);
@@ -46,7 +38,7 @@ tbody tr:hover {
 .numero-rede {
   font-size: 2rem;
   font-weight: bold;
-  color: var(--cor-primaria);
+  color: var(--cor-link);
   margin: 0;
 }
 
@@ -58,24 +50,9 @@ section ul li {
   margin-bottom: 6px;
 }
 
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid #ffb400;
-  outline-offset: 2px;
-}
-
 @media (max-width: 600px) {
-  main {
-    width: 100%;
-  }
-
   .acoes-cartao {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  table {
-    display: block;
-    overflow-x: auto;
   }
 }
