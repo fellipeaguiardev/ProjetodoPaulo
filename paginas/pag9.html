@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevNetwork - Mensagens</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/pag9.css">
 </head>
 <body>
 
   <a href="#conteudo-principal" class="pular-link">Pular para o conteúdo principal</a>
 
-  
+  <!-- Painel de acessibilidade (igual em todas as páginas). Abre e fecha
+       com <details>, sem JavaScript. -->
   <details class="painel-acessibilidade">
     <summary class="botao-painel-acessibilidade">
       <span class="conteudo-botao-painel">
@@ -102,28 +104,47 @@
 
 <main id="conteudo-principal">
 
-    <section class="chat">
+    <section class="chat" aria-label="Mensagens">
+      <input class="seletor-chat" type="radio" name="conversa" id="messi" checked>
+      <input class="seletor-chat" type="radio" name="conversa" id="ronaldo">
+      <input class="seletor-chat" type="radio" name="conversa" id="grupo">
 
-      <article class="lista-contatos">
+      <aside class="lista-contatos">
         <h2>Conversas</h2>
         <ul>
-          <li>Lionel Messi</li>
-          <li>Cristiano Ronaldo</li>
-          <li>Grupo — Site Pessoal Simples</li>
+          <li><label for="messi">Lionel Messi</label></li>
+          <li><label for="ronaldo">Cristiano Ronaldo</label></li>
+          <li><label for="grupo">Grupo — Site Pessoal Simples</label></li>
         </ul>
-      </article>
+      </aside>
 
-      <article class="conversa">
-        <h2>Lionel Messi</h2>
-        <p class="mensagem mensagem-recebida">Vi que você postou sobre HTML básico. Curti bastante o seu site!</p>
-        <p class="mensagem mensagem-enviada">Valeu! Tô treinando todo dia pra aprender mais.</p>
-        <p>
-          <button type="button">Enviar código</button>
-          <button type="button">Enviar arquivo</button>
-          <button type="button">Compartilhar projeto</button>
-        </p>
-      </article>
+      <section class="conversa" aria-label="Conversa selecionada">
+        <article id="messi-chat">
+          <h2>Lionel Messi</h2>
+          <p class="mensagem mensagem-recebida">Vi que você postou sobre HTML básico. Curti bastante o seu site!</p>
+          <p class="mensagem mensagem-enviada">Valeu! Tô treinando todo dia pra aprender mais.</p>
+        </article>
 
+        <article id="ronaldo-chat">
+          <h2>Cristiano Ronaldo</h2>
+          <p class="mensagem mensagem-recebida">Estou montando uma página para o portfólio do time.</p>
+          <p class="mensagem mensagem-enviada">Legal! Posso ajudar com HTML e CSS.</p>
+        </article>
+
+        <article id="grupo-chat">
+          <h2>Grupo — Site Pessoal Simples</h2>
+          <p class="mensagem mensagem-recebida">Ana: atualizei o layout da página inicial.</p>
+          <p class="mensagem mensagem-enviada">Vou revisar os links e já retorno por aqui.</p>
+        </article>
+
+        <form action="#" method="post">
+          <label for="mensagem">Mensagem</label>
+          <p class="envio-mensagem">
+            <input type="text" id="mensagem" name="mensagem" required placeholder="Escreva uma mensagem...">
+            <button type="submit">Enviar</button>
+          </p>
+        </form>
+      </section>
     </section>
 
   </main>

@@ -1,0 +1,74 @@
+
+.seletor-chat {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.lista-contatos label {
+  display: block;
+  margin: 0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: var(--cor-link);
+  font-weight: normal;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#messi:checked ~ .lista-contatos label[for="messi"],
+#ronaldo:checked ~ .lista-contatos label[for="ronaldo"],
+#grupo:checked ~ .lista-contatos label[for="grupo"] {
+  font-weight: bold;
+  text-decoration: none;
+  background-color: var(--cor-salvo-fundo);
+}
+
+#messi:checked ~ .lista-contatos label[for="messi"]::before,
+#ronaldo:checked ~ .lista-contatos label[for="ronaldo"]::before,
+#grupo:checked ~ .lista-contatos label[for="grupo"]::before {
+  content: "▸ ";
+}
+
+#messi:focus-visible ~ .lista-contatos label[for="messi"],
+#ronaldo:focus-visible ~ .lista-contatos label[for="ronaldo"],
+#grupo:focus-visible ~ .lista-contatos label[for="grupo"] {
+  outline: 3px solid #ffb400;
+  outline-offset: 2px;
+}
+
+
+.conversa article {
+  display: none;
+}
+
+#messi:checked ~ .conversa #messi-chat,
+#ronaldo:checked ~ .conversa #ronaldo-chat,
+#grupo:checked ~ .conversa #grupo-chat {
+  display: block;
+}
+
+
+.envio-mensagem {
+  display: flex;
+  gap: 8px;
+  margin: 15px 0 0;
+}
+
+.envio-mensagem input {
+  margin: 0;
+}
+
+.envio-mensagem button {
+  margin: 0;
+}
+
+
+body:has(#modo-alto-contraste:checked) #messi:checked ~ .lista-contatos label[for="messi"],
+body:has(#modo-alto-contraste:checked) #ronaldo:checked ~ .lista-contatos label[for="ronaldo"],
+body:has(#modo-alto-contraste:checked) #grupo:checked ~ .lista-contatos label[for="grupo"] {
+  background-color: #000000;
+  outline: 2px solid #ffff00;
+}
