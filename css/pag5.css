@@ -83,7 +83,7 @@ main {
   border-right: 0;
 }
 
-.informacoes dt {
+.informacoes span {
   display: block;
   font-size: 12px;
   font-weight: bold;
@@ -107,18 +107,22 @@ main {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 18px;
+  
 }
 
 .secao-titulo h2 {
   font-size: 25px;
   border: 0;
   padding: 0;
+  
+  
 }
 
 .secao-titulo p {
   color: var(--cor-texto-secundario);
   font-size: 15px;
   margin-top: 4px;
+  
 }
 
 
