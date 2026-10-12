@@ -6,6 +6,7 @@
   <title>DevNetwork - Feed</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/pag1.css">
+  <script src="/js/pag1.js" defer></script>
 </head>
 <body>
 
@@ -79,6 +80,8 @@
     </form>
   </details>
 
+  <script src="../js/acessibilidade.js"></script>
+
   <header class="cabecalho-site">
     <h1>DevNetwork</h1>
     <nav class="menu-principal" aria-label="Menu principal">
@@ -105,7 +108,7 @@
 
     <section>
       <h2>Criar publicação</h2>
-      <form action="#">
+      <form action="#" id="form-publicar">
         <label for="publicacao">O que você quer compartilhar?</label>
         <textarea id="publicacao" name="publicacao" rows="3" placeholder="Compartilhe um projeto, uma dúvida ou uma novidade..."></textarea>
         <button type="submit">Publicar</button>
@@ -114,6 +117,8 @@
 
     <section>
       <h2>Feed de publicações</h2>
+
+      <div id="lista-publicacoes">
 
       <article class="cartao">
         <header class="autor-publicacao">
@@ -160,7 +165,7 @@
         <p class="barra-acoes">
           <span class="acao">
             <input type="checkbox" id="curtir-1" class="input-curtir">
-            <label for="curtir-1" class="botao-acao botao-curtir" aria-label="Curtir publicação">
+            <label for="curtir-1" class="botao-acao botao-curtir"><span class="visualmente-oculto">Curtir publicação</span>
               <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M12 21s-6.7-4.3-9.3-8.1C1 10.1 1.6 6.6 4.4 4.9c2.3-1.4 5-0.8 6.6 1.1L12 7.1l1-1.1c1.6-1.9 4.3-2.5 6.6-1.1 2.8 1.7 3.4 5.2 1.7 8-2.6 3.8-9.3 8.1-9.3 8.1z"/>
               </svg>
@@ -179,7 +184,7 @@
 
           <span class="acao">
             <input type="checkbox" id="salvar-1" class="input-salvar">
-            <label for="salvar-1" class="botao-acao botao-salvar" aria-label="Salvar publicação">
+            <label for="salvar-1" class="botao-acao botao-salvar"><span class="visualmente-oculto">Salvar publicação</span>
               <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"/>
               </svg>
@@ -244,7 +249,7 @@
         <p class="barra-acoes">
           <span class="acao">
             <input type="checkbox" id="curtir-2" class="input-curtir">
-            <label for="curtir-2" class="botao-acao botao-curtir" aria-label="Curtir publicação">
+            <label for="curtir-2" class="botao-acao botao-curtir"><span class="visualmente-oculto">Curtir publicação</span>
               <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M12 21s-6.7-4.3-9.3-8.1C1 10.1 1.6 6.6 4.4 4.9c2.3-1.4 5-0.8 6.6 1.1L12 7.1l1-1.1c1.6-1.9 4.3-2.5 6.6-1.1 2.8 1.7 3.4 5.2 1.7 8-2.6 3.8-9.3 8.1-9.3 8.1z"/>
               </svg>
@@ -263,7 +268,7 @@
 
           <span class="acao">
             <input type="checkbox" id="salvar-2" class="input-salvar">
-            <label for="salvar-2" class="botao-acao botao-salvar" aria-label="Salvar publicação">
+            <label for="salvar-2" class="botao-acao botao-salvar"><span class="visualmente-oculto">Salvar publicação</span>
               <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"/>
               </svg>
@@ -327,7 +332,7 @@
         <p class="barra-acoes">
           <span class="acao">
             <input type="checkbox" id="curtir-3" class="input-curtir">
-            <label for="curtir-3" class="botao-acao botao-curtir" aria-label="Curtir publicação">
+            <label for="curtir-3" class="botao-acao botao-curtir"><span class="visualmente-oculto">Curtir publicação</span>
               <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M12 21s-6.7-4.3-9.3-8.1C1 10.1 1.6 6.6 4.4 4.9c2.3-1.4 5-0.8 6.6 1.1L12 7.1l1-1.1c1.6-1.9 4.3-2.5 6.6-1.1 2.8 1.7 3.4 5.2 1.7 8-2.6 3.8-9.3 8.1-9.3 8.1z"/>
               </svg>
@@ -346,7 +351,7 @@
 
           <span class="acao">
             <input type="checkbox" id="salvar-3" class="input-salvar">
-            <label for="salvar-3" class="botao-acao botao-salvar" aria-label="Salvar publicação">
+            <label for="salvar-3" class="botao-acao botao-salvar"><span class="visualmente-oculto">Salvar publicação</span>
               <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"/>
               </svg>
@@ -363,8 +368,80 @@
           </span>
         </p>
       </article>
+      </div>
 
     </section>
+
+  
+    <template id="modelo-publicacao">
+      <article class="cartao">
+        <header class="autor-publicacao">
+          <span class="avatar" aria-hidden="true">EU</span>
+          <div class="dados-autor">
+            <h3>Você</h3>
+            <p class="cargo-autor">Membro da DevNetwork</p>
+            <p class="tempo-publicacao"><time datetime="">agora</time></p>
+          </div>
+        </header>
+
+        <p class="texto-publicacao"></p>
+
+        <fieldset class="reacoes-rapidas">
+          <legend class="visualmente-oculto">Reagir à sua publicação</legend>
+          <input type="radio" name="reacao-NOVO" id="reacao-NOVO-nenhuma" class="input-reacao input-reacao-nenhuma" checked>
+          <input type="radio" name="reacao-NOVO" id="reacao-NOVO-curtir" class="input-reacao" value="curtir">
+          <label for="reacao-NOVO-curtir" class="emoji-reacao" title="Curtir" data-emoji="👍"><span aria-hidden="true">👍</span><span class="visualmente-oculto">Curtir</span></label>
+          <input type="radio" name="reacao-NOVO" id="reacao-NOVO-amei" class="input-reacao" value="amei">
+          <label for="reacao-NOVO-amei" class="emoji-reacao" title="Amei" data-emoji="❤️"><span aria-hidden="true">❤️</span><span class="visualmente-oculto">Amei</span></label>
+          <input type="radio" name="reacao-NOVO" id="reacao-NOVO-uau" class="input-reacao" value="uau">
+          <label for="reacao-NOVO-uau" class="emoji-reacao" title="Uau" data-emoji="😮"><span aria-hidden="true">😮</span><span class="visualmente-oculto">Uau</span></label>
+          <input type="radio" name="reacao-NOVO" id="reacao-NOVO-aplausos" class="input-reacao" value="aplausos">
+          <label for="reacao-NOVO-aplausos" class="emoji-reacao" title="Aplausos" data-emoji="👏"><span aria-hidden="true">👏</span><span class="visualmente-oculto">Aplausos</span></label>
+          <input type="radio" name="reacao-NOVO" id="reacao-NOVO-ideia" class="input-reacao" value="ideia">
+          <label for="reacao-NOVO-ideia" class="emoji-reacao" title="Ideia" data-emoji="💡"><span aria-hidden="true">💡</span><span class="visualmente-oculto">Ideia</span></label>
+          <label for="reacao-NOVO-nenhuma" class="remover-reacao"><span aria-hidden="true">✕</span> Remover reação</label>
+        </fieldset>
+
+        <p class="barra-acoes">
+          <span class="acao">
+            <input type="checkbox" id="curtir-NOVO" class="input-curtir">
+            <label for="curtir-NOVO" class="botao-acao botao-curtir"><span class="visualmente-oculto">Curtir publicação</span>
+              <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 21s-6.7-4.3-9.3-8.1C1 10.1 1.6 6.6 4.4 4.9c2.3-1.4 5-0.8 6.6 1.1L12 7.1l1-1.1c1.6-1.9 4.3-2.5 6.6-1.1 2.8 1.7 3.4 5.2 1.7 8-2.6 3.8-9.3 8.1-9.3 8.1z"/>
+              </svg>
+            </label>
+            <span class="contador">0</span>
+          </span>
+
+          <span class="acao">
+            <a href="#publicacao" class="botao-acao" aria-label="Comentar - vai para a caixa de texto">
+              <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>
+              </svg>
+            </a>
+            <span class="contador">0</span>
+          </span>
+
+          <span class="acao">
+            <input type="checkbox" id="salvar-NOVO" class="input-salvar">
+            <label for="salvar-NOVO" class="botao-acao botao-salvar"><span class="visualmente-oculto">Salvar publicação</span>
+              <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"/>
+              </svg>
+            </label>
+            <span class="contador">0</span>
+          </span>
+
+          <span class="acao">
+            <a href="https://github.com/fellipeaguiardev/ProjetodoPaulo" target="_blank" rel="noopener noreferrer" class="botao-acao" aria-label="Compartilhar - abre o repositório no GitHub em nova aba">
+              <svg class="icone-acao" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 2l5 5h-3v8h-4V7H7l5-5zM4 15h2v4a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-4h2v4a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-4z"/>
+              </svg>
+            </a>
+          </span>
+        </p>
+      </article>
+    </template>
 
   </main>
 
