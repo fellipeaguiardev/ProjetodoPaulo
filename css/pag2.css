@@ -1,15 +1,4 @@
 
-.layout {
-  width: 92%;
-  max-width: 1050px;
-  margin: 20px auto;
-  padding: 0 15px;
-  display: grid;
-  grid-template-columns: 230px 1fr;
-  gap: 20px;
-  align-items: start;
-}
-
 .barra-lateral,
 .conteudo {
   display: grid;
@@ -348,23 +337,12 @@ section {
 }
 
 @media (max-width: 900px) {
-  .layout {
-    grid-template-columns: 200px 1fr;
-    gap: 14px;
-  }
-
   .tecnologias {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 650px) {
-  .layout {
-    width: 94%;
-    margin-top: 18px;
-    display: block;
-  }
-
   .barra-lateral {
     display: none;
   }
@@ -393,4 +371,8 @@ body:has(#modo-alto-contraste:checked) .tecnologias li,
 body:has(#modo-alto-contraste:checked) .projeto {
   background-color: #000000;
   border: 1px solid #ffffff;
+}
+
+.barra-lateral.lateral-pagina {
+  margin-top: 0;
 }

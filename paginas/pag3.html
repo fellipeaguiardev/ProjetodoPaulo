@@ -11,7 +11,6 @@
 
   <a href="#conteudo-principal" class="pular-link">Pular para o conteúdo principal</a>
 
-  
   <details class="painel-acessibilidade">
     <summary class="botao-painel-acessibilidade">
       <span class="conteudo-botao-painel">
@@ -83,104 +82,131 @@
 
   <header class="cabecalho-site">
     <h1>DevNetwork</h1>
-    <nav class="menu-principal" aria-label="Menu principal">
-      <ul>
-        <li><a href="/paginas/Inicio.html">Início</a></li>
-        <li><a href="/paginas/pag1.html">Feed</a></li>
-        <li><a href="/paginas/pag2.html">Perfil</a></li>
-        <li><a href="/paginas/pag3.html" class="ativo" aria-current="page">Explorar</a></li>
-        <li><a href="/paginas/pag4.html">Projetos</a></li>
-        <li><a href="/paginas/pag5.html">Workspace</a></li>
-        <li><a href="/paginas/pag6.html">Comunidades</a></li>
-        <li><a href="/paginas/pag7.html">Vagas</a></li>
-        <li><a href="/paginas/pag8.html">Rede</a></li>
-        <li><a href="/paginas/pag9.html">Mensagens</a></li>
-        <li><a href="/paginas/pag10.html">Notificações</a></li>
-        <li><a href="/paginas/pag11.html">Empresa</a></li>
-        <li><a href="/paginas/contato.html">Contato</a></li>
-        <li><a href="/paginas/orcamento_hospedagem.html">Orçamento</a></li>
-      </ul>
-    </nav>
   </header>
 
-<main id="conteudo-principal">
+  <nav class="menu-principal" aria-label="Menu principal">
+    <ul>
+      <li><a href="/paginas/Inicio.html">Início</a></li>
+      <li><a href="/paginas/pag1.html">Feed</a></li>
+      <li><a href="/paginas/pag2.html">Perfil</a></li>
+      <li><a href="/paginas/pag3.html" class="ativo" aria-current="page">Explorar</a></li>
+      <li><a href="/paginas/pag4.html">Projetos</a></li>
+      <li><a href="/paginas/pag5.html">Workspace</a></li>
+      <li><a href="/paginas/pag6.html">Comunidades</a></li>
+      <li><a href="/paginas/pag7.html">Vagas</a></li>
+      <li><a href="/paginas/pag8.html">Rede</a></li>
+      <li><a href="/paginas/pag9.html">Mensagens</a></li>
+      <li><a href="/paginas/pag10.html">Notificações</a></li>
+      <li><a href="/paginas/pag11.html">Empresa</a></li>
+      <li><a href="/paginas/contato.html">Contato</a></li>
+      <li><a href="/paginas/orcamento_hospedagem.html">Orçamento</a></li>
+    </ul>
+  </nav>
 
-    <section>
-      <h2>Explorar</h2>
-      <form action="#">
-        <label for="busca">Pesquisar</label>
-        <input type="text" id="busca" name="busca" placeholder="Pessoas, projetos, tecnologias, empresas...">
-        <button type="submit">Buscar</button>
-      </form>
-    </section>
+  <main id="conteudo-principal">
 
-    <section>
-      <h2>Tecnologias em alta</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Tecnologia</th>
-            <th>Crescimento</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-              <td>HTML</td>
-              <td>↑ 12%</td>
-          </tr>
-          <tr>
-            <td>CSS</td>
-            <td>↑ 9%</td>
-          </tr>
-          <tr>
-            <td>JavaScript</td>
-            <td>↑ 15%</td>
-          </tr>
-          <tr>
-            <td>Java</td>
-            <td>↑ 7%</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+    <div class="conteudo-pagina">
 
-    <section>
-      <h2>Desenvolvedores em destaque</h2>
+      <section>
+        <h2>Explorar</h2>
+        <form action="#">
+          <label for="busca">Pesquisar</label>
+          <input type="text" id="busca" name="busca" placeholder="Pessoas, projetos, tecnologias, empresas...">
+          <button type="submit">Buscar</button>
+        </form>
+      </section>
 
-      <article class="cartao">
-        <h3>Lionel Messi</h3>
-        <p>Frontend Developer — HTML, CSS, JavaScript</p>
-      </article>
+      <section>
+        <h2>Tecnologias em alta</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Tecnologia</th>
+              <th>Crescimento</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>HTML</td>
+                <td>↑ 12%</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>↑ 9%</td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+              <td>↑ 15%</td>
+            </tr>
+            <tr>
+              <td>Java</td>
+              <td>↑ 7%</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-      <article class="cartao">
-        <h3>Cristiano Ronaldo</h3>
-        <p>Web Developer — HTML, JavaScript</p>
-      </article>
-    </section>
+      <section>
+        <h2>Desenvolvedores em destaque</h2>
 
-   <section>
-      <h2>Inspirações e Projetos</h2>
+        <article class="cartao">
+          <h3>Lionel Messi</h3>
+          <p>Frontend Developer — HTML, CSS, JavaScript</p>
+        </article>
 
-      <div class="galeria">
-        <figure class="cartao-foto">
-          <img src="../img/chatexplorar.png" alt="Tela de um chat com código sendo depurado" width="1234" height="662" loading="lazy">
-          <figcaption>Debugar nunca foi tão fácil</figcaption>
-        </figure>
+        <article class="cartao">
+          <h3>Cristiano Ronaldo</h3>
+          <p>Web Developer — HTML, JavaScript</p>
+        </article>
+      </section>
 
-        <figure class="cartao-foto">
-          <img src="https://img.freepik.com/vetores-premium/uma-equipe-de-desenvolvedores-e-programadores-codificando-e-depurando-juntos-em-um-espaco-de-trabalho-compartilhado_216520-123202.jpg?w=2000" alt="Ilustração de uma equipe de desenvolvedores programando juntos" loading="lazy">
-          <figcaption>
-            Comunidade de Devs
-            <small class="credito-imagem">Imagem: <a href="https://www.freepik.com/">Freepik</a></small>
-          </figcaption>
-        </figure>
+     <section>
+        <h2>Inspirações e Projetos</h2>
 
-        <figure class="cartao-foto">
-          <img src="../img/siteexplorar.jpg" alt="Interface de um site sobre craques da Copa aberto em um notebook" width="1200" height="609" loading="lazy">
-          <figcaption>Site sobre os craques da Copa finalizado!</figcaption>
-        </figure>
-      </div>
-    </section>
+        <div class="galeria">
+          <figure class="cartao-foto">
+            <img src="../img/chatexplorar.png" alt="Tela de um chat com código sendo depurado" width="1234" height="662" loading="lazy">
+            <figcaption>Debugar nunca foi tão fácil</figcaption>
+          </figure>
+
+          <figure class="cartao-foto">
+            <img src="https://img.freepik.com/vetores-premium/uma-equipe-de-desenvolvedores-e-programadores-codificando-e-depurando-juntos-em-um-espaco-de-trabalho-compartilhado_216520-123202.jpg?w=2000" alt="Ilustração de uma equipe de desenvolvedores programando juntos" loading="lazy">
+            <figcaption>
+              Comunidade de Devs
+              <small class="credito-imagem">Imagem: <a href="https://www.freepik.com/">Freepik</a></small>
+            </figcaption>
+          </figure>
+
+          <figure class="cartao-foto">
+            <img src="../img/siteexplorar.jpg" alt="Interface de um site sobre craques da Copa aberto em um notebook" width="1200" height="609" loading="lazy">
+            <figcaption>Site sobre os craques da Copa finalizado!</figcaption>
+          </figure>
+        </div>
+      </section>
+
+    </div>
+
+    <aside class="lateral-pagina" aria-label="Buscas e atalhos">
+
+      <section class="caixa-lateral" aria-labelledby="lateral-buscas">
+        <h2 id="lateral-buscas">Buscas populares</h2>
+        <ul class="lista-lateral lista-lateral-texto">
+          <li><strong>#HTML</strong> · 12,4 mil posts</li>
+          <li><strong>#JavaScript</strong> · 32,1 mil posts</li>
+          <li><strong>#CSS</strong> · 9,8 mil posts</li>
+          <li><strong>#Java</strong> · 7,2 mil posts</li>
+        </ul>
+      </section>
+
+      <section class="caixa-lateral" aria-labelledby="lateral-veja">
+        <h2 id="lateral-veja">Veja também</h2>
+        <ul class="lista-lateral">
+          <li><a href="/paginas/pag6.html">Comunidades por tecnologia</a></li>
+          <li><a href="/paginas/pag4.html">Projetos procurando colaboradores</a></li>
+        </ul>
+      </section>
+
+    </aside>
 
   </main>
 

@@ -1,11 +1,11 @@
 
-main * {
+.conteudo-pagina * {
   margin: 0;
   padding: 0;
 }
 
 main {
-  max-width: 1400px;
+  max-width: 1150px;
   margin: 0 auto;
   padding: 40px;
 }
@@ -306,7 +306,7 @@ body:has(#modo-daltonico:checked) .tag {
 
 /* ---------- Responsividade ---------- */
 
-@media (max-width: 1100px) {
+@media (max-width: 1300px) {
   .kanban {
     grid-template-columns: repeat(2, 1fr);
   }

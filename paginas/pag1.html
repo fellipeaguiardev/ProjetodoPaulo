@@ -6,13 +6,12 @@
   <title>DevNetwork - Feed</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/pag1.css">
-  <script src="../js/pag1.js" defer></script>
+  <script src="/js/pag1.js" defer></script>
 </head>
 <body>
 
   <a href="#conteudo-principal" class="pular-link">Pular para o conteúdo principal</a>
 
-  
   <details class="painel-acessibilidade">
     <summary class="botao-painel-acessibilidade">
       <span class="conteudo-botao-painel">
@@ -84,27 +83,30 @@
 
   <header class="cabecalho-site">
     <h1>DevNetwork</h1>
-    <nav class="menu-principal" aria-label="Menu principal">
-      <ul>
-        <li><a href="/paginas/Inicio.html">Início</a></li>
-        <li><a href="/paginas/pag1.html" class="ativo" aria-current="page">Feed</a></li>
-        <li><a href="/paginas/pag2.html">Perfil</a></li>
-        <li><a href="/paginas/pag3.html">Explorar</a></li>
-        <li><a href="/paginas/pag4.html">Projetos</a></li>
-        <li><a href="/paginas/pag5.html">Workspace</a></li>
-        <li><a href="/paginas/pag6.html">Comunidades</a></li>
-        <li><a href="/paginas/pag7.html">Vagas</a></li>
-        <li><a href="/paginas/pag8.html">Rede</a></li>
-        <li><a href="/paginas/pag9.html">Mensagens</a></li>
-        <li><a href="/paginas/pag10.html">Notificações</a></li>
-        <li><a href="/paginas/pag11.html">Empresa</a></li>
-        <li><a href="/paginas/contato.html">Contato</a></li>
-        <li><a href="/paginas/orcamento_hospedagem.html">Orçamento</a></li>
-      </ul>
-    </nav>
   </header>
 
-<main id="conteudo-principal">
+  <nav class="menu-principal" aria-label="Menu principal">
+    <ul>
+      <li><a href="/paginas/Inicio.html">Início</a></li>
+      <li><a href="/paginas/pag1.html" class="ativo" aria-current="page">Feed</a></li>
+      <li><a href="/paginas/pag2.html">Perfil</a></li>
+      <li><a href="/paginas/pag3.html">Explorar</a></li>
+      <li><a href="/paginas/pag4.html">Projetos</a></li>
+      <li><a href="/paginas/pag5.html">Workspace</a></li>
+      <li><a href="/paginas/pag6.html">Comunidades</a></li>
+      <li><a href="/paginas/pag7.html">Vagas</a></li>
+      <li><a href="/paginas/pag8.html">Rede</a></li>
+      <li><a href="/paginas/pag9.html">Mensagens</a></li>
+      <li><a href="/paginas/pag10.html">Notificações</a></li>
+      <li><a href="/paginas/pag11.html">Empresa</a></li>
+      <li><a href="/paginas/contato.html">Contato</a></li>
+      <li><a href="/paginas/orcamento_hospedagem.html">Orçamento</a></li>
+    </ul>
+  </nav>
+
+  <main id="conteudo-principal">
+
+    <div class="conteudo-pagina coluna-feed">
 
     <section>
       <h2>Criar publicação</h2>
@@ -371,8 +373,172 @@
       </div>
 
     </section>
+    </div>
 
-  
+    <aside class="lateral-pagina barra-lateral-feed" id="barra-lateral-feed" aria-label="Notícias e sugestões">
+
+      <section class="caixa-lateral" aria-labelledby="titulo-acontecendo">
+        <h2 id="titulo-acontecendo">O que está acontecendo</h2>
+        <input type="checkbox" id="mais-assuntos" class="input-mostrar-mais">
+        <ul class="lista-assuntos">
+        <li class="assunto" id="assunto-1">
+          <div class="assunto-conteudo">
+            <div class="assunto-texto">
+              <p class="assunto-categoria">Memes · Assunto do Momento</p>
+              <p class="assunto-titulo">#DeployDeSexta</p>
+              <p class="assunto-descricao">Quando o deploy de sexta-feira derruba a produção</p>
+              <p class="assunto-posts">12,4 mil posts</p>
+            </div>
+            <figure class="assunto-gif">
+              <img class="gif-animado" src="../img/messi-chorando.gif" alt="GIF de Lionel Messi chorando" width="160" height="160" loading="lazy">
+              <img class="gif-parado" src="../img/messi-chorando-parado.jpg" alt="GIF de Lionel Messi chorando" width="160" height="160" loading="lazy">
+            </figure>
+            <details class="mais-opcoes">
+              <summary aria-label="Mais opções sobre #DeployDeSexta"><span aria-hidden="true">···</span></summary>
+              <div class="menu-opcoes">
+                <button type="button" class="botao-nao-interesse">Não tenho interesse neste assunto</button>
+              </div>
+            </details>
+          </div>
+          <p class="assunto-oculto">Assunto ocultado. <button type="button" class="botao-desfazer">Desfazer</button></p>
+        </li>
+        <li class="assunto" id="assunto-2">
+          <div class="assunto-conteudo">
+            <div class="assunto-texto">
+              <p class="assunto-categoria">Memes · Em alta</p>
+              <p class="assunto-titulo">#CompilouDePrimeira</p>
+              <p class="assunto-descricao">Quando o código roda sem nenhum erro na primeira tentativa</p>
+              <p class="assunto-posts">8.921 posts</p>
+            </div>
+            <figure class="assunto-gif">
+              <img class="gif-animado" src="../img/cr7-calma.gif" alt="GIF de Cristiano Ronaldo fazendo o gesto de calma" width="160" height="160" loading="lazy">
+              <img class="gif-parado" src="../img/cr7-calma-parado.jpg" alt="GIF de Cristiano Ronaldo fazendo o gesto de calma" width="160" height="160" loading="lazy">
+            </figure>
+            <details class="mais-opcoes">
+              <summary aria-label="Mais opções sobre #CompilouDePrimeira"><span aria-hidden="true">···</span></summary>
+              <div class="menu-opcoes">
+                <button type="button" class="botao-nao-interesse">Não tenho interesse neste assunto</button>
+              </div>
+            </details>
+          </div>
+          <p class="assunto-oculto">Assunto ocultado. <button type="button" class="botao-desfazer">Desfazer</button></p>
+        </li>
+        <li class="assunto" id="assunto-3">
+          <div class="assunto-conteudo">
+            <div class="assunto-texto">
+              <p class="assunto-categoria">Memes · Em alta no Brasil</p>
+              <p class="assunto-titulo">#QuemFezEsseCommit</p>
+              <p class="assunto-descricao">Quando o professor pergunta quem subiu código quebrado na main</p>
+              <p class="assunto-posts">5.310 posts</p>
+            </div>
+            <figure class="assunto-gif">
+              <img class="gif-animado" src="../img/neymar-entrevista.gif" alt="GIF de Neymar Junior olhando sério durante uma entrevista" width="160" height="160" loading="lazy">
+              <img class="gif-parado" src="../img/neymar-entrevista-parado.jpg" alt="GIF de Neymar Junior olhando sério durante uma entrevista" width="160" height="160" loading="lazy">
+            </figure>
+            <details class="mais-opcoes">
+              <summary aria-label="Mais opções sobre #QuemFezEsseCommit"><span aria-hidden="true">···</span></summary>
+              <div class="menu-opcoes">
+                <button type="button" class="botao-nao-interesse">Não tenho interesse neste assunto</button>
+              </div>
+            </details>
+          </div>
+          <p class="assunto-oculto">Assunto ocultado. <button type="button" class="botao-desfazer">Desfazer</button></p>
+        </li>
+        <li class="assunto" id="assunto-4">
+          <div class="assunto-conteudo">
+            <div class="assunto-texto">
+              <p class="assunto-categoria">Tecnologia · Assunto do Momento</p>
+              <p class="assunto-titulo">#JavaScript</p>
+              <p class="assunto-posts">32,1 mil posts</p>
+            </div>
+            <details class="mais-opcoes">
+              <summary aria-label="Mais opções sobre #JavaScript"><span aria-hidden="true">···</span></summary>
+              <div class="menu-opcoes">
+                <button type="button" class="botao-nao-interesse">Não tenho interesse neste assunto</button>
+              </div>
+            </details>
+          </div>
+          <p class="assunto-oculto">Assunto ocultado. <button type="button" class="botao-desfazer">Desfazer</button></p>
+        </li>
+        <li class="assunto assunto-extra" id="assunto-5">
+          <div class="assunto-conteudo">
+            <div class="assunto-texto">
+              <p class="assunto-categoria">Carreira · Em alta</p>
+              <p class="assunto-titulo">#PrimeiroEmprego</p>
+              <p class="assunto-posts">4.870 posts</p>
+            </div>
+            <details class="mais-opcoes">
+              <summary aria-label="Mais opções sobre #PrimeiroEmprego"><span aria-hidden="true">···</span></summary>
+              <div class="menu-opcoes">
+                <button type="button" class="botao-nao-interesse">Não tenho interesse neste assunto</button>
+              </div>
+            </details>
+          </div>
+          <p class="assunto-oculto">Assunto ocultado. <button type="button" class="botao-desfazer">Desfazer</button></p>
+        </li>
+        <li class="assunto assunto-extra" id="assunto-6">
+          <div class="assunto-conteudo">
+            <div class="assunto-texto">
+              <p class="assunto-categoria">Eventos · Assunto do Momento</p>
+              <p class="assunto-titulo">Semana de Tecnologia</p>
+              <p class="assunto-posts">2.115 posts</p>
+            </div>
+            <details class="mais-opcoes">
+              <summary aria-label="Mais opções sobre Semana de Tecnologia"><span aria-hidden="true">···</span></summary>
+              <div class="menu-opcoes">
+                <button type="button" class="botao-nao-interesse">Não tenho interesse neste assunto</button>
+              </div>
+            </details>
+          </div>
+          <p class="assunto-oculto">Assunto ocultado. <button type="button" class="botao-desfazer">Desfazer</button></p>
+        </li>
+        </ul>
+        <label for="mais-assuntos" class="mostrar-mais"><span class="texto-mais">Mostrar mais</span><span class="texto-menos">Mostrar menos</span></label>
+      </section>
+
+      <section class="caixa-lateral" aria-labelledby="titulo-quem-seguir">
+        <h2 id="titulo-quem-seguir">Quem seguir</h2>
+        <ul class="lista-pessoas">
+        <li class="pessoa-sugerida">
+          <img class="avatar-sugerido" src="../img/messi-chorando-parado.jpg" alt="" width="160" height="160" loading="lazy">
+          <div class="pessoa-dados">
+            <p class="pessoa-nome">Lionel Messi</p>
+            <p class="pessoa-usuario">@messi.dev</p>
+          </div>
+          <input type="checkbox" id="seguir-messi" class="input-seguir">
+          <label for="seguir-messi" class="botao-seguir"><span class="texto-seguir">Seguir</span><span class="texto-seguindo">Seguindo</span><span class="visualmente-oculto"> Lionel Messi</span></label>
+        </li>
+        <li class="pessoa-sugerida">
+          <img class="avatar-sugerido" src="../img/cr7-calma-parado.jpg" alt="" width="160" height="160" loading="lazy">
+          <div class="pessoa-dados">
+            <p class="pessoa-nome">Cristiano Ronaldo</p>
+            <p class="pessoa-usuario">@cr7.dados</p>
+          </div>
+          <input type="checkbox" id="seguir-cr7" class="input-seguir">
+          <label for="seguir-cr7" class="botao-seguir"><span class="texto-seguir">Seguir</span><span class="texto-seguindo">Seguindo</span><span class="visualmente-oculto"> Cristiano Ronaldo</span></label>
+        </li>
+        <li class="pessoa-sugerida">
+          <img class="avatar-sugerido" src="../img/neymar-entrevista-parado.jpg" alt="" width="160" height="160" loading="lazy">
+          <div class="pessoa-dados">
+            <p class="pessoa-nome">Neymar Junior</p>
+            <p class="pessoa-usuario">@neymar.backend</p>
+          </div>
+          <input type="checkbox" id="seguir-neymar" class="input-seguir">
+          <label for="seguir-neymar" class="botao-seguir"><span class="texto-seguir">Seguir</span><span class="texto-seguindo">Seguindo</span><span class="visualmente-oculto"> Neymar Junior</span></label>
+        </li>
+        </ul>
+        <a href="/paginas/pag8.html" class="mostrar-mais">Mostrar mais</a>
+      </section>
+
+      <nav class="rodape-lateral" aria-label="Links do site">
+        <a href="/paginas/Inicio.html">Início</a>
+        <a href="/paginas/contato.html">Contato</a>
+        <a href="/paginas/orcamento_hospedagem.html">Orçamento</a>
+        <span>&copy; 2026 DevNetwork</span>
+      </nav>
+
+    </aside>
+
     <template id="modelo-publicacao">
       <article class="cartao">
         <header class="autor-publicacao">

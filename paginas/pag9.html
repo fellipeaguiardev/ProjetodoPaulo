@@ -84,70 +84,93 @@
 
   <header class="cabecalho-site">
     <h1>DevNetwork</h1>
-    <nav class="menu-principal" aria-label="Menu principal">
-      <ul>
-        <li><a href="/paginas/Inicio.html">Início</a></li>
-        <li><a href="/paginas/pag1.html">Feed</a></li>
-        <li><a href="/paginas/pag2.html">Perfil</a></li>
-        <li><a href="/paginas/pag3.html">Explorar</a></li>
-        <li><a href="/paginas/pag4.html">Projetos</a></li>
-        <li><a href="/paginas/pag5.html">Workspace</a></li>
-        <li><a href="/paginas/pag6.html">Comunidades</a></li>
-        <li><a href="/paginas/pag7.html">Vagas</a></li>
-        <li><a href="/paginas/pag8.html">Rede</a></li>
-        <li><a href="/paginas/pag9.html" class="ativo" aria-current="page">Mensagens</a></li>
-        <li><a href="/paginas/pag10.html">Notificações</a></li>
-        <li><a href="/paginas/pag11.html">Empresa</a></li>
-        <li><a href="/paginas/contato.html">Contato</a></li>
-        <li><a href="/paginas/orcamento_hospedagem.html">Orçamento</a></li>
-      </ul>
-    </nav>
   </header>
 
-<main id="conteudo-principal">
+  <nav class="menu-principal" aria-label="Menu principal">
+    <ul>
+      <li><a href="/paginas/Inicio.html">Início</a></li>
+      <li><a href="/paginas/pag1.html">Feed</a></li>
+      <li><a href="/paginas/pag2.html">Perfil</a></li>
+      <li><a href="/paginas/pag3.html">Explorar</a></li>
+      <li><a href="/paginas/pag4.html">Projetos</a></li>
+      <li><a href="/paginas/pag5.html">Workspace</a></li>
+      <li><a href="/paginas/pag6.html">Comunidades</a></li>
+      <li><a href="/paginas/pag7.html">Vagas</a></li>
+      <li><a href="/paginas/pag8.html">Rede</a></li>
+      <li><a href="/paginas/pag9.html" class="ativo" aria-current="page">Mensagens</a></li>
+      <li><a href="/paginas/pag10.html">Notificações</a></li>
+      <li><a href="/paginas/pag11.html">Empresa</a></li>
+      <li><a href="/paginas/contato.html">Contato</a></li>
+      <li><a href="/paginas/orcamento_hospedagem.html">Orçamento</a></li>
+    </ul>
+  </nav>
 
-    <section class="chat" aria-label="Mensagens">
-      <input class="seletor-chat" type="radio" name="conversa" id="messi" checked>
-      <input class="seletor-chat" type="radio" name="conversa" id="ronaldo">
-      <input class="seletor-chat" type="radio" name="conversa" id="grupo">
+  <main id="conteudo-principal">
 
-      <aside class="lista-contatos">
-        <h2>Conversas</h2>
-        <ul>
-          <li><label for="messi">Lionel Messi</label></li>
-          <li><label for="ronaldo">Cristiano Ronaldo</label></li>
-          <li><label for="grupo">Grupo — Site Pessoal Simples</label></li>
-        </ul>
-      </aside>
+    <div class="conteudo-pagina">
 
-      <section class="conversa" aria-label="Conversa selecionada">
-        <article id="messi-chat">
-          <h2>Lionel Messi</h2>
-          <p class="mensagem mensagem-recebida">Vi que você postou sobre HTML básico. Curti bastante o seu site!</p>
-          <p class="mensagem mensagem-enviada">Valeu! Tô treinando todo dia pra aprender mais.</p>
-        </article>
+      <section class="chat" aria-label="Mensagens">
+        <input class="seletor-chat" type="radio" name="conversa" id="messi" checked>
+        <input class="seletor-chat" type="radio" name="conversa" id="ronaldo">
+        <input class="seletor-chat" type="radio" name="conversa" id="grupo">
 
-        <article id="ronaldo-chat">
-          <h2>Cristiano Ronaldo</h2>
-          <p class="mensagem mensagem-recebida">Estou montando uma página para o portfólio do time.</p>
-          <p class="mensagem mensagem-enviada">Legal! Posso ajudar com HTML e CSS.</p>
-        </article>
+        <aside class="lista-contatos">
+          <h2>Conversas</h2>
+          <ul>
+            <li><label for="messi">Lionel Messi</label></li>
+            <li><label for="ronaldo">Cristiano Ronaldo</label></li>
+            <li><label for="grupo">Grupo — Site Pessoal Simples</label></li>
+          </ul>
+        </aside>
 
-        <article id="grupo-chat">
-          <h2>Grupo — Site Pessoal Simples</h2>
-          <p class="mensagem mensagem-recebida">Ana: atualizei o layout da página inicial.</p>
-          <p class="mensagem mensagem-enviada">Vou revisar os links e já retorno por aqui.</p>
-        </article>
+        <section class="conversa" aria-label="Conversa selecionada">
+          <article id="messi-chat">
+            <h2>Lionel Messi</h2>
+            <p class="mensagem mensagem-recebida">Vi que você postou sobre HTML básico. Curti bastante o seu site!</p>
+            <p class="mensagem mensagem-enviada">Valeu! Tô treinando todo dia pra aprender mais.</p>
+          </article>
 
-        <form action="#" method="post">
-          <label for="mensagem">Mensagem</label>
-          <p class="envio-mensagem">
-            <input type="text" id="mensagem" name="mensagem" required placeholder="Escreva uma mensagem...">
-            <button type="submit">Enviar</button>
-          </p>
-        </form>
+          <article id="ronaldo-chat">
+            <h2>Cristiano Ronaldo</h2>
+            <p class="mensagem mensagem-recebida">Estou montando uma página para o portfólio do time.</p>
+            <p class="mensagem mensagem-enviada">Legal! Posso ajudar com HTML e CSS.</p>
+          </article>
+
+          <article id="grupo-chat">
+            <h2>Grupo — Site Pessoal Simples</h2>
+            <p class="mensagem mensagem-recebida">Ana: atualizei o layout da página inicial.</p>
+            <p class="mensagem mensagem-enviada">Vou revisar os links e já retorno por aqui.</p>
+          </article>
+
+          <form action="#" method="post">
+            <label for="mensagem">Mensagem</label>
+            <p class="envio-mensagem">
+              <input type="text" id="mensagem" name="mensagem" required placeholder="Escreva uma mensagem...">
+              <button type="submit">Enviar</button>
+            </p>
+          </form>
+        </section>
       </section>
-    </section>
+
+    </div>
+
+    <aside class="lateral-pagina" aria-label="Atalhos das mensagens">
+
+      <section class="caixa-lateral" aria-labelledby="lateral-dica">
+        <h2 id="lateral-dica">Dica</h2>
+        <p>Pelo teclado, use as setas <kbd>↑</kbd> e <kbd>↓</kbd> para trocar de conversa.</p>
+      </section>
+
+      <section class="caixa-lateral" aria-labelledby="lateral-atalhos">
+        <h2 id="lateral-atalhos">Atalhos</h2>
+        <ul class="lista-lateral">
+          <li><a href="/paginas/pag8.html">Minha rede</a></li>
+          <li><a href="/paginas/pag10.html">Notificações</a></li>
+          <li><a href="/paginas/pag4.html">Projetos</a></li>
+        </ul>
+      </section>
+
+    </aside>
 
   </main>
 

@@ -71,7 +71,14 @@ video {
 }
 
 .cabecalho-site h1 {
-  margin: 0 0 10px 0;
+  margin: 0;
+}
+
+.menu-principal {
+  background-color: var(--cor-primaria-hover);
+  color: var(--cor-texto-claro);
+  padding: 12px 20px;
+  text-align: center;
 }
 
 .menu-principal ul {
@@ -101,10 +108,94 @@ video {
 
 main {
   width: 100%;
-  max-width: 800px;
+  max-width: 1100px;
   margin: 20px auto;
   padding: 0 15px;
   flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 30px;
+  align-items: start;
+}
+
+.conteudo-pagina {
+  min-width: 0;
+}
+
+.lateral-pagina {
+  position: sticky;
+  top: 16px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.caixa-lateral {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--cor-borda);
+  border-radius: 16px;
+  background-color: var(--cor-fundo-cartao);
+}
+
+.caixa-lateral h2 {
+  margin: 0;
+  padding: 12px 16px;
+  border-bottom: 0;
+  font-size: 20px;
+}
+
+.caixa-lateral > p,
+.caixa-lateral > address {
+  margin: 0 16px 12px;
+}
+
+.lista-lateral {
+  list-style: none;
+  margin: 0 0 4px;
+  padding: 0;
+}
+
+.lista-lateral li {
+  padding: 10px 16px;
+  border-top: 1px solid var(--cor-borda-clara);
+}
+
+.lista-lateral a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.lista-lateral a:hover {
+  text-decoration: underline;
+}
+
+.lista-numerada {
+  list-style: decimal inside;
+}
+
+.caixa-lateral kbd {
+  padding: 0 5px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lateral-pagina {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    margin-top: 0;
+  }
 }
 
 section {
@@ -558,6 +649,7 @@ body:has(#modo-alto-contraste:checked) {
 }
 
 body:has(#modo-alto-contraste:checked) .cabecalho-site,
+body:has(#modo-alto-contraste:checked) .menu-principal,
 body:has(#modo-alto-contraste:checked) .rodape-site,
 body:has(#modo-alto-contraste:checked) .barra-acessibilidade {
   background-color: #000000;
@@ -711,4 +803,13 @@ body:has(#modo-alto-contraste:checked):has(#tema-escuro:checked) {
   --cor-texto-secundario: #ffffff;
   --cor-link: #ffff00;
   --cor-borda: #ffffff;
+}
+
+body:has(#modo-alto-contraste:checked) .caixa-lateral {
+  background-color: #000000;
+  border: 2px solid #ffffff;
+}
+
+body:has(#modo-destacar-links:checked) .lista-lateral a {
+  text-decoration: underline;
 }

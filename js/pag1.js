@@ -182,4 +182,64 @@
   ler(CHAVE_POSTS, []).reverse().forEach(function (post) {
     lista.prepend(criarPost(post));
   });
+
+  const lateral = document.getElementById("barra-lateral-feed");
+
+  if (lateral) {
+    const CHAVE_LATERAL = "devnetwork-feed-lateral";
+    const estadoLateral = ler(CHAVE_LATERAL, {});
+    estadoLateral.seguindo = estadoLateral.seguindo || {};
+    estadoLateral.ocultos = estadoLateral.ocultos || {};
+
+    lateral.querySelectorAll(".input-seguir").forEach(function (input) {
+      input.checked = estadoLateral.seguindo[input.id] === true;
+      input.addEventListener("change", function () {
+        estadoLateral.seguindo[input.id] = input.checked;
+        gravar(CHAVE_LATERAL, estadoLateral);
+      });
+    });
+
+    lateral.querySelectorAll(".assunto").forEach(function (assunto) {
+      const menu = assunto.querySelector(".mais-opcoes");
+      const naoInteresse = assunto.querySelector(".botao-nao-interesse");
+      const desfazer = assunto.querySelector(".botao-desfazer");
+
+      if (estadoLateral.ocultos[assunto.id]) {
+        assunto.classList.add("oculto");
+      }
+
+      naoInteresse.addEventListener("click", function () {
+        menu.open = false;
+        assunto.classList.add("oculto");
+        estadoLateral.ocultos[assunto.id] = true;
+        gravar(CHAVE_LATERAL, estadoLateral);
+        desfazer.focus();
+      });
+
+      desfazer.addEventListener("click", function () {
+        assunto.classList.remove("oculto");
+        delete estadoLateral.ocultos[assunto.id];
+        gravar(CHAVE_LATERAL, estadoLateral);
+        menu.querySelector("summary").focus();
+      });
+    });
+
+    document.addEventListener("click", function (evento) {
+      lateral.querySelectorAll(".mais-opcoes[open]").forEach(function (menu) {
+        if (!menu.contains(evento.target)) {
+          menu.open = false;
+        }
+      });
+    });
+
+    document.addEventListener("keydown", function (evento) {
+      if (evento.key !== "Escape") {
+        return;
+      }
+      lateral.querySelectorAll(".mais-opcoes[open]").forEach(function (menu) {
+        menu.open = false;
+        menu.querySelector("summary").focus();
+      });
+    });
+  }
 })();
