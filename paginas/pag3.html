@@ -105,20 +105,114 @@
 
   <main id="conteudo-principal">
 
-    <div class="conteudo-pagina">
+    <section class="conteudo-pagina explorar" aria-labelledby="titulo-explorar">
 
-      <section>
-        <h2>Explorar</h2>
-        <form action="#">
-          <label for="busca">Pesquisar</label>
-          <input type="text" id="busca" name="busca" placeholder="Pessoas, projetos, tecnologias, empresas...">
+      <header class="cartao busca-explorar">
+        <h2 id="titulo-explorar">Explorar</h2>
+        <p>Encontre pessoas, projetos e tecnologias para aprender e colaborar.</p>
+
+        <form action="#" class="form-busca" role="search">
+          <label for="busca" class="visualmente-oculto">Pesquisar</label>
+          <input type="search" id="busca" name="busca" placeholder="Pessoas, projetos, tecnologias, empresas...">
           <button type="submit">Buscar</button>
         </form>
+
+        <nav class="categorias" aria-label="Explorar por categoria">
+          <ul>
+            <li><a href="/paginas/pag8.html">Pessoas</a></li>
+            <li><a href="/paginas/pag4.html">Projetos</a></li>
+            <li><a href="/paginas/pag6.html">Comunidades</a></li>
+            <li><a href="/paginas/pag7.html">Vagas</a></li>
+            <li><a href="/paginas/pag11.html">Empresas</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="cartao secao lista-devs" aria-labelledby="titulo-devs">
+        <h2 id="titulo-devs">Desenvolvedores em destaque</h2>
+
+        <article class="dev">
+          <img class="capa-dev foco-messi" src="../img/messi.jpg" alt="Lionel Messi programando em frente a dois monitores" width="1408" height="768" loading="lazy">
+          <header>
+            <p class="avatar-dev" aria-hidden="true">LM</p>
+            <h3>Lionel Messi</h3>
+            <p class="cargo-dev">Desenvolvedor Front-end</p>
+          </header>
+          <ul class="etiquetas" aria-label="Tecnologias">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <footer class="acoes-dev">
+            <a class="botao" href="/paginas/pag8.html">Conectar</a>
+            <a class="botao botao-secundario" href="/paginas/pag9.html">Mensagem</a>
+          </footer>
+        </article>
+
+        <article class="dev">
+          <img class="capa-dev foco-ronaldo" src="../img/ronaldo.jpg" alt="Cristiano Ronaldo programando em um escritório com vista para a cidade" width="1408" height="768" loading="lazy">
+          <header>
+            <p class="avatar-dev" aria-hidden="true">CR</p>
+            <h3>Cristiano Ronaldo</h3>
+            <p class="cargo-dev">Desenvolvedor Web</p>
+          </header>
+          <ul class="etiquetas" aria-label="Tecnologias">
+            <li>HTML</li>
+            <li>JavaScript</li>
+          </ul>
+          <footer class="acoes-dev">
+            <a class="botao" href="/paginas/pag8.html">Conectar</a>
+            <a class="botao botao-secundario" href="/paginas/pag9.html">Mensagem</a>
+          </footer>
+        </article>
+
+        <article class="dev">
+          <img class="capa-dev foco-neymar" src="../img/neymar.jpg" alt="Neymar sorrindo enquanto digita em um escritório com dois monitores" width="1408" height="768" loading="lazy">
+          <header>
+            <p class="avatar-dev" aria-hidden="true">NJ</p>
+            <h3>Neymar Junior</h3>
+            <p class="cargo-dev">Desenvolvedor Back-end</p>
+          </header>
+          <ul class="etiquetas" aria-label="Tecnologias">
+            <li>Java</li>
+            <li>Spring Boot</li>
+          </ul>
+          <footer class="acoes-dev">
+            <a class="botao" href="/paginas/pag8.html">Conectar</a>
+            <a class="botao botao-secundario" href="/paginas/pag9.html">Mensagem</a>
+          </footer>
+        </article>
       </section>
 
-      <section>
-        <h2>Tecnologias em alta</h2>
-        <table>
+      <section class="cartao secao galeria" aria-labelledby="titulo-galeria">
+        <h2 id="titulo-galeria">Inspirações e Projetos</h2>
+
+        <figure class="cartao-foto">
+          <img src="../img/chatexplorar.png" alt="Tela de um chat com código sendo depurado" width="1234" height="662" loading="lazy">
+          <figcaption>Debugar nunca foi tão fácil</figcaption>
+        </figure>
+
+        <figure class="cartao-foto">
+          <img src="https://img.freepik.com/vetores-premium/uma-equipe-de-desenvolvedores-e-programadores-codificando-e-depurando-juntos-em-um-espaco-de-trabalho-compartilhado_216520-123202.jpg?w=2000" alt="Ilustração de uma equipe de desenvolvedores programando juntos" loading="lazy">
+          <figcaption>
+            Comunidade de Devs
+            <small class="credito-imagem">Imagem: <a href="https://www.freepik.com/">Freepik</a></small>
+          </figcaption>
+        </figure>
+
+        <figure class="cartao-foto">
+          <img src="../img/siteexplorar.jpg" alt="Interface de um site sobre craques da Copa aberto em um notebook" width="1200" height="609" loading="lazy">
+          <figcaption>Site sobre os craques da Copa finalizado!</figcaption>
+        </figure>
+      </section>
+
+    </section>
+
+    <aside class="lateral-pagina" aria-label="Tendências e atalhos">
+
+      <section class="caixa-lateral" aria-labelledby="lateral-tecnologias">
+        <h2 id="lateral-tecnologias">Tecnologias em alta</h2>
+        <table class="tabela-alta">
           <thead>
             <tr>
               <th>Tecnologia</th>
@@ -127,66 +221,24 @@
           </thead>
           <tbody>
             <tr>
-                <td>HTML</td>
-                <td>↑ 12%</td>
+              <td>JavaScript</td>
+              <td><data class="crescimento" value="15">↑ 15%</data></td>
+            </tr>
+            <tr>
+              <td>HTML</td>
+              <td><data class="crescimento" value="12">↑ 12%</data></td>
             </tr>
             <tr>
               <td>CSS</td>
-              <td>↑ 9%</td>
-            </tr>
-            <tr>
-              <td>JavaScript</td>
-              <td>↑ 15%</td>
+              <td><data class="crescimento" value="9">↑ 9%</data></td>
             </tr>
             <tr>
               <td>Java</td>
-              <td>↑ 7%</td>
+              <td><data class="crescimento" value="7">↑ 7%</data></td>
             </tr>
           </tbody>
         </table>
       </section>
-
-      <section>
-        <h2>Desenvolvedores em destaque</h2>
-
-        <article class="cartao">
-          <h3>Lionel Messi</h3>
-          <p>Frontend Developer — HTML, CSS, JavaScript</p>
-        </article>
-
-        <article class="cartao">
-          <h3>Cristiano Ronaldo</h3>
-          <p>Web Developer — HTML, JavaScript</p>
-        </article>
-      </section>
-
-     <section>
-        <h2>Inspirações e Projetos</h2>
-
-        <div class="galeria">
-          <figure class="cartao-foto">
-            <img src="../img/chatexplorar.png" alt="Tela de um chat com código sendo depurado" width="1234" height="662" loading="lazy">
-            <figcaption>Debugar nunca foi tão fácil</figcaption>
-          </figure>
-
-          <figure class="cartao-foto">
-            <img src="https://img.freepik.com/vetores-premium/uma-equipe-de-desenvolvedores-e-programadores-codificando-e-depurando-juntos-em-um-espaco-de-trabalho-compartilhado_216520-123202.jpg?w=2000" alt="Ilustração de uma equipe de desenvolvedores programando juntos" loading="lazy">
-            <figcaption>
-              Comunidade de Devs
-              <small class="credito-imagem">Imagem: <a href="https://www.freepik.com/">Freepik</a></small>
-            </figcaption>
-          </figure>
-
-          <figure class="cartao-foto">
-            <img src="../img/siteexplorar.jpg" alt="Interface de um site sobre craques da Copa aberto em um notebook" width="1200" height="609" loading="lazy">
-            <figcaption>Site sobre os craques da Copa finalizado!</figcaption>
-          </figure>
-        </div>
-      </section>
-
-    </div>
-
-    <aside class="lateral-pagina" aria-label="Buscas e atalhos">
 
       <section class="caixa-lateral" aria-labelledby="lateral-buscas">
         <h2 id="lateral-buscas">Buscas populares</h2>

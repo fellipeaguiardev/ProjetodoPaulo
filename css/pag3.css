@@ -40,3 +40,354 @@
 body:has(#modo-alto-contraste:checked) .cartao-foto {
   border: 2px solid #ffffff;
 }
+
+.busca-explorar {
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--cor-primaria);
+  background-image: linear-gradient(135deg, var(--cor-primaria), var(--cor-primaria-hover));
+  color: var(--cor-texto-claro);
+}
+
+.busca-explorar h2 {
+  margin: 0;
+  padding: 28px 24px 0;
+  border: 0;
+  font-size: 1.75em;
+}
+
+.busca-explorar > p {
+  margin: 4px 0 18px;
+  padding: 0 24px;
+  opacity: 0.9;
+}
+
+.form-busca {
+  display: flex;
+  gap: 8px;
+  max-width: 640px;
+  margin: 0 24px 24px;
+}
+
+.form-busca input {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  padding: 11px 14px;
+  border: 0;
+  border-radius: 6px;
+}
+
+.form-busca button {
+  margin: 0;
+  padding: 11px 20px;
+  border-radius: 6px;
+  background-color: var(--cor-destaque);
+  color: var(--cor-primaria-hover);
+  font-weight: bold;
+}
+
+.form-busca button:hover {
+  background-color: var(--cor-texto-claro);
+}
+
+.categorias {
+  padding: 14px 24px;
+  background-color: var(--cor-fundo-cartao);
+}
+
+.categorias ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.categorias a {
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 999px;
+  background-color: var(--cor-fundo-pagina);
+  color: var(--cor-link);
+  font-size: 0.875em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.categorias a:hover {
+  border-color: var(--cor-primaria);
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+}
+
+.lista-devs,
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 14px;
+}
+
+.lista-devs h2,
+.galeria h2 {
+  grid-column: 1 / -1;
+  margin-bottom: 2px;
+}
+
+.dev {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  background-color: var(--cor-fundo-cartao);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dev:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px var(--sombra-cartao);
+}
+
+.capa-dev {
+  display: block;
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.foco-messi {
+  object-position: 72% 35%;
+}
+
+.foco-ronaldo {
+  object-position: 55% 30%;
+}
+
+.foco-neymar {
+  object-position: 85% 30%;
+}
+
+.dev header {
+  padding: 0 14px;
+}
+
+.avatar-dev {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin: -26px 0 0;
+  border: 3px solid var(--cor-fundo-cartao);
+  border-radius: 50%;
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  font-weight: bold;
+}
+
+.dev h3 {
+  margin: 8px 0 0;
+  font-size: 1.05em;
+}
+
+.cargo-dev {
+  margin: 2px 0 0;
+  color: var(--cor-texto-secundario);
+  font-size: 0.875em;
+}
+
+.etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 12px 0 14px;
+  padding: 0 14px;
+  list-style: none;
+}
+
+.etiquetas li {
+  padding: 3px 8px;
+  border-radius: 4px;
+  background-color: var(--cor-borda-clara);
+  color: var(--cor-link);
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+.acoes-dev {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  padding: 0 14px 14px;
+}
+
+.acoes-dev .botao {
+  flex: 1;
+  padding: 7px 10px;
+  border-radius: 6px;
+  font-size: 0.875em;
+  text-align: center;
+}
+
+.botao-secundario {
+  border-color: currentColor;
+  background-color: var(--cor-fundo-cartao);
+  color: var(--cor-link);
+}
+
+.botao-secundario:hover {
+  background-color: var(--cor-borda-clara);
+}
+
+
+.cartao-foto {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  background-color: var(--cor-fundo-cartao);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cartao-foto:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px var(--sombra-cartao);
+}
+
+.cartao-foto img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.cartao-foto figcaption {
+  padding: 10px 12px 12px;
+  color: var(--cor-texto);
+  font-size: 0.95em;
+  font-weight: bold;
+}
+
+.credito-imagem {
+  display: block;
+  margin-top: 2px;
+  color: var(--cor-texto-secundario);
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
+.tabela-alta {
+  width: calc(100% - 32px);
+  margin: 0 16px 8px;
+  counter-reset: posicao;
+}
+
+.tabela-alta th,
+.tabela-alta td {
+  padding: 10px 0;
+  border: 0;
+  border-top: 1px solid var(--cor-borda-clara);
+}
+
+.tabela-alta th {
+  background-color: transparent;
+  color: var(--cor-texto-secundario);
+  font-size: 0.75em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tabela-alta th:last-child,
+.tabela-alta td:last-child {
+  text-align: right;
+}
+
+.tabela-alta tbody td:first-child {
+  font-weight: bold;
+}
+
+.tabela-alta tbody td:first-child::before {
+  counter-increment: posicao;
+  content: counter(posicao);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: var(--cor-fundo-pagina);
+  color: var(--cor-texto-secundario);
+  font-size: 0.75em;
+}
+
+.crescimento {
+  display: inline-block;
+  padding: 2px 10px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  color: var(--cor-status-ok);
+  font-size: 0.8em;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .busca-explorar h2 {
+    padding: 22px 16px 0;
+    font-size: 1.5em;
+  }
+
+  .busca-explorar > p {
+    padding: 0 16px;
+  }
+
+  .form-busca {
+    margin: 0 16px 18px;
+  }
+
+  .form-busca button {
+    padding: 11px 14px;
+  }
+
+  .categorias {
+    padding: 12px 16px;
+  }
+
+  .secao {
+    padding: 16px;
+  }
+}
+
+.explorar {
+  display: grid;
+  gap: 20px;
+}
+
+.explorar section {
+  margin-bottom: 0;
+}
+
+.explorar .cartao {
+  margin: 0;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px var(--sombra-cartao);
+}
+
+.secao {
+  padding: 18px 20px 20px;
+}
+
+.secao h2 {
+  margin: 0;
+  font-size: 1.25em;
+}
+
+.lateral-pagina {
+  margin-top: 0;
+}
