@@ -114,73 +114,254 @@
 
       <section>
         <h2>Comunidades em destaque</h2>
+
+        <p>
+          <label for="campo-busca">Buscar comunidade</label>
+          <input type="text" id="campo-busca" placeholder="Digite o nome..." oninput="buscarComunidade()">
+        </p>
+        <p id="aviso-busca" role="status"></p>
+
         <div class="lista-comunidades">
-          <article class="cartao">
+          <article class="cartao" id="cartao-html">
             <h3>HTML e CSS Brasil</h3>
             <p>Para quem está começando no front-end e quer trocar dicas sobre páginas web.</p>
             <ul>
-              <li>Membros: 12.540</li>
+              <li>Membros: <span id="membros-html">12.540</span></li>
               <li>Nível: Iniciante</li>
               <li>Categoria: Front-end</li>
             </ul>
-            <a href="#como-participar" class="botao">Participar<span class="visualmente-oculto"> da comunidade HTML e CSS Brasil</span></a>
+            <div class="acoes-cartao">
+              <button type="button" class="botao" id="botao-participar-html" aria-label="Participar da comunidade HTML e CSS Brasil" onclick="participar('html')">Participar</button>
+              <button type="button" class="botao" id="botao-ver-html" onclick="abrirComunidade('html')">Ver comunidade<span class="visualmente-oculto"> HTML e CSS Brasil</span></button>
+            </div>
           </article>
 
-          <article class="cartao">
+          <article class="cartao" id="cartao-js">
             <h3>JavaScript Lovers</h3>
             <p>Discussões sobre JavaScript, frameworks, bibliotecas e boas práticas.</p>
             <ul>
-              <li>Membros: 9.870</li>
+              <li>Membros: <span id="membros-js">9.870</span></li>
               <li>Nível: Todos</li>
               <li>Categoria: Front-end</li>
             </ul>
-            <a href="#como-participar" class="botao">Participar<span class="visualmente-oculto"> da comunidade JavaScript Lovers</span></a>
+            <div class="acoes-cartao">
+              <button type="button" class="botao" id="botao-participar-js" aria-label="Participar da comunidade JavaScript Lovers" onclick="participar('js')">Participar</button>
+              <button type="button" class="botao" id="botao-ver-js" onclick="abrirComunidade('js')">Ver comunidade<span class="visualmente-oculto"> JavaScript Lovers</span></button>
+            </div>
           </article>
 
-          <article class="cartao">
+          <article class="cartao" id="cartao-python">
             <h3>Python Devs</h3>
             <p>Comunidade para quem usa Python em automação, dados e back-end.</p>
             <ul>
-              <li>Membros: 15.210</li>
+              <li>Membros: <span id="membros-python">15.210</span></li>
               <li>Nível: Todos</li>
               <li>Categoria: Back-end</li>
             </ul>
-            <a href="#como-participar" class="botao">Participar<span class="visualmente-oculto"> da comunidade Python Devs</span></a>
+            <div class="acoes-cartao">
+              <button type="button" class="botao" id="botao-participar-python" aria-label="Participar da comunidade Python Devs" onclick="participar('python')">Participar</button>
+              <button type="button" class="botao" id="botao-ver-python" onclick="abrirComunidade('python')">Ver comunidade<span class="visualmente-oculto"> Python Devs</span></button>
+            </div>
           </article>
 
-          <article class="cartao">
+          <article class="cartao" id="cartao-banco">
             <h3>Banco de Dados</h3>
             <p>Modelagem, SQL, MySQL, PostgreSQL e tudo sobre armazenar dados.</p>
             <ul>
-              <li>Membros: 6.320</li>
+              <li>Membros: <span id="membros-banco">6.320</span></li>
               <li>Nível: Intermediário</li>
               <li>Categoria: Dados</li>
             </ul>
-            <a href="#como-participar" class="botao">Participar<span class="visualmente-oculto"> da comunidade Banco de Dados</span></a>
+            <div class="acoes-cartao">
+              <button type="button" class="botao" id="botao-participar-banco" aria-label="Participar da comunidade Banco de Dados" onclick="participar('banco')">Participar</button>
+              <button type="button" class="botao" id="botao-ver-banco" onclick="abrirComunidade('banco')">Ver comunidade<span class="visualmente-oculto"> Banco de Dados</span></button>
+            </div>
           </article>
 
-          <article class="cartao">
+          <article class="cartao" id="cartao-mobile">
             <h3>Mobile Dev</h3>
             <p>Desenvolvimento de aplicativos para Android e iOS.</p>
             <ul>
-              <li>Membros: 5.480</li>
+              <li>Membros: <span id="membros-mobile">5.480</span></li>
               <li>Nível: Todos</li>
               <li>Categoria: Mobile</li>
             </ul>
-            <a href="#como-participar" class="botao">Participar<span class="visualmente-oculto"> da comunidade Mobile Dev</span></a>
+            <div class="acoes-cartao">
+              <button type="button" class="botao" id="botao-participar-mobile" aria-label="Participar da comunidade Mobile Dev" onclick="participar('mobile')">Participar</button>
+              <button type="button" class="botao" id="botao-ver-mobile" onclick="abrirComunidade('mobile')">Ver comunidade<span class="visualmente-oculto"> Mobile Dev</span></button>
+            </div>
           </article>
 
-          <article class="cartao">
+          <article class="cartao" id="cartao-emprego">
             <h3>Primeiro Emprego Tech</h3>
             <p>Dicas de currículo, entrevistas e como conseguir a primeira vaga na área.</p>
             <ul>
-              <li>Membros: 20.100</li>
+              <li>Membros: <span id="membros-emprego">20.100</span></li>
               <li>Nível: Iniciante</li>
               <li>Categoria: Carreira</li>
             </ul>
-            <a href="#como-participar" class="botao">Participar<span class="visualmente-oculto"> da comunidade Primeiro Emprego Tech</span></a>
+            <div class="acoes-cartao">
+              <button type="button" class="botao" id="botao-participar-emprego" aria-label="Participar da comunidade Primeiro Emprego Tech" onclick="participar('emprego')">Participar</button>
+              <button type="button" class="botao" id="botao-ver-emprego" onclick="abrirComunidade('emprego')">Ver comunidade<span class="visualmente-oculto"> Primeiro Emprego Tech</span></button>
+            </div>
           </article>
         </div>
+      </section>
+
+      <section class="detalhe" id="detalhe-html" aria-labelledby="titulo-detalhe-html">
+        <h2 id="titulo-detalhe-html" tabindex="-1">HTML e CSS Brasil</h2>
+        <p><button type="button" onclick="fecharComunidade('html')">Fechar</button></p>
+
+        <h3>Sobre</h3>
+        <p>Espaço para quem está aprendendo a montar páginas com HTML e CSS.</p>
+
+        <h3>Tópicos populares</h3>
+        <ul>
+          <li>Como centralizar uma div?</li>
+          <li>Diferença entre margin e padding</li>
+          <li>Ideias de projetos para iniciantes</li>
+        </ul>
+
+        <h3>Mural de recados</h3>
+        <p>
+          <label for="campo-recado-html">Escreva um recado</label>
+          <input type="text" id="campo-recado-html" placeholder="Seu recado">
+        </p>
+        <p><button type="button" onclick="enviarRecado('html')">Enviar recado</button></p>
+        <ul id="mural-html">
+          <li>Ana: Bem-vindos à comunidade!</li>
+          <li>Carlos: Alguém tem dica de curso de HTML?</li>
+        </ul>
+      </section>
+
+      <section class="detalhe" id="detalhe-js" aria-labelledby="titulo-detalhe-js">
+        <h2 id="titulo-detalhe-js" tabindex="-1">JavaScript Lovers</h2>
+        <p><button type="button" onclick="fecharComunidade('js')">Fechar</button></p>
+
+        <h3>Sobre</h3>
+        <p>Troca de ideias sobre JavaScript, do básico aos frameworks.</p>
+
+        <h3>Tópicos populares</h3>
+        <ul>
+          <li>var, let e const: qual usar?</li>
+          <li>Como funciona o onclick?</li>
+          <li>Primeiros passos com React</li>
+        </ul>
+
+        <h3>Mural de recados</h3>
+        <p>
+          <label for="campo-recado-js">Escreva um recado</label>
+          <input type="text" id="campo-recado-js" placeholder="Seu recado">
+        </p>
+        <p><button type="button" onclick="enviarRecado('js')">Enviar recado</button></p>
+        <ul id="mural-js">
+          <li>Bia: Que bom ter esse espaço!</li>
+          <li>Rafael: Alguém quer estudar junto?</li>
+        </ul>
+      </section>
+
+      <section class="detalhe" id="detalhe-python" aria-labelledby="titulo-detalhe-python">
+        <h2 id="titulo-detalhe-python" tabindex="-1">Python Devs</h2>
+        <p><button type="button" onclick="fecharComunidade('python')">Fechar</button></p>
+
+        <h3>Sobre</h3>
+        <p>Comunidade para quem usa Python em automação, análise de dados e back-end.</p>
+
+        <h3>Tópicos populares</h3>
+        <ul>
+          <li>Meu primeiro script de automação</li>
+          <li>Pandas para iniciantes</li>
+          <li>Qual framework web escolher?</li>
+        </ul>
+
+        <h3>Mural de recados</h3>
+        <p>
+          <label for="campo-recado-python">Escreva um recado</label>
+          <input type="text" id="campo-recado-python" placeholder="Seu recado">
+        </p>
+        <p><button type="button" onclick="enviarRecado('python')">Enviar recado</button></p>
+        <ul id="mural-python">
+          <li>Lucas: Python salvou meu trabalho da faculdade!</li>
+          <li>Marina: Alguém tem material de estudo?</li>
+        </ul>
+      </section>
+
+      <section class="detalhe" id="detalhe-banco" aria-labelledby="titulo-detalhe-banco">
+        <h2 id="titulo-detalhe-banco" tabindex="-1">Banco de Dados</h2>
+        <p><button type="button" onclick="fecharComunidade('banco')">Fechar</button></p>
+
+        <h3>Sobre</h3>
+        <p>Tire dúvidas sobre modelagem, SQL e bancos como MySQL e PostgreSQL.</p>
+
+        <h3>Tópicos populares</h3>
+        <ul>
+          <li>Como fazer um bom DER</li>
+          <li>Diferença entre INNER JOIN e LEFT JOIN</li>
+          <li>Chave primária e chave estrangeira</li>
+        </ul>
+
+        <h3>Mural de recados</h3>
+        <p>
+          <label for="campo-recado-banco">Escreva um recado</label>
+          <input type="text" id="campo-recado-banco" placeholder="Seu recado">
+        </p>
+        <p><button type="button" onclick="enviarRecado('banco')">Enviar recado</button></p>
+        <ul id="mural-banco">
+          <li>Júlia: Alguém pode explicar normalização?</li>
+          <li>Pedro: Posso mandar um material de SQL.</li>
+        </ul>
+      </section>
+
+      <section class="detalhe" id="detalhe-mobile" aria-labelledby="titulo-detalhe-mobile">
+        <h2 id="titulo-detalhe-mobile" tabindex="-1">Mobile Dev</h2>
+        <p><button type="button" onclick="fecharComunidade('mobile')">Fechar</button></p>
+
+        <h3>Sobre</h3>
+        <p>Tudo sobre criar aplicativos para Android e iOS.</p>
+
+        <h3>Tópicos populares</h3>
+        <ul>
+          <li>Flutter ou React Native?</li>
+          <li>Como publicar um app na loja</li>
+          <li>Dicas de design para telas pequenas</li>
+        </ul>
+
+        <h3>Mural de recados</h3>
+        <p>
+          <label for="campo-recado-mobile">Escreva um recado</label>
+          <input type="text" id="campo-recado-mobile" placeholder="Seu recado">
+        </p>
+        <p><button type="button" onclick="enviarRecado('mobile')">Enviar recado</button></p>
+        <ul id="mural-mobile">
+          <li>Fernanda: Estou criando meu primeiro app!</li>
+          <li>Diego: Quem usa Flutter por aqui?</li>
+        </ul>
+      </section>
+
+      <section class="detalhe" id="detalhe-emprego" aria-labelledby="titulo-detalhe-emprego">
+        <h2 id="titulo-detalhe-emprego" tabindex="-1">Primeiro Emprego Tech</h2>
+        <p><button type="button" onclick="fecharComunidade('emprego')">Fechar</button></p>
+
+        <h3>Sobre</h3>
+        <p>Dicas de currículo, entrevistas e como conseguir a primeira vaga em tecnologia.</p>
+
+        <h3>Tópicos populares</h3>
+        <ul>
+          <li>Como montar um currículo sem experiência</li>
+          <li>Perguntas comuns em entrevistas</li>
+          <li>Vale a pena fazer estágio?</li>
+        </ul>
+
+        <h3>Mural de recados</h3>
+        <p>
+          <label for="campo-recado-emprego">Escreva um recado</label>
+          <input type="text" id="campo-recado-emprego" placeholder="Seu recado">
+        </p>
+        <p><button type="button" onclick="enviarRecado('emprego')">Enviar recado</button></p>
+        <ul id="mural-emprego">
+          <li>Gabriel: Consegui minha primeira entrevista!</li>
+          <li>Camila: Parabéns! Boa sorte!</li>
+        </ul>
       </section>
 
       <section>
@@ -330,6 +511,8 @@
     <p>Rede Social para Desenvolvedores</p>
     <p class="direitos-autorais">&copy; 2026 DevNetwork. Todos os direitos reservados.</p>
   </footer>
+
+  <script src="../js/pag6.js"></script>
 
 </body>
 </html>
