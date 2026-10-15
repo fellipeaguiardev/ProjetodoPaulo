@@ -1,7 +1,6 @@
 
 
 
-
 .lista-comunidades {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -33,4 +32,30 @@
 
 .opcoes-tipo .campo-opcao {
   margin: 0;
+}
+
+
+/* ---------- Novidades com JavaScript ---------- */
+
+/* Os dois botões do cartão ficam juntos, no final do cartão */
+.acoes-cartao {
+  margin-top: auto;
+}
+
+.acoes-cartao .botao {
+  margin-top: 0;
+}
+
+/* Botão "Sair" (aparece depois de clicar em Participar) */
+.participando {
+  background-color: #b3261e;
+}
+
+.participando:hover {
+  background-color: #8c1d18;
+}
+
+/* Conteúdo de cada comunidade: escondido até clicar em "Ver comunidade" */
+.detalhe {
+  display: none;
 }
