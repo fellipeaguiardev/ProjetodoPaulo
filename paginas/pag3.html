@@ -111,8 +111,7 @@
         <h2 id="titulo-explorar">Explorar</h2>
         <p>Encontre pessoas, projetos e tecnologias para aprender e colaborar.</p>
 
-        <form action="#" class="form-busca" role="search">
-          <label for="busca" class="visualmente-oculto">Pesquisar</label>
+        <form action="#" class="form-busca" role="search" onsubmit="buscarDev(); return false;">          <label for="busca" class="visualmente-oculto">Pesquisar</label>
           <input type="search" id="busca" name="busca" placeholder="Pessoas, projetos, tecnologias, empresas...">
           <button type="submit">Buscar</button>
         </form>
@@ -144,12 +143,13 @@
             <li>JavaScript</li>
           </ul>
           <footer class="acoes-dev">
-            <a class="botao" href="/paginas/pag8.html">Conectar</a>
+            <button type="button" class="botao" onclick="conectar(this)">Conectar</button>
             <a class="botao botao-secundario" href="/paginas/pag9.html">Mensagem</a>
           </footer>
         </article>
 
         <article class="dev">
+          <p id="aviso-busca" class="aviso-busca" aria-live="polite"></p>
           <img class="capa-dev foco-ronaldo" src="../img/ronaldo.jpg" alt="Cristiano Ronaldo programando em um escritório com vista para a cidade" width="1408" height="768" loading="lazy">
           <header>
             <p class="avatar-dev" aria-hidden="true">CR</p>
@@ -161,7 +161,7 @@
             <li>JavaScript</li>
           </ul>
           <footer class="acoes-dev">
-            <a class="botao" href="/paginas/pag8.html">Conectar</a>
+            <button type="button" class="botao" onclick="conectar(this)">Conectar</button>
             <a class="botao botao-secundario" href="/paginas/pag9.html">Mensagem</a>
           </footer>
         </article>
@@ -178,7 +178,7 @@
             <li>Spring Boot</li>
           </ul>
           <footer class="acoes-dev">
-            <a class="botao" href="/paginas/pag8.html">Conectar</a>
+            <button type="button" class="botao" onclick="conectar(this)">Conectar</button>
             <a class="botao botao-secundario" href="/paginas/pag9.html">Mensagem</a>
           </footer>
         </article>
@@ -266,6 +266,8 @@
     <p>Rede Social para Desenvolvedores</p>
     <p class="direitos-autorais">&copy; 2026 DevNetwork. Todos os direitos reservados.</p>
   </footer>
+
+  <script src="../js/pag3.js"></script>
 
 </body>
 </html>
