@@ -1,7 +1,7 @@
 
 
 
-/* Filtros lado a lado no computador */
+ /* Filtros lado a lado no computador */
 .filtros {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -27,6 +27,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 
 .vaga:hover {
   transform: translateY(-4px);
@@ -55,3 +56,61 @@
   font-weight: 600;
   color: var(--cor-salvo-icone);
 }
+
+
+/* Filtros lado a lado no computador */
+.filtros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0 15px;
+  align-items: end;
+}
+
+.filtros p {
+  margin: 0 0 10px;
+}
+
+.filtros label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.filtros select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #999;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  color: #222;
+  cursor: pointer;
+}
+
+.filtros select:focus {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+}
+
+.filtros button {
+  width: 100%;
+  padding: 9px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #1a73e8;
+  color: #fff;
+  cursor: pointer;
+}
+
+.filtros button:hover {
+  background: #1558b0;
+}
+
+.filtros button:focus-visible {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+}
+
