@@ -106,13 +106,67 @@
 
     <div class="conteudo-pagina">
 
-      <section>
-        <h2>TechStart</h2>
-        <p>Empresa de tecnologia focada em desenvolvimento web para iniciantes.</p>
+      <!-- EMPRESA 1: TechStart -->
+    <article class="empresa-item" data-empresa="techstart">
+      
+      <!-- Cabeçalho da empresa com logo e botão seguir -->
+      <header class="empresa-cabecalho">
+        <div class="empresa-logo-info">
+          <img src="../imagens/logo-techstart.svg" alt="Logo da TechStart" class="empresa-logo">
+          <div>
+            <h2>TechStart</h2>
+            <p class="empresa-tagline">Empresa de tecnologia focada em desenvolvimento web para iniciantes.</p>
+          </div>
+        </div>
+        <button class="botao-seguir" data-empresa="techstart" aria-label="Seguir empresa TechStart">
+          <span class="texto-botao">Seguir empresa</span>
+          <span class="contador-seguidores" aria-live="polite">0</span>
+        </button>
+      </header>
+
+      <!-- Sobre a empresa -->
+      <section class="empresa-sobre">
+        <h3>Sobre</h3>
+        <p>A TechStart é uma empresa de tecnologia focada em desenvolvimento web para iniciantes, oferecendo soluções modernas e acessíveis. Nosso time é dedicado a criar experiências web de qualidade e formar novos talentos na área.</p>
       </section>
 
-      <section>
-        <h2>Tecnologias utilizadas</h2>
+      <!-- Benefícios -->
+      <section class="empresa-beneficios">
+        <h3>Benefícios</h3>
+        <ul>
+          <li>
+            <strong>Home Office</strong>
+            <p>Trabalhe de qualquer lugar com flexibilidade total.</p>
+          </li>
+          <li>
+            <strong>Vale Refeição</strong>
+            <p>R$ 500/mês para alimentação.</p>
+          </li>
+          <li>
+            <strong>Desenvolvimento Profissional</strong>
+            <p>Cursos e certificações custeadas pela empresa.</p>
+          </li>
+          <li>
+            <strong>Ambiente Inclusivo</strong>
+            <p>Comprometidos com diversidade e inclusão.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Localização -->
+      <section class="empresa-localizacao">
+        <h3>Localização</h3>
+        <address>
+          <p><strong>Sede:</strong> São Paulo, SP</p>
+          <p><strong>Endereço:</strong> Avenida Paulista, 1000 - Bela Vista</p>
+          <p><strong>Telefone:</strong> <a href="tel:+5511987654321">(11) 98765-4321</a></p>
+          <p><strong>Email:</strong> <a href="mailto:contato@techstart.com.br">contato@techstart.com.br</a></p>
+        </address>
+      </section>
+
+      <!-- Tecnologias -->
+      <section class="empresa-tecnologias">
+        <h3>Tecnologias utilizadas</h3>
         <ul>
           <li>HTML</li>
           <li>CSS</li>
@@ -121,47 +175,121 @@
         </ul>
       </section>
 
-      <section>
-        <h2>Vagas abertas</h2>
-        <article class="cartao">
-          <h3>Front-end HTML/CSS Developer</h3>
-          <p>Remoto — Júnior</p>
-        </article>
+      <!-- Vagas abertas -->
+      <section class="empresa-vagas">
+        <h3>Vagas abertas</h3>
+        <ul class="lista-vagas">
+          <li class="vaga-item">
+            <h4>Front-end HTML/CSS Developer</h4>
+            <p><strong>Modalidade:</strong> Remoto</p>
+            <p><strong>Nível:</strong> Júnior</p>
+            <a href="./pag7.html" class="botao-ver-vagas">Ver vagas</a>
+          </li>
+        </ul>
       </section>
 
-      <section>
-        <h2>Equipe</h2>
+      <!-- Equipe -->
+      <section class="empresa-equipe">
+        <h3>Equipe</h3>
         <ul>
           <li>Neymar Junior — Front-end</li>
           <li>Lionel Messi — Front-end</li>
         </ul>
       </section>
+    </article>
 
-    </div>
+    <hr aria-hidden="true">
 
-    <aside class="lateral-pagina" aria-label="Sobre a empresa">
+    <!-- EMPRESA 2: Nexus Pay Tech -->
+    <article class="empresa-item" data-empresa="nexus-pay">
+      
+      <header class="empresa-cabecalho">
+        <div class="empresa-logo-info">
+          <img src="../imagens/logo-nexus-pay.svg" alt="Logo da Nexus Pay Tech" class="empresa-logo">
+          <div>
+            <h2>Nexus Pay Tech</h2>
+            <p class="empresa-tagline">Desenvolvimento de infraestrutura de pagamentos de alta performance.</p>
+          </div>
+        </div>
+        <button class="botao-seguir" data-empresa="nexus-pay" aria-label="Seguir empresa Nexus Pay Tech">
+          <span class="texto-botao">Seguir empresa</span>
+          <span class="contador-seguidores" aria-live="polite">0</span>
+        </button>
+      </header>
 
-      <section class="caixa-lateral" aria-labelledby="lateral-sobre">
-        <h2 id="lateral-sobre">Sobre a TechStart</h2>
-        <p>Empresa parceira da DevNetwork que contrata desenvolvedores em início de carreira.</p>
+      <section class="empresa-sobre">
+        <h3>Sobre</h3>
+        <p>A Nexus Pay Tech é especializada em desenvolvimento de infraestrutura de pagamentos de alta performance, processamento de transações em tempo real e APIs financeiras distribuídas. Somos líderes em soluções fintech e contamos com um time experiente em arquitetura distribuída.</p>
       </section>
 
-      <section class="caixa-lateral" aria-labelledby="lateral-atalhos">
-        <h2 id="lateral-atalhos">Atalhos</h2>
-        <ul class="lista-lateral">
-          <li><a href="/paginas/pag7.html">Ver todas as vagas</a></li>
-          <li><a href="/paginas/contato.html">Fale conosco</a></li>
+      <section class="empresa-beneficios">
+        <h3>Benefícios</h3>
+        <ul>
+          <li>
+            <strong>Trabalho Híbrido</strong>
+            <p>3 dias no escritório, 2 em home office.</p>
+          </li>
+          <li>
+            <strong>Vale Refeição + Vale Transporte</strong>
+            <p>Cobertura total de despesas.</p>
+          </li>
+          <li>
+            <strong>Plano de Saúde Premium</strong>
+            <p>Para você e sua família.</p>
+          </li>
+          <li>
+            <strong>Bônus Anual</strong>
+            <p>Baseado em performance e metas.</p>
+          </li>
         </ul>
       </section>
 
-    </aside>
+      <section class="empresa-localizacao">
+        <h3>Localização</h3>
+        <address>
+          <p><strong>Sede:</strong> Rio de Janeiro, RJ</p>
+          <p><strong>Endereço:</strong> Av. Rio Branco, 500 - Centro</p>
+          <p><strong>Telefone:</strong> <a href="tel:+5521987654321">(21) 98765-4321</a></p>
+          <p><strong>Email:</strong> <a href="mailto:contato@nexuspay.com.br">contato@nexuspay.com.br</a></p>
+        </address>
+      </section>
 
-  </main>
+      <section class="empresa-tecnologias">
+        <h3>Tecnologias utilizadas</h3>
+        <ul>
+          <li>Java (Spring Boot)</li>
+          <li>Node.js</li>
+          <li>PostgreSQL</li>
+          <li>Docker / Kubernetes</li>
+          <li>AWS</li>
+        </ul>
+      </section>
 
-  <footer class="rodape-site">
-    <p>Rede Social para Desenvolvedores</p>
-    <p class="direitos-autorais">&copy; 2026 DevNetwork. Todos os direitos reservados.</p>
-  </footer>
+      <section class="empresa-vagas">
+        <h3>Vagas abertas</h3>
+        <ul class="lista-vagas">
+          <li class="vaga-item">
+            <h4>Desenvolvedor(a) Back-end</h4>
+            <p><strong>Modalidade:</strong> Híbrido</p>
+            <p><strong>Nível:</strong> Júnior</p>
+            <a href="./pag7.html" class="botao-ver-vagas">Ver vagas</a>
+          </li>
+          <li class="vaga-item">
+            <h4>Engenheiro(a) de Software Back-end</h4>
+            <p><strong>Modalidade:</strong> Híbrido</p>
+            <p><strong>Nível:</strong> Sênior</p>
+            <a href="./pag7.html" class="botao-ver-vagas">Ver vagas</a>
+          </li>
+        </ul>
+      </section>
 
-</body>
-</html>
+      <section class="empresa-equipe">
+        <h3>Equipe</h3>
+        <ul>
+          <li>João Cassiano — Back-end Lead</li>
+          <li>Julio Cesar — Back-end</li>
+        </section>
+      </body>
+      </html>
+
+
