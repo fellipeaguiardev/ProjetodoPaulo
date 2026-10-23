@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Perfil de Cristiano Ronaldo na DevNetwork.">
+  <title>DevNetwork - Perfil de Cristiano Ronaldo</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/pag2.css">
+  <link rel="stylesheet" href="../css/perfil-pessoa.css">
+</head>
+<body>
+
+  <a href="#conteudo-principal" class="pular-link">Pular para o conteúdo principal</a>
+
+  <details class="painel-acessibilidade">
+    <summary class="botao-painel-acessibilidade">
+      <span class="conteudo-botao-painel">
+        <svg class="icone-painel" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="12" cy="6.2" r="1.6"/>
+          <path d="M6.5 9.2 12 10l5.5-.8.3 1.4-4.3 1v2.6l1.6 5-1.4.5-1.7-4.6-1.7 4.6-1.4-.5 1.6-5v-2.6l-4.3-1z"/>
+        </svg>
+        <span>Acessibilidade</span>
+      </span>
+    </summary>
+
+    <form class="barra-acessibilidade conteudo-painel" aria-labelledby="titulo-painel-acessibilidade">
+      <p id="titulo-painel-acessibilidade" class="titulo-painel">Opções de acessibilidade</p>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Visão</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-daltonico">
+          <label for="modo-daltonico">Modo para daltônicos</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-alto-contraste">
+          <label for="modo-alto-contraste">Alto contraste</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-fonte-grande">
+          <label for="modo-fonte-grande">Aumentar texto</label>
+        </span>
+      </fieldset>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Leitura</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-destacar-links">
+          <label for="modo-destacar-links">Destacar links e botões</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-espacamento">
+          <label for="modo-espacamento">Espaçamento de leitura</label>
+        </span>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="modo-sem-animacoes">
+          <label for="modo-sem-animacoes">Pausar animações</label>
+        </span>
+      </fieldset>
+
+      <fieldset class="grupo-acessibilidade">
+        <legend class="rotulo-acessibilidade">Aparência</legend>
+
+        <span class="opcao-acessibilidade">
+          <input type="checkbox" id="tema-escuro">
+          <label for="tema-escuro">Tema escuro</label>
+        </span>
+      </fieldset>
+
+      <button type="reset" class="botao-restaurar">Restaurar padrão</button>
+      <p class="aviso-painel">As opções valem enquanto você estiver nesta página.</p>
+    </form>
+  </details>
+
+  <script src="../js/acessibilidade.js"></script>
+
+  <header class="cabecalho-site">
+    <h1>DevNetwork</h1>
+  </header>
+
+  <nav class="menu-principal" aria-label="Menu principal">
+    <ul>
+      <li><a href="Inicio.html">Início</a></li>
+      <li><a href="pag1.html">Feed</a></li>
+      <li><a href="pag2.html">Perfil</a></li>
+      <li><a href="pag3.html">Explorar</a></li>
+      <li><a href="pag4.html">Projetos</a></li>
+      <li><a href="pag5.html">Workspace</a></li>
+      <li><a href="pag6.html">Comunidades</a></li>
+      <li><a href="pag7.html">Vagas</a></li>
+      <li><a href="pag8.html" class="ativo" aria-current="page">Rede</a></li>
+      <li><a href="pag9.html">Mensagens</a></li>
+      <li><a href="pag10.html">Notificações</a></li>
+      <li><a href="pag11.html">Empresa</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
+    </ul>
+  </nav>
+
+  <main id="conteudo-principal">
+
+    <div class="conteudo-pagina">
+
+      <section class="conteudo">
+        <article class="cartao perfil-principal">
+          <header class="capa-grande">
+            <h2>Sugestão da sua rede</h2>
+          </header>
+          <section class="perfil-conteudo">
+            <p class="avatar avatar-grande">CR</p>
+            <nav class="botoes-perfil">
+              <a class="botao botao-secundario" href="pag8.html">Voltar para a Rede</a>
+              <a class="botao" href="pag9.html">Mensagem</a>
+            </nav>
+            <h2>Cristiano Ronaldo</h2>
+            <p class="cargo">Web Developer · HTML, JavaScript</p>
+            <p>Vocês seguem as mesmas comunidades de desenvolvimento web.</p>
+          </section>
+        </article>
+
+        <section class="cartao secao">
+          <h2>Sobre</h2>
+          <p>Cristiano Ronaldo é Web developer na DevNetwork e trabalha com HTML, JavaScript.</p>
+          <p class="nota-exemplo">Este é um perfil de exemplo, criado para o projeto da disciplina. O conteúdo completo ainda não foi preenchido.</p>
+        </section>
+
+        <section class="cartao secao">
+          <h2>Tecnologias</h2>
+          <ul class="tecnologias">
+            <li><h3>HTML</h3><p>Estrutura de páginas</p></li>
+            <li><h3>JavaScript</h3><p>Interatividade</p></li>
+          </ul>
+        </section>
+
+        <section class="cartao secao">
+          <h2>Em comum com você</h2>
+          <p>Vocês seguem as mesmas comunidades de desenvolvimento web.</p>
+        </section>
+      </section>
+
+    </div>
+
+    <aside class="lateral-pagina barra-lateral" aria-label="Resumo do perfil">
+      <section class="cartao resumo-perfil">
+        <header class="capa-pequena">
+          <h2>Perfil de desenvolvedor</h2>
+        </header>
+        <section class="resumo-conteudo">
+          <p class="avatar avatar-pequeno">CR</p>
+          <h2>Cristiano Ronaldo</h2>
+          <p>Web Developer</p>
+        </section>
+      </section>
+      <nav class="cartao atalhos">
+        <h2>Continue navegando</h2>
+        <ul>
+          <li><a href="pag8.html">Voltar para a Rede</a></li>
+          <li><a href="pag9.html">Mensagens</a></li>
+          <li><a href="pag6.html">Comunidades</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+  </main>
+
+  <footer class="rodape-site">
+    <p>Rede Social para Desenvolvedores</p>
+    <p class="direitos-autorais">&copy; 2026 DevNetwork. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
