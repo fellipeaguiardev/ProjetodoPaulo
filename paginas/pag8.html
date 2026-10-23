@@ -127,13 +127,13 @@
 
       <section>
         <h2>Buscar pessoas</h2>
-        <form action="#">
+        <form action="#" onsubmit="buscarPessoas(); return false;">
 
           <label for="busca-pessoa">Nome da pessoa</label>
-          <input type="text" id="busca-pessoa" name="busca-pessoa" placeholder="Ex.: Ana Souza">
+          <input type="text" id="busca-pessoa" name="busca-pessoa" placeholder="Ex.: Ana Souza" oninput="buscarPessoas()">
 
           <label for="tecnologia">Tecnologia</label>
-          <select id="tecnologia" name="tecnologia">
+          <select id="tecnologia" name="tecnologia" onchange="buscarPessoas()">
             <option value="">Todas</option>
             <option value="html">HTML</option>
             <option value="css">CSS</option>
@@ -143,13 +143,14 @@
           </select>
 
           <button type="submit">Buscar</button>
+          <button type="button" onclick="limparBusca()">Limpar</button>
         </form>
+        <p id="aviso-busca" role="status"></p>
       </section>
 
       <section>
         <h2>Pessoas que você deveria conhecer</h2>
         <p>Sugestões baseadas nas comunidades que você participa e nas tecnologias que você usa.</p>
-        <p class="aviso-perfil"><strong>Aviso:</strong> nesta versão do site ainda não existe um perfil para cada pessoa. O botão "Ver perfil" abre sempre o mesmo perfil de exemplo.</p>
 
         <article class="cartao cartao-pessoa">
           <h3>Lionel Messi</h3>
@@ -157,7 +158,8 @@
           <p>Motivo: vocês participam da comunidade Iniciantes em HTML e usam tecnologias parecidas.</p>
           <p class="acoes-cartao">
             <button type="button" onclick="conectar(this)">Conectar</button>
-            <a href="pag2.html" title="Abre um perfil de exemplo">Ver perfil (exemplo)</a>
+            <button type="button" class="botao-cancelar" onclick="cancelarPedido(this)" hidden>Cancelar pedido</button>
+            <a href="perfil-messi.html">Ver perfil</a>
           </p>
         </article>
 
@@ -167,14 +169,15 @@
           <p>Motivo: vocês seguem as mesmas comunidades de desenvolvimento web.</p>
           <p class="acoes-cartao">
             <button type="button" onclick="conectar(this)">Conectar</button>
-            <a href="pag2.html" title="Abre um perfil de exemplo">Ver perfil (exemplo)</a>
+            <button type="button" class="botao-cancelar" onclick="cancelarPedido(this)" hidden>Cancelar pedido</button>
+            <a href="perfil-ronaldo.html">Ver perfil</a>
           </p>
         </article>
       </section>
 
       <section>
         <h2>Convites recebidos</h2>
-        <p id="aviso-convites" role="status"></p>
+        <p id="aviso-convites" role="status"><span id="texto-aviso"></span> <button type="button" id="botao-desfazer" class="botao-desfazer" onclick="desfazer()" hidden>Desfazer</button></p>
 
         <article class="notificacao convite">
           <h3>Eduardo Ramos</h3>
@@ -249,19 +252,22 @@
               <th>Pessoa</th>
               <th>Cargo</th>
               <th>Tecnologias</th>
+              <th>Situação</th>
             </tr>
           </thead>
 
-          <tbody>
+          <tbody id="tabela-sugestoes">
             <tr>
               <td>Lionel Messi</td>
               <td>Frontend Developer</td>
               <td>HTML, CSS, JavaScript</td>
+              <td class="situacao">Sugerido</td>
             </tr>
             <tr>
               <td>Cristiano Ronaldo</td>
               <td>Web Developer</td>
               <td>HTML, JavaScript</td>
+              <td class="situacao">Sugerido</td>
             </tr>
           </tbody>
         </table>
