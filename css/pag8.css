@@ -52,3 +52,16 @@ section ul li {
     align-items: flex-start;
   }
 }
+
+.aviso-perfil {
+  border-left: 4px solid var(--cor-status-andamento);
+  background-color: var(--cor-fundo-cartao);
+  padding: 8px 12px;
+}
+
+.acoes-cartao button:disabled {
+  background-color: var(--cor-fundo-cabecalho-tabela);
+  color: var(--cor-texto-secundario);
+  border: 1px solid var(--cor-borda);
+  cursor: not-allowed;
+}
