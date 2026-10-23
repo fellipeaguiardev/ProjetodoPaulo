@@ -78,7 +78,7 @@
     </form>
   </details>
 
-  <script src="/js/acessibilidade.js"></script>
+  <script src="../js/acessibilidade.js"></script>
 
   <header class="cabecalho-site">
     <h1>DevNetwork</h1>
@@ -86,20 +86,20 @@
 
   <nav class="menu-principal" aria-label="Menu principal">
     <ul>
-      <li><a href="/paginas/Inicio.html">Início</a></li>
-      <li><a href="/paginas/pag1.html">Feed</a></li>
-      <li><a href="/paginas/pag2.html">Perfil</a></li>
-      <li><a href="/paginas/pag3.html">Explorar</a></li>
-      <li><a href="/paginas/pag4.html">Projetos</a></li>
-      <li><a href="/paginas/pag5.html">Workspace</a></li>
-      <li><a href="/paginas/pag6.html">Comunidades</a></li>
-      <li><a href="/paginas/pag7.html">Vagas</a></li>
-      <li><a href="/paginas/pag8.html" class="ativo" aria-current="page">Rede</a></li>
-      <li><a href="/paginas/pag9.html">Mensagens</a></li>
-      <li><a href="/paginas/pag10.html">Notificações</a></li>
-      <li><a href="/paginas/pag11.html">Empresa</a></li>
-      <li><a href="/paginas/contato.html">Contato</a></li>
-      <li><a href="/paginas/orcamento_hospedagem.html">Orçamento</a></li>
+      <li><a href="Inicio.html">Início</a></li>
+      <li><a href="pag1.html">Feed</a></li>
+      <li><a href="pag2.html">Perfil</a></li>
+      <li><a href="pag3.html">Explorar</a></li>
+      <li><a href="pag4.html">Projetos</a></li>
+      <li><a href="pag5.html">Workspace</a></li>
+      <li><a href="pag6.html">Comunidades</a></li>
+      <li><a href="pag7.html">Vagas</a></li>
+      <li><a href="pag8.html" class="ativo" aria-current="page">Rede</a></li>
+      <li><a href="pag9.html">Mensagens</a></li>
+      <li><a href="pag10.html">Notificações</a></li>
+      <li><a href="pag11.html">Empresa</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
     </ul>
   </nav>
 
@@ -109,18 +109,18 @@
 
       <section class="resumo-rede">
         <h2>Resumo da sua rede</h2>
-        <div class="quadro">
+        <div class="quadro" aria-live="polite">
           <div class="coluna">
             <h3>Conexões</h3>
-            <p class="numero-rede">4</p>
+            <p class="numero-rede" id="num-conexoes">4</p>
           </div>
           <div class="coluna">
             <h3>Convites recebidos</h3>
-            <p class="numero-rede">2</p>
+            <p class="numero-rede" id="num-convites">2</p>
           </div>
           <div class="coluna">
             <h3>Sugestões</h3>
-            <p class="numero-rede">2</p>
+            <p class="numero-rede" id="num-sugestoes">2</p>
           </div>
         </div>
       </section>
@@ -149,14 +149,15 @@
       <section>
         <h2>Pessoas que você deveria conhecer</h2>
         <p>Sugestões baseadas nas comunidades que você participa e nas tecnologias que você usa.</p>
+        <p class="aviso-perfil"><strong>Aviso:</strong> nesta versão do site ainda não existe um perfil para cada pessoa. O botão "Ver perfil" abre sempre o mesmo perfil de exemplo.</p>
 
         <article class="cartao cartao-pessoa">
           <h3>Lionel Messi</h3>
           <p>Frontend Developer — HTML, CSS, JavaScript</p>
           <p>Motivo: vocês participam da comunidade Iniciantes em HTML e usam tecnologias parecidas.</p>
           <p class="acoes-cartao">
-            <button type="button">Conectar</button>
-            <a href="pag2.html">Ver perfil</a>
+            <button type="button" onclick="conectar(this)">Conectar</button>
+            <a href="pag2.html" title="Abre um perfil de exemplo">Ver perfil (exemplo)</a>
           </p>
         </article>
 
@@ -165,22 +166,23 @@
           <p>Web Developer — HTML, JavaScript</p>
           <p>Motivo: vocês seguem as mesmas comunidades de desenvolvimento web.</p>
           <p class="acoes-cartao">
-            <button type="button">Conectar</button>
-            <a href="pag2.html">Ver perfil</a>
+            <button type="button" onclick="conectar(this)">Conectar</button>
+            <a href="pag2.html" title="Abre um perfil de exemplo">Ver perfil (exemplo)</a>
           </p>
         </article>
       </section>
 
       <section>
         <h2>Convites recebidos</h2>
+        <p id="aviso-convites" role="status"></p>
 
         <article class="notificacao convite">
           <h3>Eduardo Ramos</h3>
           <p>Mobile Developer — Flutter, Dart</p>
           <p>Mensagem: "Vi o seu projeto Meu Primeiro Site e gostei muito!"</p>
           <p class="acoes-cartao">
-            <button type="button">Aceitar</button>
-            <button type="button">Recusar</button>
+            <button type="button" onclick="aceitarConvite(this)">Aceitar</button>
+            <button type="button" onclick="recusarConvite(this)">Recusar</button>
           </p>
         </article>
 
@@ -189,8 +191,8 @@
           <p>Front-end Developer — HTML, CSS</p>
           <p>Mensagem: "Nós dois participamos da comunidade HTML e CSS Brasil. Vamos nos conectar?"</p>
           <p class="acoes-cartao">
-            <button type="button">Aceitar</button>
-            <button type="button">Recusar</button>
+            <button type="button" onclick="aceitarConvite(this)">Aceitar</button>
+            <button type="button" onclick="recusarConvite(this)">Recusar</button>
           </p>
         </article>
       </section>
@@ -207,7 +209,7 @@
               <th>Conectados desde</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="tabela-conexoes">
             <tr>
               <td>Ana Souza</td>
               <td>Back-end Developer</td>
@@ -273,7 +275,7 @@
       <section class="caixa-lateral" aria-labelledby="lateral-navegando">
         <h2 id="lateral-navegando">Continue navegando</h2>
         <ul class="lista-lateral">
-          <li><a href="/paginas/Inicio.html">Início</a> — apresentação da DevNetwork.</li>
+          <li><a href="Inicio.html">Início</a> — apresentação da DevNetwork.</li>
           <li><a href="pag1.html">Feed</a> — publicações da comunidade, com reações, comentários e opção de salvar.</li>
           <li><a href="pag2.html">Perfil</a> — tecnologias, projetos e experiência de um desenvolvedor.</li>
           <li><a href="pag3.html">Explorar</a> — busca, tecnologias em alta e devs em destaque.</li>
@@ -299,5 +301,6 @@
     <p class="direitos-autorais">&copy; 2026 DevNetwork. Todos os direitos reservados.</p>
   </footer>
 
+  <script src="../js/pag8.js"></script>
 </body>
 </html>
