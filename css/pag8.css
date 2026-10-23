@@ -53,15 +53,37 @@ section ul li {
   }
 }
 
-.aviso-perfil {
-  border-left: 4px solid var(--cor-status-andamento);
-  background-color: var(--cor-fundo-cartao);
-  padding: 8px 12px;
-}
-
 .acoes-cartao button:disabled {
   background-color: var(--cor-fundo-cabecalho-tabela);
   color: var(--cor-texto-secundario);
   border: 1px solid var(--cor-borda);
   cursor: not-allowed;
+}
+
+/* Botões secundários: Cancelar pedido e Desfazer */
+.botao-cancelar,
+.botao-desfazer {
+  background-color: var(--cor-fundo-cartao);
+  color: var(--cor-link);
+  border: 1px solid var(--cor-primaria);
+}
+
+.botao-cancelar:hover,
+.botao-desfazer:hover {
+  background-color: var(--cor-borda-clara);
+}
+
+.botao-desfazer {
+  padding: 4px 10px;
+  margin-left: 8px;
+}
+
+#aviso-convites,
+#aviso-busca {
+  min-height: 1.4em;
+  font-weight: bold;
+}
+
+.situacao {
+  font-weight: bold;
 }
