@@ -78,7 +78,7 @@
     </form>
   </details>
 
-  <script src="../js/acessibilidade.js"></script>
+  <script src="/js/acessibilidade.js"></script>
 
   <header class="cabecalho-site">
     <h1>DevNetwork</h1>
@@ -86,20 +86,20 @@
 
   <nav class="menu-principal" aria-label="Menu principal">
     <ul>
-      <li><a href="Inicio.html">Início</a></li>
-      <li><a href="pag1.html">Feed</a></li>
-      <li><a href="pag2.html">Perfil</a></li>
-      <li><a href="pag3.html">Explorar</a></li>
-      <li><a href="pag4.html">Projetos</a></li>
-      <li><a href="pag5.html">Workspace</a></li>
-      <li><a href="pag6.html">Comunidades</a></li>
-      <li><a href="pag7.html">Vagas</a></li>
-      <li><a href="pag8.html">Rede</a></li>
-      <li><a href="pag9.html">Mensagens</a></li>
-      <li><a href="pag10.html" class="ativo" aria-current="page">Notificações</a></li>
-      <li><a href="pag11.html">Empresa</a></li>
-      <li><a href="contato.html">Contato</a></li>
-      <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
+      <li><a href="/paginas/Inicio.html">Início</a></li>
+      <li><a href="/paginas/pag1.html">Feed</a></li>
+      <li><a href="/paginas/pag2.html">Perfil</a></li>
+      <li><a href="/paginas/pag3.html">Explorar</a></li>
+      <li><a href="/paginas/pag4.html">Projetos</a></li>
+      <li><a href="/paginas/pag5.html">Workspace</a></li>
+      <li><a href="/paginas/pag6.html">Comunidades</a></li>
+      <li><a href="/paginas/pag7.html">Vagas</a></li>
+      <li><a href="/paginas/pag8.html">Rede</a></li>
+      <li><a href="/paginas/pag9.html">Mensagens</a></li>
+      <li><a href="/paginas/pag10.html" class="ativo" aria-current="page">Notificações</a></li>
+      <li><a href="/paginas/pag11.html">Empresa</a></li>
+      <li><a href="/paginas/contato.html">Contato</a></li>
+      <li><a href="/paginas/orcamento_hospedagem.html">Orçamento</a></li>
     </ul>
   </nav>
 
@@ -107,24 +107,63 @@
 
     <div class="conteudo-pagina">
 
-      <section>
-        <h2>Notificações</h2>
+      <section aria-labelledby="titulo-notificacoes">
+        <h2 id="titulo-notificacoes" tabindex="-1">Notificações</h2>
 
-        <article class="notificacao">
-          <p><strong>Social —</strong> Lionel Messi começou a seguir você.</p>
-        </article>
+        <div class="barra-notificacoes">
+          <p class="contador-notificacoes" id="contador-nao-lidas" aria-live="polite">2 não lidas</p>
+          <button type="button" class="botao-marcar-lidas" id="marcar-todas-lidas">Marcar todas como lidas</button>
+        </div>
 
-        <article class="notificacao">
-          <p><strong>Projetos —</strong> Cristiano Ronaldo solicitou participação no seu projeto.</p>
-        </article>
+        <ul class="lista-notificacoes">
 
-        <article class="notificacao">
-          <p><strong>Código —</strong> Lionel Messi comentou na sua contribuição.</p>
-        </article>
+          <li>
+            <article class="notificacao nao-lida" data-categoria="Social" aria-labelledby="notificacao-1">
+              <div class="topo-notificacao">
+                <h3 id="notificacao-1" class="categoria-notificacao">Social <span class="texto-oculto marcador-nao-lida">(não lida)</span></h3>
+                <time datetime="2026-10-21T14:32">21/10/2026 às 14:32</time>
+              </div>
+              <p>Lionel Messi começou a seguir você.</p>
+              <button type="button" class="botao-apagar" aria-label="Apagar notificação: Lionel Messi começou a seguir você">✕</button>
+            </article>
+          </li>
 
-        <article class="notificacao">
-          <p><strong>Carreira —</strong> Uma empresa visualizou seu perfil.</p>
-        </article>
+          <li>
+            <article class="notificacao nao-lida" data-categoria="Projetos" aria-labelledby="notificacao-2">
+              <div class="topo-notificacao">
+                <h3 id="notificacao-2" class="categoria-notificacao">Projetos <span class="texto-oculto marcador-nao-lida">(não lida)</span></h3>
+                <time datetime="2026-10-21T09:15">21/10/2026 às 09:15</time>
+              </div>
+              <p>Cristiano Ronaldo solicitou participação no seu projeto.</p>
+              <button type="button" class="botao-apagar" aria-label="Apagar notificação: Cristiano Ronaldo solicitou participação no seu projeto">✕</button>
+            </article>
+          </li>
+
+          <li>
+            <article class="notificacao" data-categoria="Código" aria-labelledby="notificacao-3">
+              <div class="topo-notificacao">
+                <h3 id="notificacao-3" class="categoria-notificacao">Código</h3>
+                <time datetime="2026-10-20T18:47">20/10/2026 às 18:47</time>
+              </div>
+              <p>Lionel Messi comentou na sua contribuição.</p>
+              <button type="button" class="botao-apagar" aria-label="Apagar notificação: Lionel Messi comentou na sua contribuição">✕</button>
+            </article>
+          </li>
+
+          <li>
+            <article class="notificacao" data-categoria="Carreira" aria-labelledby="notificacao-4">
+              <div class="topo-notificacao">
+                <h3 id="notificacao-4" class="categoria-notificacao">Carreira</h3>
+                <time datetime="2026-10-18T11:03">18/10/2026 às 11:03</time>
+              </div>
+              <p>Uma empresa visualizou seu perfil.</p>
+              <button type="button" class="botao-apagar" aria-label="Apagar notificação: Uma empresa visualizou seu perfil">✕</button>
+            </article>
+          </li>
+
+        </ul>
+
+        <p class="sem-notificacoes" id="sem-notificacoes" hidden>Tudo em dia! Você não tem notificações.</p>
 
       </section>
 
@@ -135,18 +174,18 @@
       <section class="caixa-lateral" aria-labelledby="lateral-resumo">
         <h2 id="lateral-resumo">Resumo</h2>
         <ul class="lista-lateral lista-lateral-texto">
-          <li><strong>Social</strong> · 1</li>
-          <li><strong>Projetos</strong> · 1</li>
-          <li><strong>Código</strong> · 1</li>
-          <li><strong>Carreira</strong> · 1</li>
+          <li data-resumo="Social"><strong>Social</strong> · <span class="total-resumo">1</span></li>
+          <li data-resumo="Projetos"><strong>Projetos</strong> · <span class="total-resumo">1</span></li>
+          <li data-resumo="Código"><strong>Código</strong> · <span class="total-resumo">1</span></li>
+          <li data-resumo="Carreira"><strong>Carreira</strong> · <span class="total-resumo">1</span></li>
         </ul>
       </section>
 
       <section class="caixa-lateral" aria-labelledby="lateral-veja">
         <h2 id="lateral-veja">Veja também</h2>
         <ul class="lista-lateral">
-          <li><a href="pag9.html">Mensagens</a></li>
-          <li><a href="pag8.html">Minha rede</a></li>
+          <li><a href="/paginas/pag9.html">Mensagens</a></li>
+          <li><a href="/paginas/pag8.html">Minha rede</a></li>
         </ul>
       </section>
 
@@ -158,6 +197,69 @@
     <p>Rede Social para Desenvolvedores</p>
     <p class="direitos-autorais">&copy; 2026 DevNetwork. Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    const listaNotificacoes = document.querySelector('.lista-notificacoes');
+    const contadorNaoLidas = document.getElementById('contador-nao-lidas');
+    const botaoMarcarLidas = document.getElementById('marcar-todas-lidas');
+    const avisoSemNotificacoes = document.getElementById('sem-notificacoes');
+    const tituloNotificacoes = document.getElementById('titulo-notificacoes');
+    const tituloOriginal = document.title;
+
+    // Atualiza o contador, o título da aba, o resumo lateral e o aviso de lista vazia
+    function atualizarContadores() {
+      const naoLidas = listaNotificacoes.querySelectorAll('.notificacao.nao-lida').length;
+
+      contadorNaoLidas.textContent = naoLidas + (naoLidas === 1 ? ' não lida' : ' não lidas');
+      contadorNaoLidas.classList.toggle('zerado', naoLidas === 0);
+      botaoMarcarLidas.disabled = naoLidas === 0;
+      document.title = naoLidas > 0 ? '(' + naoLidas + ') ' + tituloOriginal : tituloOriginal;
+
+      document.querySelectorAll('[data-resumo]').forEach(function (item) {
+        const categoria = item.dataset.resumo;
+        const total = listaNotificacoes.querySelectorAll('.notificacao[data-categoria="' + categoria + '"]').length;
+        item.querySelector('.total-resumo').textContent = total;
+      });
+
+      avisoSemNotificacoes.hidden = listaNotificacoes.children.length > 0;
+    }
+
+    // Botão "Marcar todas como lidas"
+    botaoMarcarLidas.addEventListener('click', function () {
+      listaNotificacoes.querySelectorAll('.notificacao.nao-lida').forEach(function (notificacao) {
+        notificacao.classList.remove('nao-lida');
+      });
+      listaNotificacoes.querySelectorAll('.marcador-nao-lida').forEach(function (marcador) {
+        marcador.remove();
+      });
+      atualizarContadores();
+    });
+
+    // Botão ✕ de cada notificação
+    listaNotificacoes.addEventListener('click', function (evento) {
+      const botao = evento.target.closest('.botao-apagar');
+      if (!botao) return;
+
+      const item = botao.closest('li');
+
+      item.classList.add('saindo');
+      setTimeout(function () {
+        const posicao = Array.from(listaNotificacoes.children).indexOf(item);
+        item.remove();
+        atualizarContadores();
+
+        // Mantém o foco do teclado na página depois de apagar
+        const vizinho = listaNotificacoes.children[posicao] || listaNotificacoes.children[posicao - 1];
+        if (vizinho) {
+          vizinho.querySelector('.botao-apagar').focus();
+        } else {
+          tituloNotificacoes.focus();
+        }
+      }, 200);
+    });
+
+    atualizarContadores();
+  </script>
 
 </body>
 </html>

@@ -1,8 +1,74 @@
-.notificacao {
+.barra-notificacoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.contador-notificacoes {
+  margin: 0;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background-color: var(--cor-primaria);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.contador-notificacoes.zerado {
+  background-color: transparent;
+  color: inherit;
   border: 1px solid var(--cor-borda);
-  border-left: 4px solid var(--cor-primaria);
+  opacity: 0.7;
+}
+
+.botao-marcar-lidas {
+  padding: 8px 16px;
+  border: 1px solid var(--cor-primaria);
   border-radius: 8px;
-  padding: 20px;
+  background-color: transparent;
+  color: var(--cor-link);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.botao-marcar-lidas:hover:not(:disabled) {
+  background-color: var(--cor-primaria);
+  color: #fff;
+}
+
+.botao-marcar-lidas:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+
+.lista-notificacoes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lista-notificacoes li {
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.lista-notificacoes li.saindo {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.notificacao {
+  position: relative;
+  border: 1px solid var(--cor-borda);
+  border-left: 4px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 20px 56px 20px 20px;
   margin-bottom: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
 }
@@ -11,6 +77,101 @@
   margin: 0;
 }
 
-.notificacao strong {
+.notificacao time {
+  opacity: 0.7;
+}
+
+.notificacao.nao-lida {
+  border-left-color: var(--cor-primaria);
+}
+
+.notificacao.nao-lida p,
+.notificacao.nao-lida time {
+  opacity: 1;
+}
+
+.topo-notificacao {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.categoria-notificacao {
+  margin: 0;
+  font-size: 1rem;
   color: var(--cor-link);
+}
+
+/* Bolinha de não lida ao lado da categoria */
+.notificacao.nao-lida .categoria-notificacao::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: var(--cor-primaria);
+  vertical-align: middle;
+}
+
+.notificacao time {
+  font-size: 0.85rem;
+}
+
+
+.botao-apagar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: inherit;
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.2s, background-color 0.2s;
+}
+
+.botao-apagar:hover,
+.botao-apagar:focus-visible {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.botao-marcar-lidas:focus-visible,
+.botao-apagar:focus-visible {
+  outline: 2px solid var(--cor-primaria);
+  outline-offset: 2px;
+}
+
+.sem-notificacoes {
+  border: 1px dashed var(--cor-borda);
+  border-radius: 8px;
+  padding: 30px 20px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.texto-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lista-notificacoes li,
+  .botao-marcar-lidas,
+  .botao-apagar {
+    transition: none;
+  }
 }
