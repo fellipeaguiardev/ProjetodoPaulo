@@ -45,7 +45,7 @@ section {
   border: 3px solid var(--cor-texto-claro);
   border-radius: 50%;
   background-color: var(--cor-destaque);
-  color: var(--cor-texto-claro);
+  color: var(--cor-primaria-hover);
   font-size: 22px;
   font-weight: bold;
 }
@@ -68,7 +68,7 @@ section {
 }
 
 .resumo-conteudo > p.avatar {
-  color: var(--cor-texto-claro);
+  color: var(--cor-primaria-hover);
 }
 
 .estatistica {

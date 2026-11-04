@@ -813,3 +813,17 @@ body:has(#modo-alto-contraste:checked) .caixa-lateral {
 body:has(#modo-destacar-links:checked) .lista-lateral a {
   text-decoration: underline;
 }
+
+@media (max-width: 600px) {
+  .menu-principal ul {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .painel-acessibilidade {
+    top: auto;
+    bottom: 16px;
+    transform: none;
+  }
+}

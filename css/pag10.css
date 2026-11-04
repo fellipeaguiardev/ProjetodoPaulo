@@ -14,3 +14,11 @@
 .notificacao strong {
   color: var(--cor-link);
 }
+
+.notificacao.lida {
+  border-left-color: var(--cor-borda);
+}
+
+.notificacao.lida p {
+  color: var(--cor-texto-secundario);
+}

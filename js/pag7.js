@@ -14,6 +14,7 @@ function filtrar() {
   // Nos cards está escrito C++ e C#, mas no select o valor é cpp e csharp
   if (tecnologia === 'cpp') tecnologia = 'c++';
   if (tecnologia === 'csharp') tecnologia = 'c#';
+  let visiveis = 0;
 
   for (const vaga of vagas) {
     const texto = limpar(vaga.textContent);
@@ -42,11 +43,19 @@ function filtrar() {
     }
 
     vaga.style.display = mostrar ? '' : 'none';
+    if (mostrar) visiveis++;
   }
+
+  document.getElementById('aviso-vagas').textContent = visiveis === 0 ? 'Nenhuma vaga encontrada com esses filtros.' : '';
 }
 
 form.addEventListener('submit', function (e) {
   e.preventDefault(); // impede a página de recarregar
+  filtrar();
+});
+
+document.getElementById('limpar-filtros').addEventListener('click', function () {
+  form.reset();
   filtrar();
 });
   
