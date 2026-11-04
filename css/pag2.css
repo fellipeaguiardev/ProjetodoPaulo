@@ -269,6 +269,7 @@ section {
 
 .imagem-projeto.site {
   background-color: var(--cor-destaque);
+  color: var(--cor-primaria-hover);
 }
 
 .imagem-projeto.jogos {

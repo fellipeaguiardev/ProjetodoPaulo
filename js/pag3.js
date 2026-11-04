@@ -4,8 +4,7 @@ function buscarDev() {
   var achou = false;
 
   for (var i = 0; i < cartoes.length; i++) {
-    var nome = cartoes[i].getElementsByTagName("h3")[0].textContent.toLowerCase();
-
+    var nome = cartoes[i].textContent.toLowerCase();
     if (nome.includes(texto)) {
       cartoes[i].style.display = "";
       achou = true;
