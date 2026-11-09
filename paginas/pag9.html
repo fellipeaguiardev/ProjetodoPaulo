@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevNetwork - Mensagens</title>
+  <meta name="description" content="Mensagens da DevNetwork: converse com outros desenvolvedores.">
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/pag9.css">
 </head>
@@ -76,7 +78,7 @@
       </fieldset>
 
       <button type="reset" class="botao-restaurar">Restaurar padrão</button>
-      <p class="aviso-painel">As opções valem enquanto você estiver nesta página.</p>
+      <p class="aviso-painel">Suas escolhas ficam salvas neste navegador.</p>
     </form>
   </details>
 
@@ -114,14 +116,14 @@
         <input class="seletor-chat" type="radio" name="conversa" id="ronaldo">
         <input class="seletor-chat" type="radio" name="conversa" id="grupo">
 
-        <aside class="lista-contatos">
+        <nav class="lista-contatos" aria-label="Conversas">
           <h2>Conversas</h2>
           <ul>
             <li><label for="messi">Lionel Messi</label></li>
             <li><label for="ronaldo">Cristiano Ronaldo</label></li>
             <li><label for="grupo">Grupo — Site Pessoal Simples</label></li>
           </ul>
-        </aside>
+        </nav>
 
         <section class="conversa" aria-label="Conversa selecionada">
           <article id="messi-chat">
@@ -142,7 +144,7 @@
             <p class="mensagem mensagem-enviada">Vou revisar os links e já retorno por aqui.</p>
           </article>
 
-          <form action="#" method="post">
+          <form action="#" method="post" id="form-mensagem">
             <label for="mensagem">Mensagem</label>
             <p class="envio-mensagem">
               <input type="text" id="mensagem" name="mensagem" required placeholder="Escreva uma mensagem...">
@@ -178,6 +180,8 @@
     <p>Rede Social para Desenvolvedores</p>
     <p class="direitos-autorais">&copy; 2026 DevNetwork. Todos os direitos reservados.</p>
   </footer>
+
+  <script src="../js/pag9.js"></script>
 
 </body>
 </html>

@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevNetwork - Contato</title>
+  <meta name="description" content="Fale com a equipe DevNetwork pelo formulário de contato.">
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -75,7 +77,7 @@
       </fieldset>
 
       <button type="reset" class="botao-restaurar">Restaurar padrão</button>
-      <p class="aviso-painel">As opções valem enquanto você estiver nesta página.</p>
+      <p class="aviso-painel">Suas escolhas ficam salvas neste navegador.</p>
     </form>
   </details>
 
@@ -115,8 +117,7 @@
 
       <section>
         <h2>Formulário de contato</h2>
-        <form action="#" method="post">
-
+        <form action="#" method="post" id="form-contato">
           <p>
             <label for="nome">Nome completo</label>
             <input type="text" id="nome" name="nome" required minlength="3" placeholder="Seu nome">
@@ -172,6 +173,8 @@
             <button type="submit">Enviar</button>
             <button type="reset">Limpar</button>
           </p>
+
+          <p id="aviso-contato" aria-live="polite"></p>
 
         </form>
       </section>
@@ -235,6 +238,8 @@
     <p>Rede Social para Desenvolvedores</p>
     <p class="direitos-autorais">&copy; 2026 DevNetwork. Todos os direitos reservados.</p>
   </footer>
+
+  <script src="../js/contato.js"></script>
 
 </body>
 </html>

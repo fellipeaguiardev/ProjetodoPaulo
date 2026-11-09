@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevNetwork - Empresa</title>
+  <meta name="description" content="Empresas na DevNetwork: conheça benefícios, tecnologias e vagas abertas.">
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -73,7 +75,7 @@
       </fieldset>
 
       <button type="reset" class="botao-restaurar">Restaurar padrão</button>
-      <p class="aviso-painel">As opções valem enquanto você estiver nesta página.</p>
+      <p class="aviso-painel">Suas escolhas ficam salvas neste navegador.</p>
     </form>
   </details>
 
@@ -107,18 +109,18 @@
     <div class="conteudo-pagina">
 
       <!-- EMPRESA 1: TechStart -->
-    <article class="empresa-item" data-empresa="techstart">
+    <article class="cartao empresa-item" data-empresa="techstart">
       
       <!-- Cabeçalho da empresa com logo e botão seguir -->
       <header class="empresa-cabecalho">
         <div class="empresa-logo-info">
-          <img src="../imagens/logo-techstart.svg" alt="Logo da TechStart" class="empresa-logo">
+          <img src="../img/techimg.jpeg"     alt="Logo da TechStart" class="empresa-logo">
           <div>
             <h2>TechStart</h2>
             <p class="empresa-tagline">Empresa de tecnologia focada em desenvolvimento web para iniciantes.</p>
           </div>
         </div>
-        <button class="botao-seguir" data-empresa="techstart" aria-label="Seguir empresa TechStart">
+        <button type="button" class="botao-seguir" data-empresa="techstart" aria-label="Seguir empresa TechStart">
           <span class="texto-botao">Seguir empresa</span>
           <span class="contador-seguidores" aria-live="polite">0</span>
         </button>
@@ -201,17 +203,17 @@
     <hr aria-hidden="true">
 
     <!-- EMPRESA 2: Nexus Pay Tech -->
-    <article class="empresa-item" data-empresa="nexus-pay">
+    <article class="cartao empresa-item" data-empresa="nexus-pay">
       
       <header class="empresa-cabecalho">
         <div class="empresa-logo-info">
-          <img src="../imagens/logo-nexus-pay.svg" alt="Logo da Nexus Pay Tech" class="empresa-logo">
+          <img src="../img/nexusimg.jpeg"  alt="Logo da Nexus Pay Tech" class="empresa-logo">
           <div>
             <h2>Nexus Pay Tech</h2>
             <p class="empresa-tagline">Desenvolvimento de infraestrutura de pagamentos de alta performance.</p>
           </div>
         </div>
-        <button class="botao-seguir" data-empresa="nexus-pay" aria-label="Seguir empresa Nexus Pay Tech">
+        <button type="button" class="botao-seguir" data-empresa="nexus-pay" aria-label="Seguir empresa Nexus Pay Tech">
           <span class="texto-botao">Seguir empresa</span>
           <span class="contador-seguidores" aria-live="polite">0</span>
         </button>
@@ -288,8 +290,42 @@
         <ul>
           <li>João Cassiano — Back-end Lead</li>
           <li>Julio Cesar — Back-end</li>
-        </section>
-      </body>
-      </html>
+        </ul>
+      </section>
+    </article>
+
+    </div>
+
+    <aside class="lateral-pagina" aria-label="Resumo das empresas">
+
+      <section class="caixa-lateral" aria-labelledby="lateral-empresas">
+        <h2 id="lateral-empresas">Empresas</h2>
+        <ul class="lista-lateral">
+          <li><strong>TechStart</strong> · 1 vaga</li>
+          <li><strong>Nexus Pay Tech</strong> · 2 vagas</li>
+        </ul>
+      </section>
+
+      <section class="caixa-lateral" aria-labelledby="lateral-veja">
+        <h2 id="lateral-veja">Veja também</h2>
+        <ul class="lista-lateral">
+          <li><a href="pag7.html">Vagas</a></li>
+          <li><a href="pag8.html">Minha rede</a></li>
+        </ul>
+      </section>
+
+    </aside>
+
+  </main>
+
+  <footer class="rodape-site">
+    <p>Rede Social para Desenvolvedores</p>
+    <p class="direitos-autorais">&copy; 2026 DevNetwork. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="../js/pag11.js"></script>
+
+</body>
+</html>
 
 

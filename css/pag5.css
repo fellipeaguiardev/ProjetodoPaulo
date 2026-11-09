@@ -183,7 +183,7 @@ main {
 
 .tag {
   display: inline-block;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: bold;
   padding: 4px 7px;
   border-radius: 4px;
@@ -201,12 +201,12 @@ main {
 
 .verde {
   background: #dcfce7;
-  color: #16a34a;
+  color: var(--cor-primaria-hover);
 }
 
 .amarelo {
   background: #fef3c7;
-  color: #d97706;
+  color: var(--cor-primaria-hover);
 }
 
 .tarefa-footer {
@@ -254,7 +254,7 @@ main {
   height: 42px;
   flex-shrink: 0;
   background: #8c919b;
-  color: #ffffff;
+  color: var(--cor-primaria-hover);
   border-radius: 50%;
   display: flex;
   align-items: center;

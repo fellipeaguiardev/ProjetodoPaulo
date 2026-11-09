@@ -109,3 +109,12 @@ function enviarRecado(nome) {
   campo.value = ""; // limpa o campo
   campo.focus();
 }
+
+var formComunidade = document.getElementById("form-comunidade");
+
+formComunidade.addEventListener("submit", function (evento) {
+  evento.preventDefault();
+  var nome = document.getElementById("nome_comunidade").value;
+  document.getElementById("aviso-comunidade").textContent = "Solicitação da comunidade " + nome + " enviada!";
+  formComunidade.reset();
+});

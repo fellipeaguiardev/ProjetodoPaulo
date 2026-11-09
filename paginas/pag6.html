@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevNetwork - Comunidades</title>
+  <meta name="description" content="Comunidades da DevNetwork: participe de grupos e crie sua própria comunidade.">
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/pag6.css">
 </head>
@@ -74,7 +76,7 @@
       </fieldset>
 
       <button type="reset" class="botao-restaurar">Restaurar padrão</button>
-      <p class="aviso-painel">As opções valem enquanto você estiver nesta página.</p>
+      <p class="aviso-painel">Suas escolhas ficam salvas neste navegador.</p>
     </form>
   </details>
 
@@ -398,7 +400,7 @@
         <h2>Crie sua comunidade</h2>
         <p>Preencha o formulário abaixo para solicitar a criação de uma nova comunidade.</p>
 
-        <form action="#" method="post">
+        <form action="#" method="post" id="form-comunidade">
           <p>
             <label for="nome_comunidade">Nome da comunidade</label>
             <input type="text" id="nome_comunidade" name="nome_comunidade" placeholder="Ex.: React Brasil" required minlength="3">
@@ -468,6 +470,8 @@
           <p>
             <button type="submit">Enviar solicitação</button>
           </p>
+          
+          <p id="aviso-comunidade" aria-live="polite"></p>
         </form>
       </section>
 
